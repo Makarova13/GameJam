@@ -15,9 +15,9 @@ public class Player : MonoBehaviour
     [Header("Floats")]
     private float PlayerSpeed = 10f;
 
-    void Update()
+    void FixedUpdate()
     {
         movementInput = movement.action.ReadValue<Vector3>();
-        playerRB.AddForce(movementInput * PlayerSpeed * Time.deltaTime, ForceMode.Impulse);
+        playerRB.AddForce(movementInput * PlayerSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
     }
 }
