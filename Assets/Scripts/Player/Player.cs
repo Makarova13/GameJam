@@ -13,11 +13,29 @@ public class Player : MonoBehaviour
     private Vector3 movementInput;
     [Space]
     [Header("Floats")]
-    private float PlayerSpeed = 10f;
+    private float PlayerSpeed;
+
+    private void Start()
+    {
+        Speed = 10f;
+    }
 
     void FixedUpdate()
     {
         movementInput = movement.action.ReadValue<Vector3>();
-        playerRB.AddForce(movementInput * PlayerSpeed * Time.fixedDeltaTime, ForceMode.Impulse);
+        playerRB.AddForce(movementInput * Speed * Time.fixedDeltaTime, ForceMode.Impulse);
     }
+
+    public float Speed
+    {
+        get { return PlayerSpeed;  }
+        set
+        {
+            if(value < 20)
+            {
+                PlayerSpeed = value;
+            }
+        }
+    }
+
 }
