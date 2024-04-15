@@ -11,14 +11,17 @@ public class Health : MonoBehaviour
     private int maxHP;
     private int currentHP;
 
-    private Action<int, int, int> OnDamageTaken;
-    private Action<int, int, int> OnHealed;
+    public Action<int, int, int> OnDamageTaken;
+    public Action<int, int, int> OnHealed;
 
     private void Awake()
     {
         maxHP = initalMaxHP;
         currentHP = initalCurrentHP;
     }
+
+    public int GetMaxHP() => maxHP; 
+    public int GetCurrentHP() => currentHP;
 
     public void Damage(int damage)
     {
