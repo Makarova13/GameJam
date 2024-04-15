@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        Speed = 10f;
+        Speed = 60f;
     }
 
     void FixedUpdate()
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
         get { return PlayerSpeed;  }
         set
         {
-            if(value < 20)
+            if(value < 100)
             {
                 PlayerSpeed = value;
             }
