@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         movementInput = movement.action.ReadValue<Vector3>();
-        playerRB.AddForce(movementInput * Speed * Time.fixedDeltaTime, ForceMode.Force);
+        playerRB.AddForce(movementInput * Speed * Time.fixedDeltaTime, ForceMode.Impulse);
     }
 
     public float Speed
@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
         get { return PlayerSpeed;  }
         set
         {
-            if(value < 120f)
+            if(value < 100)
             {
                 PlayerSpeed = value;
             }
