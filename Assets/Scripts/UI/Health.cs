@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
 
     public Action<int, int, int> OnDamageTaken;
     public Action<int, int, int> OnHealed;
+    public Action OnDeath;
 
     private void Awake()
     {
@@ -28,6 +29,11 @@ public class Health : MonoBehaviour
         currentHP = Mathf.Clamp(currentHP - damage, 0, maxHP);
 
         OnDamageTaken?.Invoke(damage, currentHP, maxHP);
+
+        if(currentHP <= 0)
+        {
+            OnDeath?.Invoke();
+        }
     }
 
     public void Heal(int amount)

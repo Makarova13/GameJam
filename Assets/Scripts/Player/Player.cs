@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -64,6 +65,13 @@ public class Player : MonoBehaviour
     private void Start()
     {
         Speed = 60f;
+
+        health.OnDeath += Health_OnDeath;
+    }
+
+    private void Health_OnDeath()
+    {
+        UIManager.Instance.OpenDeathPopup();
     }
 
     void FixedUpdate()
