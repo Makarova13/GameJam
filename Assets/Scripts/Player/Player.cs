@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     
     [Header("Components")]
     [SerializeField] private InputActionReference movement;
+    [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody playerRB;
     [SerializeField] private Health health;
     [Space]
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
     [Space]
     [Header("Floats")]
     private float PlayerSpeed;
+    private float CurrentSpeed;
 
 
     private InputActions inputActions;
@@ -77,7 +79,22 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         movementInput = movement.action.ReadValue<Vector3>();
+        CurrentSpeed = movementInput.magnitude * PlayerSpeed;
         playerRB.AddForce(movementInput * Speed * Time.fixedDeltaTime, ForceMode.Impulse);
+        animator.SetFloat("Walking", CurrentSpeed);
+        if (movementInput.x < 0)
+        {
+            Debug.Log("Links");
+        } else if(movementInput.x > 0)
+        {
+            Debug.Log("Rechts");
+        } else if(movementInput.z < 0)
+        {
+            Debug.Log("Naar Beneden");
+        } else if(movementInput.z > 0)
+        {
+            Debug.Log("Naar Boven");
+        }
     }
 
     public float Speed
@@ -90,5 +107,5 @@ public class Player : MonoBehaviour
                 PlayerSpeed = value;
             }
         }
-    } 
+    }
 }
