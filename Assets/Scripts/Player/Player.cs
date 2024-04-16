@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
     [Header("Floats")]
     private float PlayerSpeed;
     private float CurrentSpeed;
-    private float Direction = 0;
 
     private void Start()
     {
