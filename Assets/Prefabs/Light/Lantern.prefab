@@ -116,6 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 567568788323552653}
+  - component: {fileID: 9006561658770971298}
   m_Layer: 0
   m_Name: Lantern
   m_TagString: Untagged
@@ -140,6 +141,20 @@ Transform:
   - {fileID: 8558576518205738315}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9006561658770971298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5197219492668046094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dbb877154468644e8874ea16e6aefa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainLight: {fileID: 6395329592209797524}
+  defaultData: {fileID: 11400000, guid: 41c7f2ce74b045d48a7d4c88e6e11c22, type: 2}
 --- !u!1 &8406634441155087529
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +206,7 @@ Light:
   m_InnerSpotAngle: 23.460537
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
