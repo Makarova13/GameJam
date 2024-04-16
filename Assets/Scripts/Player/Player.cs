@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     [Space]
     [Header("Floats")]
     private float PlayerSpeed;
+    private float CurrentSpeed;
 
 
     private InputActions inputActions;
@@ -73,13 +74,6 @@ public class Player : MonoBehaviour
     private void Health_OnDeath()
     {
         UIManager.Instance.OpenDeathPopup();
-    }
-    private float PlayerSpeed;
-    private float CurrentSpeed;
-
-    private void Start()
-    {
-        Speed = 60f;
     }
 
     void FixedUpdate()
