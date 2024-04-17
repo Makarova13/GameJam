@@ -47,14 +47,20 @@ public class RechargingStation : MonoBehaviour
         if(isInteracting)
         {
             interactionTimer += Time.deltaTime;
+            UpdateMarkerPosition();
         }
 
         if (interactionTimer >= rechargingDuration)
         {
             player.GetFlashLight().Recharge();
-            isInteracting = false;
-            interactionTimer = 0;
+            ResetStation();
         }
+    }
+
+    private void UpdateMarkerPosition()
+    {
+        positionMarker.position = starPos.position
+            + (interactionTimer / rechargingDuration) * (endPos.position - starPos.position);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -62,6 +68,7 @@ public class RechargingStation : MonoBehaviour
         if(other.TryGetComponent<Player>(out Player player))
         {
             this.player = player;
+            interactionText.SetActive(true);
         }
     }
 
@@ -70,6 +77,7 @@ public class RechargingStation : MonoBehaviour
         if(player.gameObject == other.gameObject)
         {
             player = null;
+            interactionText.SetActive(false);
         }
     }
 
@@ -78,13 +86,22 @@ public class RechargingStation : MonoBehaviour
         isInteracting = true;
 
         player.GetFlashLight().SetIsOn(false);
+        interactionText.SetActive(false);
+        rechargingBar.SetActive(true);
     }
 
     private void OnStopInteraction(InputAction.CallbackContext context)
     {
+        ResetStation();
+    }
+
+
+    private void ResetStation()
+    {
         isInteracting = false;
 
         interactionTimer = 0;
-    }
 
+        rechargingBar.SetActive(false);
+    }
 }
