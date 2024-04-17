@@ -41,6 +41,12 @@ public class Player : MonoBehaviour
 
         inputActions = new InputActions();
         inputActions.PlayerInput.Test.performed += ctx => OnTestPerformed();
+        inputActions.PlayerInput.FlashLight.performed += ctx => OnFlashLightToggle();
+    }
+
+    private void OnFlashLightToggle()
+    {
+        flashLightController.ToggleLight();
     }
 
     private void OnEnable()
