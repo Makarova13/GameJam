@@ -18,6 +18,7 @@ namespace Assets.Scripts
         [SerializeField] private Animator animator;
         [SerializeField] private Rigidbody playerRB;
         [SerializeField] private Health health;
+        [SerializeField] private FlashLightController flashLightController;
         [Space]
         [Header("Vectors")]
         private Vector3 movementInput;
@@ -104,15 +105,19 @@ namespace Assets.Scripts
 
             if (input.x > 0) // Right
             {
+                flashLightController.Rotate(FlashLightController.Direction.Right);
             }
             else if (input.x < 0) // Left
             {
+                flashLightController.Rotate(FlashLightController.Direction.Left);
             }
             else if (input.z > 0) // Top
             {
+                flashLightController.Rotate(FlashLightController.Direction.Up);
             }
             else if (input.z < 0) // Down
             {
+                flashLightController.Rotate(FlashLightController.Direction.Down);
             }
         }
 
