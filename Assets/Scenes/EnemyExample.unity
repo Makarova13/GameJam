@@ -270,6 +270,10 @@ MonoBehaviour:
   player: {fileID: 1888585603}
   agroDistance: 4
   attackRange: 0.5
+  viewAngle: 70
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &402080325
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,7 +816,7 @@ GameObject:
   - component: {fileID: 1888585604}
   m_Layer: 0
   m_Name: PlayerKinda
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
