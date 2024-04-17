@@ -7,6 +7,11 @@ using UnityEngine.InputSystem;
 public class RechargingStation : MonoBehaviour
 {
     [SerializeField] private float rechargingDuration = 1f;
+    [SerializeField] private GameObject interactionText;
+    [SerializeField] private GameObject rechargingBar;
+    [SerializeField] private RectTransform starPos;
+    [SerializeField] private RectTransform endPos;
+    [SerializeField] private RectTransform positionMarker;
 
     private Player player;
     private InputActions inputActions;
@@ -46,7 +51,7 @@ public class RechargingStation : MonoBehaviour
 
         if (interactionTimer >= rechargingDuration)
         {
-            Debug.Log("Succedded");
+            player.GetFlashLight().Recharge();
             isInteracting = false;
             interactionTimer = 0;
         }
@@ -72,7 +77,7 @@ public class RechargingStation : MonoBehaviour
     {
         isInteracting = true;
 
-
+        player.GetFlashLight().SetIsOn(false);
     }
 
     private void OnStopInteraction(InputAction.CallbackContext context)
