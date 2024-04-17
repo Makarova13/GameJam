@@ -22,17 +22,20 @@ public class DeathPopup : MonoBehaviour
 
     private void OnQuitButtonClicked()
     {
+        Debug.Log("Quit");
         Application.Quit();
     }
 
     private void OnRestartButtonClicked()
     {
+        Debug.Log("Restart");
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void OnCheckpointButtonClicked()
     {
+        Debug.Log("CheckPoint");
         //Todo
     }
 }
