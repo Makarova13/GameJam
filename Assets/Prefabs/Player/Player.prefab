@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1450437262087526631}
   - component: {fileID: 6800749564508740774}
   - component: {fileID: 9058054480967721854}
+  - component: {fileID: 9166703139934595371}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -77,8 +78,7 @@ MonoBehaviour:
     type: 3}
   animator: {fileID: 927206864373930961}
   playerRB: {fileID: 6800749564508740774}
-  health: {fileID: 0}
-  flashLightController: {fileID: 120215539613681502}
+  health: {fileID: 9166703139934595371}
 --- !u!54 &6800749564508740774
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -158,6 +158,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9166703139934595371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3351362214598815704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b4ed375d3ed354bb859d25752bd5fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initalMaxHP: 5
+  initalCurrentHP: 5
 --- !u!1 &6407887277547441808
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,18 +465,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee9b188695b666f4da42d82aa6797702, type: 3}
---- !u!114 &120215539613681502 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9006561658770971298, guid: ee9b188695b666f4da42d82aa6797702,
-    type: 3}
-  m_PrefabInstance: {fileID: 9031594640688913916}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dbb877154468644e8874ea16e6aefa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &8842470109739634801 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 567568788323552653, guid: ee9b188695b666f4da42d82aa6797702,

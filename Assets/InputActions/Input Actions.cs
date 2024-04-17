@@ -48,7 +48,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Attack"",
                     ""type"": ""Button"",
-                    ""id"": ""1932f47d-50b2-48e4-9a4d-2112772fa1a1"",
+                    ""id"": ""bd7d0106-5f10-4358-9835-de460795d92c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -146,12 +146,40 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a1605c0d-1449-47c7-b987-97160fc55bb3"",
+                    ""id"": ""4a0cb513-a035-4e43-9a13-9034d3b33680"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""ChargeStation"",
+            ""id"": ""aca109fa-5096-41c9-b819-7410f66e9c26"",
+            ""actions"": [
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""80191914-0135-4c9e-9dc5-ef0bdccfb485"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""9439fdb9-c2cf-48fb-9a96-32c3175a0853"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -165,6 +193,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_PlayerInput_Movement = m_PlayerInput.FindAction("Movement", throwIfNotFound: true);
         m_PlayerInput_Test = m_PlayerInput.FindAction("Test", throwIfNotFound: true);
         m_PlayerInput_Attack = m_PlayerInput.FindAction("Attack", throwIfNotFound: true);
+        // ChargeStation
+        m_ChargeStation = asset.FindActionMap("ChargeStation", throwIfNotFound: true);
+        m_ChargeStation_Interact = m_ChargeStation.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -284,10 +315,60 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         }
     }
     public PlayerInputActions @PlayerInput => new PlayerInputActions(this);
+
+    // ChargeStation
+    private readonly InputActionMap m_ChargeStation;
+    private List<IChargeStationActions> m_ChargeStationActionsCallbackInterfaces = new List<IChargeStationActions>();
+    private readonly InputAction m_ChargeStation_Interact;
+    public struct ChargeStationActions
+    {
+        private @InputActions m_Wrapper;
+        public ChargeStationActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Interact => m_Wrapper.m_ChargeStation_Interact;
+        public InputActionMap Get() { return m_Wrapper.m_ChargeStation; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(ChargeStationActions set) { return set.Get(); }
+        public void AddCallbacks(IChargeStationActions instance)
+        {
+            if (instance == null || m_Wrapper.m_ChargeStationActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_ChargeStationActionsCallbackInterfaces.Add(instance);
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
+        }
+
+        private void UnregisterCallbacks(IChargeStationActions instance)
+        {
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
+        }
+
+        public void RemoveCallbacks(IChargeStationActions instance)
+        {
+            if (m_Wrapper.m_ChargeStationActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IChargeStationActions instance)
+        {
+            foreach (var item in m_Wrapper.m_ChargeStationActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_ChargeStationActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public ChargeStationActions @ChargeStation => new ChargeStationActions(this);
     public interface IPlayerInputActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnTest(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+    }
+    public interface IChargeStationActions
+    {
+        void OnInteract(InputAction.CallbackContext context);
     }
 }
