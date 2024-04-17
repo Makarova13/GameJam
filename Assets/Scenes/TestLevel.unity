@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 214635235}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -348,6 +348,12 @@ Transform:
   - {fileID: 1346580390}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &214635235 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 188475325826921305, guid: 7b019b159ca07604c8fec0b1d591986d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1858058066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &491943430
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491943431}
   - component: {fileID: 491943432}
+  - component: {fileID: 491943433}
   m_Layer: 0
   m_Name: Bush
   m_TagString: Untagged
@@ -375,7 +382,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.4284, z: 0}
-  m_LocalScale: {x: 1, y: 0.090790994, z: 1}
+  m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 181274766}
@@ -432,6 +439,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &491943433
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491943430}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 24, y: 24, z: 0.20000018}
+  m_Center: {x: 0, y: 0, z: -0.00000011920929}
 --- !u!1 &664725327
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,19 +721,19 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996828060}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
+  m_MotionVectors: 2
+  m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 361512bd2d4889d4bbe5b35c9cc35a4f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -987,6 +1015,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 927206864373930961, guid: 7b019b159ca07604c8fec0b1d591986d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 869c47d631d58374cb71d791a6d05ad4, type: 2}
     - target: {fileID: 3351362214598815704, guid: 7b019b159ca07604c8fec0b1d591986d,
         type: 3}
       propertyPath: m_Name
@@ -1322,8 +1355,8 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1858058066}
   - {fileID: 2106241764}
+  - {fileID: 1858058066}
   - {fileID: 43814510}
   - {fileID: 996828064}
   - {fileID: 1944775411}

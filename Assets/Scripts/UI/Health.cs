@@ -3,43 +3,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+namespace Assets.Scripts
 {
-    [SerializeField] private int initalMaxHP = 5;
-    [SerializeField] private int initalCurrentHP = 5;
-
-    private int maxHP;
-    private int currentHP;
-
-    public Action<int, int, int> OnDamageTaken;
-    public Action<int, int, int> OnHealed;
-    public Action OnDeath;
-
-    private void Awake()
+    public class Health : MonoBehaviour
     {
-        maxHP = initalMaxHP;
-        currentHP = initalCurrentHP;
-    }
+        [SerializeField] private int initalMaxHP = 5;
+        [SerializeField] private int initalCurrentHP = 5;
 
-    public int GetMaxHP() => maxHP; 
-    public int GetCurrentHP() => currentHP;
+        private int maxHP;
+        private int currentHP;
 
-    public void Damage(int damage)
-    {
-        currentHP = Mathf.Clamp(currentHP - damage, 0, maxHP);
+        public Action<int, int, int> OnDamageTaken;
+        public Action<int, int, int> OnHealed;
+        public Action OnDeath;
 
-        OnDamageTaken?.Invoke(damage, currentHP, maxHP);
-
-        if(currentHP <= 0)
+        private void Awake()
         {
-            OnDeath?.Invoke();
+            maxHP = initalMaxHP;
+            currentHP = initalCurrentHP;
         }
-    }
 
-    public void Heal(int amount)
-    {
-        currentHP = Mathf.Clamp(currentHP + amount, 0, maxHP);
+        public int GetMaxHP() => maxHP;
+        public int GetCurrentHP() => currentHP;
 
-        OnHealed?.Invoke(amount, currentHP, maxHP);
+        public void Damage(int damage)
+        {
+            currentHP = Mathf.Clamp(currentHP - damage, 0, maxHP);
+
+            OnDamageTaken?.Invoke(damage, currentHP, maxHP);
+
+            if (currentHP <= 0)
+            {
+                OnDeath?.Invoke();
+            }
+        }
+
+        public void Heal(int amount)
+        {
+            currentHP = Mathf.Clamp(currentHP + amount, 0, maxHP);
+
+            OnHealed?.Invoke(amount, currentHP, maxHP);
+        }
     }
 }
