@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody playerRB;
     [SerializeField] private Health health;
     [SerializeField] private Transform testEnemy;
+    [SerializeField] private FlashLightController flashLightController;
     [Space]
     [Header("Vectors")]
     private Vector3 movementInput;
@@ -124,23 +126,23 @@ public class Player : MonoBehaviour
             animator.SetFloat("Z-Input", input.z);
         }
 
-        if (input.x > 0) // Right
-        {
-
+            if (input.x > 0) // Right
+            {
+                flashLightController.Rotate(FlashLightController.Direction.Right);
+            }
+            else if (input.x < 0) // Left
+            {
+                flashLightController.Rotate(FlashLightController.Direction.Left);
+            }
+            else if (input.z > 0) // Top
+            {
+                flashLightController.Rotate(FlashLightController.Direction.Up);
+            }
+            else if (input.z < 0) // Down
+            {
+                flashLightController.Rotate(FlashLightController.Direction.Down);
+            }
         }
-        else if (input.x < 0) // Left
-        {
-
-        }
-        else if (input.z > 0) // Top
-        {
-
-        }
-        else if (input.z < 0) // Down
-        {
-
-        }
-    }
 
     public float Speed
     {
