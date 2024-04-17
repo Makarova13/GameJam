@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     private InputActions inputActions;
 
     public Health GetHealth() => health;
+    public FlashLightController GetFlashLight() => flashLightController;
 
     private void Awake()
     {

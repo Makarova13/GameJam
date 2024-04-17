@@ -23,6 +23,14 @@ public class FlashLightController : MonoBehaviour
         SetIsOn(true);
     }
 
+    public enum Direction
+    {
+        Up,
+        Down,
+        Left,
+        Right
+    }
+
     public FlashlightData CurrentData { get; private set; }
 
     public void ToggleLight()
@@ -48,6 +56,11 @@ public class FlashLightController : MonoBehaviour
         }
 
         flashLightRoutine = StartCoroutine(Routine());
+    }
+
+    public void Rotate(Direction dir)
+    {
+        //lost in merge
     }
 
     public void SetData(FlashlightData data)
