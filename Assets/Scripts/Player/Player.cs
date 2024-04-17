@@ -7,23 +7,25 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Windows;
 
-namespace Assets.Scripts
+namespace Assets.Scripts;
+public class Player : MonoBehaviour
 {
-    public class Player : MonoBehaviour
-    {
-        public static Player instance;
-
-        [Header("Components")]
-        [SerializeField] private InputActionReference movement;
-        [SerializeField] private Animator animator;
-        [SerializeField] private Rigidbody playerRB;
-        [SerializeField] private Health health;
-        [Space]
-        [Header("Vectors")]
-        private Vector3 movementInput;
-        [Space]
-        [Header("Floats")]
-        private float PlayerSpeed;
+    public static Player instance;
+    
+    [Header("Components")]
+    [SerializeField] private InputActionReference movement;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Rigidbody playerRB;
+    [SerializeField] private Health health;
+    [SerializeField] private Transform testEnemy;
+    [Space]
+    [Header("Vectors")]
+    private Vector3 movementInput;
+    [Space]
+    [Header("Floats")]
+    private float PlayerSpeed;
+    [Header("Bools")]
+    private bool isAttacking = false;
 
 
         private InputActions inputActions;
@@ -79,19 +81,43 @@ namespace Assets.Scripts
             UIManager.Instance.OpenDeathPopup();
         }
 
-        void FixedUpdate()
+    void FixedUpdate()
+    {
+        // Movement
+        movementInput = movement.action.ReadValue<Vector3>();
+        playerRB.AddForce(movementInput * Speed * Time.fixedDeltaTime, ForceMode.Impulse);
+        if(movementInput != Vector3.zero)
         {
-            movementInput = movement.action.ReadValue<Vector3>();
-            playerRB.AddForce(movementInput * Speed * Time.fixedDeltaTime, ForceMode.Impulse);
-            if (movementInput != Vector3.zero)
+            animator.SetBool("isWalking", true);
+        } else
+        {
+            animator.SetBool("isWalking", false);
+        }
+
+        inputActions.PlayerInput.Attack.performed += ctx => Attack();
+    }
+
+    private void Attack()
+    {
+        if(!isAttacking)
+        {
+            isAttacking = true;
+            animator.SetBool("isAttacking", isAttacking);
+            StartCoroutine(AttackRoutine());
+            Debug.Log("Attack Success");
+            if(Vector3.Distance(this.transform.position, testEnemy.position) < 3f)
             {
-                animator.SetBool("isWalking", true);
-            }
-            else
-            {
-                animator.SetBool("isWalking", false);
+                // hit
             }
         }
+    }
+
+    private IEnumerator AttackRoutine()
+    {
+        yield return new WaitForSeconds(2);
+        isAttacking = false;
+        animator.SetBool("isAttacking", isAttacking);
+    }
 
         public void Movement(InputAction.CallbackContext context)
         {
@@ -102,19 +128,23 @@ namespace Assets.Scripts
                 animator.SetFloat("Z-Input", input.z);
             }
 
-            if (input.x > 0) // Right
-            {
-            }
-            else if (input.x < 0) // Left
-            {
-            }
-            else if (input.z > 0) // Top
-            {
-            }
-            else if (input.z < 0) // Down
-            {
-            }
+        if (input.x > 0) // Right
+        {
+            
         }
+        else if (input.x < 0) // Left
+        {
+            
+        }
+        else if (input.z > 0) // Top
+        {
+
+        }
+        else if (input.z < 0) // Down
+        {
+
+        }
+    }
 
         public float Speed
         {
