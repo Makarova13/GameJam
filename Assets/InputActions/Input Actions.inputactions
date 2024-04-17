@@ -26,7 +26,7 @@
                 {
                     "name": "Attack",
                     "type": "Button",
-                    "id": "1932f47d-50b2-48e4-9a4d-2112772fa1a1",
+                    "id": "bd7d0106-5f10-4358-9835-de460795d92c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -124,7 +124,7 @@
                 },
                 {
                     "name": "",
-                    "id": "a1605c0d-1449-47c7-b987-97160fc55bb3",
+                    "id": "4a0cb513-a035-4e43-9a13-9034d3b33680",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
