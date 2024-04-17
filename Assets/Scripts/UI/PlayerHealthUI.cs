@@ -4,53 +4,54 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerHealthUI : MonoBehaviour
+namespace Assets.Scripts
 {
-    [SerializeField] private Heart heartPrefab;
-    [SerializeField] private GameObject heartHolder;
-
-    private Health playerHealth;
-
-    private List<Heart> healthList = new List<Heart>();
-
-    private void Health_OnHealed(int dmg, int currentHP, int maxHP)
+    public class PlayerHealthUI : MonoBehaviour
     {
-        UpdateHearts();
-    }
+        [SerializeField] private Heart heartPrefab;
+        [SerializeField] private GameObject heartHolder;
 
-    private void Health_OnDamageTaken(int dmg, int currentHP, int maxHP)
-    {
-        UpdateHearts();
-    }
+        private Health playerHealth;
 
-    private void Start()
-    {
-        playerHealth = Player.instance.GetHealth();
-        playerHealth.OnDamageTaken += Health_OnDamageTaken;
-        playerHealth.OnHealed += Health_OnHealed;
+        private List<Heart> healthList = new List<Heart>();
 
-        var maxHP = playerHealth.GetMaxHP();
-
-        for (int i = 0; i < maxHP; i++)
+        private void Health_OnHealed(int dmg, int currentHP, int maxHP)
         {
-            var heart = Instantiate<Heart>(heartPrefab);
-            heart.transform.parent = heartHolder.transform;
-            healthList.Add(heart);
+            UpdateHearts();
         }
 
-        UpdateHearts();
-    }
-
-    private void UpdateHearts()
-    {
-        var maxHP = playerHealth.GetMaxHP();
-        var currentHP = playerHealth.GetCurrentHP();
-
-        for (int i = 0; i < maxHP; i++)
+        private void Health_OnDamageTaken(int dmg, int currentHP, int maxHP)
         {
-            healthList[i].Toggle(i < currentHP);
+            UpdateHearts();
+        }
+
+        private void Start()
+        {
+            playerHealth = Player.instance.GetHealth();
+            playerHealth.OnDamageTaken += Health_OnDamageTaken;
+            playerHealth.OnHealed += Health_OnHealed;
+
+            var maxHP = playerHealth.GetMaxHP();
+
+            for (int i = 0; i < maxHP; i++)
+            {
+                var heart = Instantiate<Heart>(heartPrefab);
+                heart.transform.parent = heartHolder.transform;
+                healthList.Add(heart);
+            }
+
+            UpdateHearts();
+        }
+
+        private void UpdateHearts()
+        {
+            var maxHP = playerHealth.GetMaxHP();
+            var currentHP = playerHealth.GetCurrentHP();
+
+            for (int i = 0; i < maxHP; i++)
+            {
+                healthList[i].Toggle(i < currentHP);
+            }
         }
     }
-
-
 }

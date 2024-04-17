@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Windows;
 
+namespace Assets.Scripts;
 public class Player : MonoBehaviour
 {
     public static Player instance;
@@ -27,58 +28,58 @@ public class Player : MonoBehaviour
     private bool isAttacking = false;
 
 
-    private InputActions inputActions;
+        private InputActions inputActions;
 
-    public Health GetHealth() => health;
+        public Health GetHealth() => health;
 
-    private void Awake()
-    {
-        if(instance != null)
+        private void Awake()
         {
-            Destroy(this);
+            if (instance != null)
+            {
+                Destroy(this);
+            }
+
+            instance = this;
+
+            inputActions = new InputActions();
+            inputActions.PlayerInput.Test.performed += ctx => OnTestPerformed();
         }
 
-        instance = this;
-
-        inputActions = new InputActions();
-        inputActions.PlayerInput.Test.performed += ctx => OnTestPerformed();
-    }
-
-    private void OnEnable()
-    {
-        inputActions.Enable();
-    }
-
-    private void OnDisable()
-    {
-        inputActions.Disable();
-    }
-
-
-    private void OnTestPerformed()
-    {
-        health.Damage(1);
-    }
-
-    private void OnDestroy()
-    {
-        if (instance == this)
+        private void OnEnable()
         {
-            instance = null;
+            inputActions.Enable();
         }
-    }
 
-    private void Start()
-    {
-        Speed = 60f;
+        private void OnDisable()
+        {
+            inputActions.Disable();
+        }
 
-        health.OnDeath += Health_OnDeath;
-    }
 
-    private void Health_OnDeath()
-    {
-        UIManager.Instance.OpenDeathPopup();
-    }
+        private void OnTestPerformed()
+        {
+            health.Damage(1);
+        }
+
+        private void OnDestroy()
+        {
+            if (instance == this)
+            {
+                instance = null;
+            }
+        }
+
+        private void Start()
+        {
+            Speed = 60f;
+
+            health.OnDeath += Health_OnDeath;
+        }
+
+        private void Health_OnDeath()
+        {
+            UIManager.Instance.OpenDeathPopup();
+        }
 
     void FixedUpdate()
     {
@@ -118,14 +119,14 @@ public class Player : MonoBehaviour
         animator.SetBool("isAttacking", isAttacking);
     }
 
-    public void Movement(InputAction.CallbackContext context)
-    {
-        Vector3 input = context.ReadValue<Vector3>();
-        if(input != Vector3.zero)
+        public void Movement(InputAction.CallbackContext context)
         {
-            animator.SetFloat("X-Input", input.x);
-            animator.SetFloat("Z-Input", input.z);
-        }
+            Vector3 input = context.ReadValue<Vector3>();
+            if (input != Vector3.zero)
+            {
+                animator.SetFloat("X-Input", input.x);
+                animator.SetFloat("Z-Input", input.z);
+            }
 
         if (input.x > 0) // Right
         {
@@ -145,14 +146,15 @@ public class Player : MonoBehaviour
         }
     }
 
-    public float Speed
-    {
-        get { return PlayerSpeed;  }
-        set
+        public float Speed
         {
-            if(value < 100)
+            get { return PlayerSpeed; }
+            set
             {
-                PlayerSpeed = value;
+                if (value < 100)
+                {
+                    PlayerSpeed = value;
+                }
             }
         }
     }
