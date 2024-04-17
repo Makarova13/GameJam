@@ -1,17 +1,12 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Windows;
 
-namespace Assets.Scripts;
 public class Player : MonoBehaviour
 {
     public static Player instance;
-    
+
     [Header("Components")]
     [SerializeField] private InputActionReference movement;
     [SerializeField] private Animator animator;
@@ -28,68 +23,69 @@ public class Player : MonoBehaviour
     private bool isAttacking = false;
 
 
-        private InputActions inputActions;
+    private InputActions inputActions;
 
-        public Health GetHealth() => health;
+    public Health GetHealth() => health;
 
-        private void Awake()
+    private void Awake()
+    {
+        if (instance != null)
         {
-            if (instance != null)
-            {
-                Destroy(this);
-            }
-
-            instance = this;
-
-            inputActions = new InputActions();
-            inputActions.PlayerInput.Test.performed += ctx => OnTestPerformed();
+            Destroy(this);
         }
 
-        private void OnEnable()
+        instance = this;
+
+        inputActions = new InputActions();
+        inputActions.PlayerInput.Test.performed += ctx => OnTestPerformed();
+    }
+
+    private void OnEnable()
+    {
+        inputActions.Enable();
+    }
+
+    private void OnDisable()
+    {
+        inputActions.Disable();
+    }
+
+
+    private void OnTestPerformed()
+    {
+        health.Damage(1);
+    }
+
+    private void OnDestroy()
+    {
+        if (instance == this)
         {
-            inputActions.Enable();
+            instance = null;
         }
+    }
 
-        private void OnDisable()
-        {
-            inputActions.Disable();
-        }
+    private void Start()
+    {
+        Speed = 60f;
 
+        health.OnDeath += Health_OnDeath;
+    }
 
-        private void OnTestPerformed()
-        {
-            health.Damage(1);
-        }
-
-        private void OnDestroy()
-        {
-            if (instance == this)
-            {
-                instance = null;
-            }
-        }
-
-        private void Start()
-        {
-            Speed = 60f;
-
-            health.OnDeath += Health_OnDeath;
-        }
-
-        private void Health_OnDeath()
-        {
-            UIManager.Instance.OpenDeathPopup();
-        }
+    private void Health_OnDeath()
+    {
+        UIManager.Instance.OpenDeathPopup();
+    }
 
     void FixedUpdate()
     {
         // Movement
         movementInput = movement.action.ReadValue<Vector3>();
         playerRB.AddForce(movementInput * Speed * Time.fixedDeltaTime, ForceMode.Impulse);
-        if(movementInput != Vector3.zero)
+        if (movementInput != Vector3.zero)
         {
             animator.SetBool("isWalking", true);
-        } else
+        }
+        else
         {
             animator.SetBool("isWalking", false);
         }
@@ -99,13 +95,13 @@ public class Player : MonoBehaviour
 
     private void Attack()
     {
-        if(!isAttacking)
+        if (!isAttacking)
         {
             isAttacking = true;
             animator.SetBool("isAttacking", isAttacking);
             StartCoroutine(AttackRoutine());
             Debug.Log("Attack Success");
-            if(Vector3.Distance(this.transform.position, testEnemy.position) < 3f)
+            if (Vector3.Distance(this.transform.position, testEnemy.position) < 3f)
             {
                 // hit
             }
@@ -119,22 +115,22 @@ public class Player : MonoBehaviour
         animator.SetBool("isAttacking", isAttacking);
     }
 
-        public void Movement(InputAction.CallbackContext context)
+    public void Movement(InputAction.CallbackContext context)
+    {
+        Vector3 input = context.ReadValue<Vector3>();
+        if (input != Vector3.zero)
         {
-            Vector3 input = context.ReadValue<Vector3>();
-            if (input != Vector3.zero)
-            {
-                animator.SetFloat("X-Input", input.x);
-                animator.SetFloat("Z-Input", input.z);
-            }
+            animator.SetFloat("X-Input", input.x);
+            animator.SetFloat("Z-Input", input.z);
+        }
 
         if (input.x > 0) // Right
         {
-            
+
         }
         else if (input.x < 0) // Left
         {
-            
+
         }
         else if (input.z > 0) // Top
         {
@@ -146,16 +142,16 @@ public class Player : MonoBehaviour
         }
     }
 
-        public float Speed
+    public float Speed
+    {
+        get { return PlayerSpeed; }
+        set
         {
-            get { return PlayerSpeed; }
-            set
+            if (value < 100)
             {
-                if (value < 100)
-                {
-                    PlayerSpeed = value;
-                }
+                PlayerSpeed = value;
             }
         }
     }
 }
+
