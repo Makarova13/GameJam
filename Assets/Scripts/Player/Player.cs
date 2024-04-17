@@ -2,8 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class Player : MonoBehaviour
 {
@@ -20,7 +22,6 @@ public class Player : MonoBehaviour
     [Space]
     [Header("Floats")]
     private float PlayerSpeed;
-    private float CurrentSpeed;
 
 
     private InputActions inputActions;
@@ -79,21 +80,36 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         movementInput = movement.action.ReadValue<Vector3>();
-        CurrentSpeed = movementInput.magnitude * PlayerSpeed;
         playerRB.AddForce(movementInput * Speed * Time.fixedDeltaTime, ForceMode.Impulse);
-        animator.SetFloat("Walking", CurrentSpeed);
-        if (movementInput.x < 0)
+        if(movementInput != Vector3.zero)
         {
-            Debug.Log("Links");
-        } else if(movementInput.x > 0)
+            animator.SetBool("isWalking", true);
+        } else
         {
-            Debug.Log("Rechts");
-        } else if(movementInput.z < 0)
+            animator.SetBool("isWalking", false);
+        }
+    }
+
+    public void Movement(InputAction.CallbackContext context)
+    {
+        Vector3 input = context.ReadValue<Vector3>();
+        if(input != Vector3.zero)
         {
-            Debug.Log("Naar Beneden");
-        } else if(movementInput.z > 0)
+            animator.SetFloat("X-Input", input.x);
+            animator.SetFloat("Z-Input", input.z);
+        }
+
+        if (input.x > 0) // Right
         {
-            Debug.Log("Naar Boven");
+        }
+        else if (input.x < 0) // Left
+        {
+        }
+        else if (input.z > 0) // Top
+        {
+        }
+        else if (input.z < 0) // Down
+        {
         }
     }
 
