@@ -46,7 +46,7 @@ public class RechargingStation : MonoBehaviour
 
         if (interactionTimer >= rechargingDuration)
         {
-            Debug.Log("Succedded");
+            player.GetFlashLight().Recharge();
             isInteracting = false;
             interactionTimer = 0;
         }
@@ -72,7 +72,7 @@ public class RechargingStation : MonoBehaviour
     {
         isInteracting = true;
 
-
+        player.GetFlashLight().SetIsOn(false);
     }
 
     private void OnStopInteraction(InputAction.CallbackContext context)

@@ -53,6 +53,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FlashLight"",
+                    ""type"": ""Button"",
+                    ""id"": ""f588ce2e-703b-4d84-b8a9-f57b84c37cfa"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -154,6 +163,17 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6f831346-372d-4380-8ed0-6832401390a6"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FlashLight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -193,6 +213,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_PlayerInput_Movement = m_PlayerInput.FindAction("Movement", throwIfNotFound: true);
         m_PlayerInput_Test = m_PlayerInput.FindAction("Test", throwIfNotFound: true);
         m_PlayerInput_Attack = m_PlayerInput.FindAction("Attack", throwIfNotFound: true);
+        m_PlayerInput_FlashLight = m_PlayerInput.FindAction("FlashLight", throwIfNotFound: true);
         // ChargeStation
         m_ChargeStation = asset.FindActionMap("ChargeStation", throwIfNotFound: true);
         m_ChargeStation_Interact = m_ChargeStation.FindAction("Interact", throwIfNotFound: true);
@@ -260,6 +281,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerInput_Movement;
     private readonly InputAction m_PlayerInput_Test;
     private readonly InputAction m_PlayerInput_Attack;
+    private readonly InputAction m_PlayerInput_FlashLight;
     public struct PlayerInputActions
     {
         private @InputActions m_Wrapper;
@@ -267,6 +289,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_PlayerInput_Movement;
         public InputAction @Test => m_Wrapper.m_PlayerInput_Test;
         public InputAction @Attack => m_Wrapper.m_PlayerInput_Attack;
+        public InputAction @FlashLight => m_Wrapper.m_PlayerInput_FlashLight;
         public InputActionMap Get() { return m_Wrapper.m_PlayerInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -285,6 +308,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
+            @FlashLight.started += instance.OnFlashLight;
+            @FlashLight.performed += instance.OnFlashLight;
+            @FlashLight.canceled += instance.OnFlashLight;
         }
 
         private void UnregisterCallbacks(IPlayerInputActions instance)
@@ -298,6 +324,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
+            @FlashLight.started -= instance.OnFlashLight;
+            @FlashLight.performed -= instance.OnFlashLight;
+            @FlashLight.canceled -= instance.OnFlashLight;
         }
 
         public void RemoveCallbacks(IPlayerInputActions instance)
@@ -366,6 +395,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnTest(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+        void OnFlashLight(InputAction.CallbackContext context);
     }
     public interface IChargeStationActions
     {

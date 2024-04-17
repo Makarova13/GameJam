@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody playerRB;
     [SerializeField] private Health health;
     [SerializeField] private Transform testEnemy;
+    [SerializeField] private FlashLightController flashLightController;
+
     [Space]
     [Header("Vectors")]
     private Vector3 movementInput;
@@ -26,6 +28,7 @@ public class Player : MonoBehaviour
     private InputActions inputActions;
 
     public Health GetHealth() => health;
+    public FlashLightController GetFlashLight() => flashLightController;
 
     private void Awake()
     {
@@ -38,6 +41,12 @@ public class Player : MonoBehaviour
 
         inputActions = new InputActions();
         inputActions.PlayerInput.Test.performed += ctx => OnTestPerformed();
+        inputActions.PlayerInput.FlashLight.performed += ctx => OnFlashLightPerformed();
+    }
+
+    private void OnFlashLightPerformed()
+    {
+        flashLightController.ToggleLight();
     }
 
     private void OnEnable()
