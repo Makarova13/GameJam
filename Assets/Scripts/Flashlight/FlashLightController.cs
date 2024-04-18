@@ -94,7 +94,7 @@ public class FlashLightController : MonoBehaviour
 
             if (!isOn)  
             {
-                yield break;
+                yield return null;
             }
 
             currentPower--;
@@ -107,8 +107,16 @@ public class FlashLightController : MonoBehaviour
 
                 if (chance <= flickeringChance)
                 {
-                    mainLight.intensity = 0;
-                    yield return new WaitForSeconds(Random.Range(0.01f, 0.04f));
+                    int count = Random.Range(1, 3);
+
+                    for (int i = 0; i < count; i++)
+                    {
+                        mainLight.intensity = 0;
+
+                        yield return new WaitForSeconds(Random.Range(0.005f, 0.01f));
+
+                        mainLight.intensity = lowerIntensityOnLowBatteryValue;
+                    }
                 }
             }
 
