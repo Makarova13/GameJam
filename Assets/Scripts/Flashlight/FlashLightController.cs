@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FlashLightController : MonoBehaviour
@@ -14,11 +15,20 @@ public class FlashLightController : MonoBehaviour
     private float lowerIntensityOnLowBatteryValue;
     private WaitForSeconds waitForSeconds = new WaitForSeconds(1);
     private bool isOn;
+    private Dictionary<Direction, Vector3> directionRotation;
 
     private Coroutine flashLightRoutine;
 
     private void Awake()
     {
+        directionRotation = new()
+            {
+                { Direction.Up, new Vector3(0, 0, -45) },
+                { Direction.Down, new Vector3(0, 180, -45) },
+                { Direction.Right, new Vector3(0, 90, -45) },
+                { Direction.Left, new Vector3(0, -90, -45) },
+            };
+
         SetData(defaultData);
         SetIsOn(true);
     }
