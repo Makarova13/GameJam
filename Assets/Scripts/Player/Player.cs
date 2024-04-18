@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Windows;
 
-namespace Assets.Scripts;
+namespace Assets.Scripts {
 public class Player : MonoBehaviour
 {
     public static Player instance;
@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody playerRB;
     [SerializeField] private Health health;
-    [SerializeField] private Transform testEnemy;
+    [SerializeField] private GameObject testEnemy;
     [Space]
     [Header("Vectors")]
     private Vector3 movementInput;
@@ -89,7 +89,9 @@ public class Player : MonoBehaviour
         if(movementInput != Vector3.zero)
         {
             animator.SetBool("isWalking", true);
-        } else
+            animator.SetFloat("last-X-Input", movementInput.x);
+            animator.SetFloat("last-Z-Input", movementInput.z);
+            } else
         {
             animator.SetBool("isWalking", false);
         }
@@ -105,7 +107,7 @@ public class Player : MonoBehaviour
             animator.SetBool("isAttacking", isAttacking);
             StartCoroutine(AttackRoutine());
             Debug.Log("Attack Success");
-            if(Vector3.Distance(this.transform.position, testEnemy.position) < 3f)
+            if(Vector3.Distance(this.transform.position, testEnemy.transform.position) < 3f)
             {
                 // hit
             }

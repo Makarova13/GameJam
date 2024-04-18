@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 188475325826921305}
   - component: {fileID: 5879462408788464876}
   - component: {fileID: 1450437262087526631}
+  - component: {fileID: 384329677766627135}
   - component: {fileID: 6800749564508740774}
   - component: {fileID: 9058054480967721854}
   m_Layer: 0
@@ -78,6 +79,22 @@ MonoBehaviour:
   animator: {fileID: 927206864373930961}
   playerRB: {fileID: 6800749564508740774}
   health: {fileID: 0}
+  testEnemy: {fileID: 6763963949850390874, guid: c922b41a5eb9d964ab34bc8799622bea,
+    type: 3}
+--- !u!114 &384329677766627135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3351362214598815704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2795f3cd39ac26948a0c208b58af5b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashlight: {fileID: 3705050400862503418, guid: af0c80fb9b1a8db48b22dd17fcabb2a9,
+    type: 3}
 --- !u!54 &6800749564508740774
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -252,7 +269,7 @@ Animator:
   m_GameObject: {fileID: 6407887277547441808}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0e37ff4237ff88645bdd25a069b2ba27, type: 2}
+  m_Controller: {fileID: 9100000, guid: 869c47d631d58374cb71d791a6d05ad4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
