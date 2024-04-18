@@ -13,5 +13,15 @@ public class IdleState : EnemyState
         {
             enemy.TransitionToState(new ChaseState(enemy));
         }
+        if (enemy.HasPath)
+            return;
+        if (!enemy.IsDestenationStartPosition())
+        {
+            enemy.GoToStartPosition();
+        }
+        else
+        {
+            enemy.GoToSetPathPoint();
+        }
     }
 }
