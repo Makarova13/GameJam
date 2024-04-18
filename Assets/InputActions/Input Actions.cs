@@ -177,8 +177,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""bd705bcc-63ee-4ee1-9120-f3760c458870"",
                     ""path"": ""<Keyboard>/e"",
-                    ""id"": ""6f831346-372d-4380-8ed0-6832401390a6"",
-                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -224,8 +222,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_PlayerInput_Movement = m_PlayerInput.FindAction("Movement", throwIfNotFound: true);
         m_PlayerInput_Test = m_PlayerInput.FindAction("Test", throwIfNotFound: true);
         m_PlayerInput_Attack = m_PlayerInput.FindAction("Attack", throwIfNotFound: true);
-        m_PlayerInput_Interact = m_PlayerInput.FindAction("Interact", throwIfNotFound: true);
         m_PlayerInput_FlashLight = m_PlayerInput.FindAction("FlashLight", throwIfNotFound: true);
+        m_PlayerInput_Interact = m_PlayerInput.FindAction("Interact", throwIfNotFound: true);
         // ChargeStation
         m_ChargeStation = asset.FindActionMap("ChargeStation", throwIfNotFound: true);
         m_ChargeStation_Interact = m_ChargeStation.FindAction("Interact", throwIfNotFound: true);
@@ -293,8 +291,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerInput_Movement;
     private readonly InputAction m_PlayerInput_Test;
     private readonly InputAction m_PlayerInput_Attack;
-    private readonly InputAction m_PlayerInput_Interact;
     private readonly InputAction m_PlayerInput_FlashLight;
+    private readonly InputAction m_PlayerInput_Interact;
     public struct PlayerInputActions
     {
         private @InputActions m_Wrapper;
@@ -302,8 +300,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_PlayerInput_Movement;
         public InputAction @Test => m_Wrapper.m_PlayerInput_Test;
         public InputAction @Attack => m_Wrapper.m_PlayerInput_Attack;
-        public InputAction @Interact => m_Wrapper.m_PlayerInput_Interact;
         public InputAction @FlashLight => m_Wrapper.m_PlayerInput_FlashLight;
+        public InputAction @Interact => m_Wrapper.m_PlayerInput_Interact;
         public InputActionMap Get() { return m_Wrapper.m_PlayerInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -322,12 +320,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
-            @Interact.started += instance.OnInteract;
-            @Interact.performed += instance.OnInteract;
-            @Interact.canceled += instance.OnInteract;
             @FlashLight.started += instance.OnFlashLight;
             @FlashLight.performed += instance.OnFlashLight;
             @FlashLight.canceled += instance.OnFlashLight;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
         }
 
         private void UnregisterCallbacks(IPlayerInputActions instance)
@@ -341,12 +339,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
-            @Interact.started -= instance.OnInteract;
-            @Interact.performed -= instance.OnInteract;
-            @Interact.canceled -= instance.OnInteract;
             @FlashLight.started -= instance.OnFlashLight;
             @FlashLight.performed -= instance.OnFlashLight;
             @FlashLight.canceled -= instance.OnFlashLight;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
         }
 
         public void RemoveCallbacks(IPlayerInputActions instance)
@@ -416,6 +414,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnTest(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnFlashLight(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
     public interface IChargeStationActions
     {
