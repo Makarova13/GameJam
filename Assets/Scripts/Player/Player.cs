@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Assets.Scripts {
-=======
 public class Player : MonoBehaviour
 {
     public static Player instance;
