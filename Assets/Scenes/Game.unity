@@ -1496,12 +1496,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &826623469 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3705050400862503418, guid: af0c80fb9b1a8db48b22dd17fcabb2a9,
-    type: 3}
-  m_PrefabInstance: {fileID: 5201322945199336222}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &804647187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,6 +1581,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &826623469 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3705050400862503418, guid: af0c80fb9b1a8db48b22dd17fcabb2a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 5201322945199336222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &843320715
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,6 +2454,18 @@ MonoBehaviour:
   m_DefaultActionMap: PlayerInput
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1996343396 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 120215539613681502, guid: 7b019b159ca07604c8fec0b1d591986d,
+    type: 3}
+  m_PrefabInstance: {fileID: 986497410938769306}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dbb877154468644e8874ea16e6aefa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2056022244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2731,6 +2743,11 @@ PrefabInstance:
       propertyPath: Objects.Array.data[1]
       value: 
       objectReference: {fileID: 3059655674016907869}
+    - target: {fileID: 1450437262087526631, guid: 7b019b159ca07604c8fec0b1d591986d,
+        type: 3}
+      propertyPath: flashLightController
+      value: 
+      objectReference: {fileID: 1996343396}
     - target: {fileID: 3351362214598815704, guid: 7b019b159ca07604c8fec0b1d591986d,
         type: 3}
       propertyPath: m_Name
