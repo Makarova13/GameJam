@@ -3,46 +3,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts
+public class Health : MonoBehaviour
 {
-    public class Health : MonoBehaviour
+    [SerializeField] private int initalMaxHP = 5;
+    [SerializeField] private int initalCurrentHP = 5;
+
+    private int maxHP;
+    private int currentHP;
+
+    public Action<int, int, int> OnDamageTaken;
+    public Action<int, int, int> OnHealed;
+    public Action OnDeath;
+
+    private void Awake()
     {
-        [SerializeField] private int initalMaxHP = 5;
-        [SerializeField] private int initalCurrentHP = 5;
+        maxHP = initalMaxHP;
+        currentHP = initalCurrentHP;
+    }
 
-        private int maxHP;
-        private int currentHP;
+    public int GetMaxHP() => maxHP;
+    public int GetCurrentHP() => currentHP;
 
-        public Action<int, int, int> OnDamageTaken;
-        public Action<int, int, int> OnHealed;
-        public Action OnDeath;
+    public void Damage(int damage)
+    {
+        currentHP = Mathf.Clamp(currentHP - damage, 0, maxHP);
 
-        private void Awake()
+        OnDamageTaken?.Invoke(damage, currentHP, maxHP);
+
+        if (currentHP <= 0)
         {
-            maxHP = initalMaxHP;
-            currentHP = initalCurrentHP;
+            OnDeath?.Invoke();
         }
+    }
 
-        public int GetMaxHP() => maxHP;
-        public int GetCurrentHP() => currentHP;
+    public void Heal(int amount)
+    {
+        currentHP = Mathf.Clamp(currentHP + amount, 0, maxHP);
 
-        public void Damage(int damage)
-        {
-            currentHP = Mathf.Clamp(currentHP - damage, 0, maxHP);
-
-            OnDamageTaken?.Invoke(damage, currentHP, maxHP);
-
-            if (currentHP <= 0)
-            {
-                OnDeath?.Invoke();
-            }
-        }
-
-        public void Heal(int amount)
-        {
-            currentHP = Mathf.Clamp(currentHP + amount, 0, maxHP);
-
-            OnHealed?.Invoke(amount, currentHP, maxHP);
-        }
+        OnHealed?.Invoke(amount, currentHP, maxHP);
     }
 }
