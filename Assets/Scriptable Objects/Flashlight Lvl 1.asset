@@ -15,7 +15,7 @@ MonoBehaviour:
   intensity: 30
   range: 20
   color: {r: 0.9344028, g: 0.9528302, b: 0.7685564, a: 0}
-  powerCapacity: 30
+  powerCapacity: 120
   flickeringChance: 50
   lowBatteryPercent: 20
   lowerIntensityOnLowBatteryValue: 15
