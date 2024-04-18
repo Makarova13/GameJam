@@ -97,10 +97,10 @@ public class Player : MonoBehaviour
             animator.SetBool("isWalking", true);
             animator.SetFloat("last-X-Input", movementInput.x);
             animator.SetFloat("last-Z-Input", movementInput.z);
-            } else 
-            {
-                animator.SetBool("isWalking", false);
-            }
+        } else 
+        {
+            animator.SetBool("isWalking", false);
+        }
 
         inputActions.PlayerInput.Attack.performed += ctx => Attack();
     }
