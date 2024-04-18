@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "92d5bf81-6788-447b-b21d-062b56dccd29",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -144,6 +153,8 @@
                 },
                 {
                     "name": "",
+                    "id": "bd705bcc-63ee-4ee1-9120-f3760c458870",
+                    "path": "<Keyboard>/e",
                     "id": "6f831346-372d-4380-8ed0-6832401390a6",
                     "path": "<Keyboard>/q",
                     "interactions": "",

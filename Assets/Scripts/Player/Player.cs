@@ -4,6 +4,8 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+namespace Assets.Scripts {
+=======
 public class Player : MonoBehaviour
 {
     public static Player instance;
@@ -13,7 +15,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Rigidbody playerRB;
     [SerializeField] private Health health;
-    [SerializeField] private Transform testEnemy;
+    [SerializeField] private GameObject testEnemy;
     [SerializeField] private FlashLightController flashLightController;
     [Space]
     [Header("Vectors")]
@@ -93,11 +95,12 @@ public class Player : MonoBehaviour
         if (movementInput != Vector3.zero)
         {
             animator.SetBool("isWalking", true);
-        }
-        else
-        {
-            animator.SetBool("isWalking", false);
-        }
+            animator.SetFloat("last-X-Input", movementInput.x);
+            animator.SetFloat("last-Z-Input", movementInput.z);
+            } else 
+            {
+                animator.SetBool("isWalking", false);
+            }
 
         inputActions.PlayerInput.Attack.performed += ctx => Attack();
     }
@@ -110,7 +113,7 @@ public class Player : MonoBehaviour
             animator.SetBool("isAttacking", isAttacking);
             StartCoroutine(AttackRoutine());
             Debug.Log("Attack Success");
-            if (Vector3.Distance(this.transform.position, testEnemy.position) < 3f)
+            if(Vector3.Distance(this.transform.position, testEnemy.transform.position) < 3f)
             {
                 // hit
             }
