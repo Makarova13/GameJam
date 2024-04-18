@@ -11,7 +11,7 @@ public class ChaseState : EnemyState
         else if (enemy.TryToFindPlayer())
             enemy.ChasePlayer();
 
-        else
+        else if(!enemy.HasPath)
             enemy.TransitionToState(new IdleState(enemy));
     }
 }

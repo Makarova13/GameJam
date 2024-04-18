@@ -25,8 +25,17 @@
                 },
                 {
                     "name": "Attack",
+                    "type": "PassThrough",
+                    "id": "bd7d0106-5f10-4358-9835-de460795d92c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "FlashLight",
                     "type": "Button",
-                    "id": "1932f47d-50b2-48e4-9a4d-2112772fa1a1",
+                    "id": "f588ce2e-703b-4d84-b8a9-f57b84c37cfa",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -133,7 +142,7 @@
                 },
                 {
                     "name": "",
-                    "id": "a1605c0d-1449-47c7-b987-97160fc55bb3",
+                    "id": "4a0cb513-a035-4e43-9a13-9034d3b33680",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
@@ -146,6 +155,36 @@
                     "name": "",
                     "id": "bd705bcc-63ee-4ee1-9120-f3760c458870",
                     "path": "<Keyboard>/e",
+                    "id": "6f831346-372d-4380-8ed0-6832401390a6",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FlashLight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "ChargeStation",
+            "id": "aca109fa-5096-41c9-b819-7410f66e9c26",
+            "actions": [
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "80191914-0135-4c9e-9dc5-ef0bdccfb485",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9439fdb9-c2cf-48fb-9a96-32c3175a0853",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

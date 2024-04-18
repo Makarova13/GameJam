@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fcf63cbf7eccf948b38f733a156f6e8, type: 3}
   m_Name: Flashlight Lvl 1
   m_EditorClassIdentifier: 
-  intensity: 20
+  intensity: 30
   range: 20
   color: {r: 0.9344028, g: 0.9528302, b: 0.7685564, a: 0}
-  powerCapacity: 30
+  powerCapacity: 120
   flickeringChance: 50
   lowBatteryPercent: 20
   lowerIntensityOnLowBatteryValue: 15
