@@ -70,7 +70,7 @@ public class FlashLightController : MonoBehaviour
 
     public void Rotate(Direction dir)
     {
-        //lost in merge
+        gameObject.transform.rotation = Quaternion.Euler(directionRotation[direction]);
     }
 
     public void SetData(FlashlightData data)
