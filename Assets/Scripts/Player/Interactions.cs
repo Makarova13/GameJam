@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.Rendering.ReloadAttribute;
 
 public class Interactions : MonoBehaviour
 {
     [Header("Components")]
-    [SerializeField] private GameObject[] Objects;
+    [SerializeField] private BaseInteractibleObject[] Objects;
     private InputActions inputActions;
 
     private void Awake()
@@ -32,11 +29,11 @@ public class Interactions : MonoBehaviour
 
     private void Interact()
     {
-        foreach (GameObject objects in Objects)
+        foreach (var obj in Objects)
         {
-            if(GetDistance(objects) < 3)
+            if(GetDistance(obj.gameObject) < 3)
             {
-                Debug.Log(objects);
+                obj.Interact();
             }
         }
     }
