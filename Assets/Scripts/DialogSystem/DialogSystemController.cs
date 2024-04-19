@@ -11,12 +11,24 @@ namespace Assets.Scripts
         [SerializeField] TextTyper _dialogText;
         [SerializeField] List<ChoiceButton> _choiceButtons = new(3);
 
+        public static DialogSystemController Instance;
+
         public UnityEvent<ChoiceType> PlayerResponded;
         public UnityEvent DialogEnded;
 
         private List<DialogWithChoices> _dialogs;
         private int _currentDialogIndex = 0;
         private bool _haveChoices;
+
+        private void Awake()
+        {
+            Instance = this;
+
+            for (int i = 0; i < _choiceButtons.Count; i++)
+            {
+                _choiceButtons[i].Subscribe(OnChoiceButtonClick);
+            }
+        }
 
         private void OnEnable()
         {
@@ -28,15 +40,9 @@ namespace Assets.Scripts
             _skipButton.onClick.RemoveListener(Skip);
         }
 
-        public void Init(string jsonName, bool random = false)
+        public void Init(List<DialogWithChoices> dialogs)
         {
-            _currentDialogIndex = 0;
-            _dialogs = new DialogsLoader().LoadJsonData(jsonName, random);
-
-            for (int i = 0; i < _choiceButtons.Count; i++)
-            {
-                _choiceButtons[i].Subscribe(OnChoiceButtonClick);
-            }
+            _dialogs = dialogs;
         }
 
         public void ShowCurrentDialog()
