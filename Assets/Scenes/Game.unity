@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &14084728 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3351362214598815704, guid: 7b019b159ca07604c8fec0b1d591986d,
+    type: 3}
+  m_PrefabInstance: {fileID: 986497410938769306}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &34855895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,12 +1181,80 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 986497410938769306}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 14084728}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec565e6c7c0a2e24288ad56a5cbe2ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &567275862
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2610335841036345372, guid: af0c80fb9b1a8db48b22dd17fcabb2a9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.55421
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610335841036345372, guid: af0c80fb9b1a8db48b22dd17fcabb2a9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610335841036345372, guid: af0c80fb9b1a8db48b22dd17fcabb2a9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.48363447
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610335841036345372, guid: af0c80fb9b1a8db48b22dd17fcabb2a9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610335841036345372, guid: af0c80fb9b1a8db48b22dd17fcabb2a9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610335841036345372, guid: af0c80fb9b1a8db48b22dd17fcabb2a9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610335841036345372, guid: af0c80fb9b1a8db48b22dd17fcabb2a9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610335841036345372, guid: af0c80fb9b1a8db48b22dd17fcabb2a9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610335841036345372, guid: af0c80fb9b1a8db48b22dd17fcabb2a9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610335841036345372, guid: af0c80fb9b1a8db48b22dd17fcabb2a9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705050400862503418, guid: af0c80fb9b1a8db48b22dd17fcabb2a9,
+        type: 3}
+      propertyPath: m_Name
+      value: flashlight(test)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af0c80fb9b1a8db48b22dd17fcabb2a9, type: 3}
 --- !u!1 &610311656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,6 +2517,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 80191914-0135-4c9e-9dc5-ef0bdccfb485
     m_ActionName: ChargeStation/Interact[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 92d5bf81-6788-447b-b21d-062b56dccd29
+    m_ActionName: PlayerInput/Interact[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerInput
@@ -2739,6 +2817,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1450437262087526631, guid: 7b019b159ca07604c8fec0b1d591986d,
         type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 986497410938769307}
+    - target: {fileID: 1450437262087526631, guid: 7b019b159ca07604c8fec0b1d591986d,
+        type: 3}
       propertyPath: flashLightController
       value: 
       objectReference: {fileID: 1996343396}
@@ -2747,11 +2830,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 384329677766627135, guid: 7b019b159ca07604c8fec0b1d591986d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3351362214598815704, guid: 7b019b159ca07604c8fec0b1d591986d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 986497410938769310}
   m_SourcePrefab: {fileID: 100100000, guid: 7b019b159ca07604c8fec0b1d591986d, type: 3}
+--- !u!114 &986497410938769307 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9166703139934595371, guid: 7b019b159ca07604c8fec0b1d591986d,
+    type: 3}
+  m_PrefabInstance: {fileID: 986497410938769306}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14084728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b4ed375d3ed354bb859d25752bd5fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &986497410938769310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14084728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5336f1cd025edb43b785ea9e0c5feab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Objects: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2781,3 +2895,4 @@ SceneRoots:
   - {fileID: 2056022245}
   - {fileID: 1833836128}
   - {fileID: 516707814}
+  - {fileID: 567275862}

@@ -183,6 +183,17 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""FlashLight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d177924b-37f5-45fc-8400-656b9c4f4526"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
