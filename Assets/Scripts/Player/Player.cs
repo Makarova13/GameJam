@@ -44,6 +44,9 @@ namespace Assets.Scripts
             inputActions = new InputActions();
             inputActions.PlayerInput.Test.performed += ctx => OnTestPerformed();
             inputActions.PlayerInput.FlashLight.performed += ctx => OnFlashLightToggle();
+            movement.action.performed += Movement;
+
+            inputActions.PlayerInput.Attack.performed += ctx => Attack();
         }
 
         private void OnFlashLightToggle()
@@ -90,20 +93,8 @@ namespace Assets.Scripts
         void FixedUpdate()
         {
             // Movement
-            movementInput = movement.action.ReadValue<Vector3>();
+            //movementInput = movement.action.ReadValue<Vector3>();
             playerRB.AddForce(movementInput * Speed * Time.fixedDeltaTime, ForceMode.Impulse);
-            if (movementInput != Vector3.zero)
-            {
-                animator.SetBool("isWalking", true);
-                animator.SetFloat("last-X-Input", movementInput.x);
-                animator.SetFloat("last-Z-Input", movementInput.z);
-            }
-            else
-            {
-                animator.SetBool("isWalking", false);
-            }
-
-            inputActions.PlayerInput.Attack.performed += ctx => Attack();
         }
 
         private void Attack()
@@ -137,6 +128,8 @@ namespace Assets.Scripts
                 animator.SetFloat("Z-Input", input.z);
             }
 
+            movementInput = input;
+
             if (input.x > 0) // Right
             {
                 flashLightController.Rotate(FlashLightController.Direction.Right);
@@ -152,6 +145,17 @@ namespace Assets.Scripts
             else if (input.z < 0) // Down
             {
                 flashLightController.Rotate(FlashLightController.Direction.Down);
+            }
+
+            if (movementInput != Vector3.zero)
+            {
+                animator.SetBool("isWalking", true);
+                animator.SetFloat("last-X-Input", movementInput.x);
+                animator.SetFloat("last-Z-Input", movementInput.z);
+            }
+            else
+            {
+                animator.SetBool("isWalking", false);
             }
         }
 
