@@ -186,8 +186,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""26741a5d-e044-41c7-b0a7-b49161d9ae6b"",
-                    ""path"": ""<Keyboard>/f"",
+                    ""id"": ""d177924b-37f5-45fc-8400-656b9c4f4526"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
