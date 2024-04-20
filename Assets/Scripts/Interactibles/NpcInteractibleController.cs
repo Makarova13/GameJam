@@ -8,5 +8,6 @@ public class NpcInteractibleController : BaseInteractibleObject
     public override void Interact()
     {
         DialogSystemController.Instance.Init(DialogsLoader.GetJsonData(controller.Data.ChainedToWallDialogue));
+        DialogSystemController.Instance.ShowCurrentDialog();
     }
 }

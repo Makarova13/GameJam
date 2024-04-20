@@ -8,6 +8,7 @@ namespace Assets.Scripts
     public class DialogSystemController : MonoBehaviour
     {
         [SerializeField] Button _skipButton;
+        [SerializeField] GameObject _panel;
         [SerializeField] TextTyper _dialogText;
         [SerializeField] List<ChoiceButton> _choiceButtons = new(3);
 
@@ -47,6 +48,8 @@ namespace Assets.Scripts
 
         public void ShowCurrentDialog()
         {
+            _panel.SetActive(true);
+
             ShowDialog(_dialogs[_currentDialogIndex]);
         }
 
@@ -57,7 +60,11 @@ namespace Assets.Scripts
             if (_currentDialogIndex < _dialogs.Count)
                 ShowDialog(_dialogs[_currentDialogIndex]);
             else
+            {
                 DialogEnded?.Invoke();
+
+                gameObject.SetActive(false);
+            }
         }
 
         public void ShowDialog(int index)
