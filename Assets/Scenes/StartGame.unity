@@ -1951,7 +1951,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   lightIntensity: 10
   light: {fileID: 764841625}
-  curveDuration: 5
+  curveDuration: 10
 --- !u!114 &764841624
 MonoBehaviour:
   m_ObjectHideFlags: 0
