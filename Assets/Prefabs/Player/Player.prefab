@@ -536,6 +536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainLight: {fileID: 3083578825333093232}
   defaultData: {fileID: 11400000, guid: 41c7f2ce74b045d48a7d4c88e6e11c22, type: 2}
+  fillImage: {fileID: 0}
 --- !u!1 &7583178850741963185
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,8 +767,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8301887, g: 0.6830616, b: 0.34069067, a: 1}
-  m_Intensity: 3
-  m_Range: 6.245572
+  m_Intensity: 1
+  m_Range: 3.9380665
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
