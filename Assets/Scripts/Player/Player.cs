@@ -17,20 +17,24 @@ namespace Assets.Scripts
         [SerializeField] private Health health;
         [SerializeField] private GameObject testEnemy;
         [SerializeField] private FlashLightController flashLightController;
+        [SerializeField] private WeaponController weaponController;
         [Space]
         [Header("Vectors")]
         private Vector3 movementInput;
         [Space]
         [Header("Floats")]
         private float PlayerSpeed;
+        private float Range;
         [Header("Bools")]
         private bool isAttacking = false;
+        private bool hasWeapon;
 
 
         private InputActions inputActions;
 
         public Health GetHealth() => health;
         public FlashLightController GetFlashLight() => flashLightController;
+        public WeaponController GetWeaponController() => weaponController;
 
         private void Awake()
         {
@@ -102,15 +106,24 @@ namespace Assets.Scripts
         {
             if (!isAttacking)
             {
+                Range = weaponController.CurrentData.Range;
+                hasWeapon = weaponController.CurrentData.HasWeapon;
                 isAttacking = true;
                 animator.SetBool("isAttacking", isAttacking);
                 StartCoroutine(AttackRoutine());
-                Debug.Log("Attack Success");
-                if (Vector3.Distance(this.transform.position, testEnemy.transform.position) < 3f)
+                if (GetDistance(testEnemy) < Range)
                 {
-                    // hit
+                    if(hasWeapon)
+                    {
+                        Debug.Log("Test");
+                    }
                 }
             }
+        }
+
+        private float GetDistance(GameObject objects)
+        {
+            return Vector3.Distance(this.transform.position, objects.transform.position);
         }
 
         private IEnumerator AttackRoutine()
