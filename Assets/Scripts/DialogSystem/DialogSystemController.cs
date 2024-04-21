@@ -21,6 +21,8 @@ namespace Assets.Scripts
         private int _currentDialogIndex = 0;
         private bool _haveChoices;
 
+        public bool isActive = false;
+
         private void Awake()
         {
             Instance = this;
@@ -49,6 +51,7 @@ namespace Assets.Scripts
         public void ShowCurrentDialog()
         {
             _panel.SetActive(true);
+            isActive = true;
 
             ShowDialog(_dialogs[_currentDialogIndex]);
         }
@@ -62,7 +65,7 @@ namespace Assets.Scripts
             else
             {
                 DialogEnded?.Invoke();
-
+                isActive = false;
                 gameObject.SetActive(false);
             }
         }
