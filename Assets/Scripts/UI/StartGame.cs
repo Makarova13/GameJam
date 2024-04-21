@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class StartGame : MonoBehaviour
 {
     [SerializeField] private Button startGameButton;
-    [SerializeField] private string gameSceneName;
+    [SerializeField] private int gameSceneIndex = 1;
     [SerializeField] private Button quitGameButton;
 
     private void Awake()
@@ -24,6 +24,6 @@ public class StartGame : MonoBehaviour
 
     private void OnStartGameClicked()
     {
-        SceneManager.LoadScene(gameSceneName);
+        SceneManager.LoadScene(gameSceneIndex);
     }
 }
