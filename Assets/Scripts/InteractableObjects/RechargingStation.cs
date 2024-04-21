@@ -105,4 +105,9 @@ public class RechargingStation : MonoBehaviour
 
         rechargingBar.SetActive(false);
     }
+
+    public bool GetIsInteracting()
+    {
+        return isInteracting;
+    }
 }
