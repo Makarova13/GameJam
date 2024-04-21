@@ -231,12 +231,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: MazeRectungleBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 8631199988080188235, guid: fa8932d83b482fd42ac832b75b9006e7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.244
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7456725575715441444, guid: fa8932d83b482fd42ac832b75b9006e7, type: 3}
+    - {fileID: 8881700053903760268, guid: fa8932d83b482fd42ac832b75b9006e7, type: 3}
+    - {fileID: 1330414899651514096, guid: fa8932d83b482fd42ac832b75b9006e7, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1596974717223948522, guid: fa8932d83b482fd42ac832b75b9006e7,
         type: 3}
-      insertIndex: 13
+      insertIndex: -1
       addedObject: {fileID: 4012515540601509180}
     - targetCorrespondingSourceObject: {fileID: 1596974717223948522, guid: fa8932d83b482fd42ac832b75b9006e7,
         type: 3}
