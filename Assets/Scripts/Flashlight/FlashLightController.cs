@@ -145,7 +145,7 @@ public class FlashLightController : MonoBehaviour
 
             yield return waitForSeconds;
         }
-
+        TryFireEvent(false);
         mainLight.intensity = 0;
         yield break;
     }
@@ -157,6 +157,9 @@ public class FlashLightController : MonoBehaviour
     private void TryFireEvent(bool isLighting)
     {
         if (currentPower <= 0 && isLighting)
+            return;
+
+        if (!isLighting && mainLight.intensity <= 0)
             return;
 
         if (isLighting)
