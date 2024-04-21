@@ -34,6 +34,10 @@ public class Interactions : MonoBehaviour
             if(GetDistance(obj.gameObject) < 3)
             {
                 obj.Interact();
+                if (obj.gameObject.name != "Fool Test") // != to an npc
+                {
+                    Destroy(obj.gameObject);
+                }
             }
         }
     }
