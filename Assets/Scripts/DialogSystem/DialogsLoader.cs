@@ -5,13 +5,11 @@ namespace Assets.Scripts
 {
     public class DialogsLoader
     {
-        public List<DialogWithChoices> LoadJsonData(string jsonName, bool random)
+        public static List<DialogWithChoices> GetJsonData(TextAsset textAsset, bool random = false)
         {
             try
             {
-                TextAsset jsonFile = Resources.Load<TextAsset>(jsonName);
-
-                string jsonData = jsonFile.text;
+                string jsonData = textAsset.text;
 
                 var dialogs = JsonUtility.FromJson<DialogsWithChoices>(jsonData).Dialogs;
 

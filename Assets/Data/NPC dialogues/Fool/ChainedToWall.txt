@@ -1,0 +1,19 @@
+{
+  "Dialogs": [
+    {
+      "Text": "Hey, friend! Mind giving me a hand here?",
+      "Choices": [
+        {
+          "Text": "Yes",
+          "ChoiceType": 1,
+          "Response": "Thanks, friend! You’ve done me a great solid here! Why don’t I join you on your journey, then."
+        },
+        {
+          "Text": "No",
+          "ChoiceType": 0,
+          "Response": "Wait, friend! Don’t forget me!"
+        }
+      ]
+    }
+  ]
+}
