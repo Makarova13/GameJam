@@ -50,7 +50,7 @@ public class FlashLightController : MonoBehaviour
 
     private void Update()
     {
-        fillImage.fillAmount = currentPower/powerCapacity;
+        //fillImage.fillAmount = currentPower/powerCapacity;
     }
 
     public void SetIsOn(bool isOn)
