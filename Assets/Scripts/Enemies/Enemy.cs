@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
 
     public void ChasePlayer()
     {
-        agent.SetDestination(player.position);  
+        agent.SetDestination(player.position);
     }
 
     public void GoToStartPosition()
