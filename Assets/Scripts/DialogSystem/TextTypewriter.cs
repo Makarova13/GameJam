@@ -9,7 +9,6 @@ namespace Assets.Scripts
 {
     public sealed class TextTyper : MonoBehaviour
     {
-        [SerializeField] InputSystemUIInputModule inputModule;
         [SerializeField] TextMeshProUGUI textComponent;
         [SerializeField] float printDelay = 0.02f;
         [SerializeField] float punctuationDelay = 8f;

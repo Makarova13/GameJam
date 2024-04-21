@@ -2,13 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class FlashLightController : MonoBehaviour
 {
     [SerializeField] Light mainLight;
     [SerializeField] FlashlightData defaultData;
-    [SerializeField] Image fillImage;
 
     private float flickeringChance;
     private float currentPower;
@@ -52,7 +50,7 @@ public class FlashLightController : MonoBehaviour
 
     private void Update()
     {
-        //fillImage.fillAmount = currentPower/powerCapacity;
+        fillImage.fillAmount = currentPower/powerCapacity;
     }
 
     public void SetIsOn(bool isOn)

@@ -2122,7 +2122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startGameButton: {fileID: 1610288823}
-  gameSceneName: TestLevel
+  gameSceneName: Game
   quitGameButton: {fileID: 717905209}
 --- !u!114 &818671672
 MonoBehaviour:

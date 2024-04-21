@@ -8,8 +8,11 @@ namespace Assets.Scripts
     public class DialogSystemController : MonoBehaviour
     {
         [SerializeField] Button _skipButton;
+        [SerializeField] GameObject _panel;
         [SerializeField] TextTyper _dialogText;
         [SerializeField] List<ChoiceButton> _choiceButtons = new(3);
+
+        public static DialogSystemController Instance;
 
         public UnityEvent<ChoiceType> PlayerResponded;
         public UnityEvent DialogEnded;
@@ -17,6 +20,16 @@ namespace Assets.Scripts
         private List<DialogWithChoices> _dialogs;
         private int _currentDialogIndex = 0;
         private bool _haveChoices;
+
+        private void Awake()
+        {
+            Instance = this;
+
+            for (int i = 0; i < _choiceButtons.Count; i++)
+            {
+                _choiceButtons[i].Subscribe(OnChoiceButtonClick);
+            }
+        }
 
         private void OnEnable()
         {
@@ -28,19 +41,15 @@ namespace Assets.Scripts
             _skipButton.onClick.RemoveListener(Skip);
         }
 
-        public void Init(string jsonName, bool random = false)
+        public void Init(List<DialogWithChoices> dialogs)
         {
-            _currentDialogIndex = 0;
-            _dialogs = new DialogsLoader().LoadJsonData(jsonName, random);
-
-            for (int i = 0; i < _choiceButtons.Count; i++)
-            {
-                _choiceButtons[i].Subscribe(OnChoiceButtonClick);
-            }
+            _dialogs = dialogs;
         }
 
         public void ShowCurrentDialog()
         {
+            _panel.SetActive(true);
+
             ShowDialog(_dialogs[_currentDialogIndex]);
         }
 
@@ -51,7 +60,11 @@ namespace Assets.Scripts
             if (_currentDialogIndex < _dialogs.Count)
                 ShowDialog(_dialogs[_currentDialogIndex]);
             else
+            {
                 DialogEnded?.Invoke();
+
+                gameObject.SetActive(false);
+            }
         }
 
         public void ShowDialog(int index)
