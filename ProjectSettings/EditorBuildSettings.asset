@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Game.unity
-    guid: 4604868aeeff2354a8314c93617afe39
   - enabled: 1
     path: Assets/Scenes/StartGame.unity
     guid: c1527dec8173ffc40865b34c343b82b0
   - enabled: 1
-    path: Assets/Scenes/TestLevel 1.unity
-    guid: 70fb8772e72e49b47993fd85893cabda
+    path: Assets/Scenes/TestLevel - minor bushes.unity
+    guid: 64b9f725d25be114dba82cdbfdc34c77
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 4604868aeeff2354a8314c93617afe39
   m_configObjects: {}
