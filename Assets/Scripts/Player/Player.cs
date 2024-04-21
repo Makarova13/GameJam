@@ -51,6 +51,7 @@ namespace Assets.Scripts
 
         private void OnFlashLightToggle()
         {
+            Debug.Log("lantern loged");
             flashLightController.ToggleLight();
         }
 
