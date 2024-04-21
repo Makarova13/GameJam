@@ -149,7 +149,7 @@ MonoBehaviour:
   agent: {fileID: 7842943739354988660}
   speedInDark: 3.5
   speedOnLight: 1.5
-  agroDistance: 3
+  agroDistance: 7
   attackRange: 1.5
   viewAngle: 70
   health: {fileID: 7192494451465130230}

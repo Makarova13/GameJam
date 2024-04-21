@@ -130,10 +130,11 @@ public class Enemy : MonoBehaviour
     }
     private void SpeedUp()
     {
-        agent.speed = speedOnLight;
+        agent.speed = speedInDark;
     }
     private void SlowDown()
     {
-        agent.speed = speedInDark;
+        agent.speed = speedOnLight;
+        
     }
 }
