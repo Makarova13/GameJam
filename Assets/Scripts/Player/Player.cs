@@ -94,7 +94,7 @@ namespace Assets.Scripts
         {
             // Movement
             //movementInput = movement.action.ReadValue<Vector3>();
-            playerRB.AddForce(movementInput * Speed * Time.fixedDeltaTime, ForceMode.Impulse);
+            playerRB.AddForce(movementInput.normalized * Speed * Time.fixedDeltaTime, ForceMode.Impulse);
         }
 
         private void Attack()
