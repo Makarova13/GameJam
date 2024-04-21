@@ -6,7 +6,7 @@ namespace Assets.Scripts
     public class WeaponController : MonoBehaviour
     {
         [SerializeField] WeaponData defaultData;
-        private float Damage;
+        private int Damage;
         private float Range;
         private bool hasWeapon;
         private void Awake()

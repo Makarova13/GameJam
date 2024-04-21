@@ -15,7 +15,6 @@ namespace Assets.Scripts
         [SerializeField] private Animator animator;
         [SerializeField] private Rigidbody playerRB;
         [SerializeField] private Health health;
-        [SerializeField] private GameObject testEnemy;
         [SerializeField] private FlashLightController flashLightController;
         [SerializeField] private WeaponController weaponController;
         [Space]
@@ -28,6 +27,8 @@ namespace Assets.Scripts
         [Header("Bools")]
         private bool isAttacking = false;
         private bool hasWeapon;
+        [Header("Ints")]
+        private int Damage;
 
 
         private InputActions inputActions;
@@ -108,14 +109,20 @@ namespace Assets.Scripts
             {
                 Range = weaponController.CurrentData.Range;
                 hasWeapon = weaponController.CurrentData.HasWeapon;
+                Damage = weaponController.CurrentData.Damage;
                 isAttacking = true;
                 animator.SetBool("isAttacking", isAttacking);
                 StartCoroutine(AttackRoutine());
-                if (GetDistance(testEnemy) < Range)
+                foreach(GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
                 {
-                    if(hasWeapon)
+                    if (GetDistance(enemy) < Range)
                     {
-                        Debug.Log("Test");
+                        if (hasWeapon)
+                        {
+                            enemy.gameObject.GetComponent<Health>().Damage(Damage);
+                            Debug.Log(enemy.gameObject.GetComponent<Health>().GetCurrentHP());
+                            Debug.Log(enemy);
+                        }
                     }
                 }
             }
