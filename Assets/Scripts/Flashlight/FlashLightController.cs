@@ -8,7 +8,7 @@ public class FlashLightController : MonoBehaviour
 {
     [SerializeField] Light mainLight;
     [SerializeField] FlashlightData defaultData;
-    [SerializeField] Image fillImage;
+    [SerializeField] private Image fillImage;
 
     private float flickeringChance;
     private float currentPower;
@@ -16,10 +16,26 @@ public class FlashLightController : MonoBehaviour
     private int lowBatteryPercent;
     private float lowerIntensityOnLowBatteryValue;
     private WaitForSeconds waitForSeconds = new WaitForSeconds(1);
-    private bool isOn;
+    private bool isOn
+    {
+        set
+        {
+            if (value != _isOn)
+            {
+                TryFireEvent(value);
+            }
+            _isOn = value;
+        }
+        get => _isOn;
+    }
+    private bool _isOn;   
+
     private Dictionary<Direction, Vector3> directionRotation;
 
     private Coroutine flashLightRoutine;
+
+    public static event System.Action OnStartLighting;    
+    public static event System.Action OnStoptLighting;
 
     private void Awake()
     {
@@ -99,9 +115,9 @@ public class FlashLightController : MonoBehaviour
         {
             mainLight.intensity = isOn ? CurrentData.Intensity : 0;
 
-            if (!isOn)  
+            if (!isOn)
             {
-                yield return null;
+                yield break;
             }
 
             currentPower--;
@@ -129,7 +145,7 @@ public class FlashLightController : MonoBehaviour
 
             yield return waitForSeconds;
         }
-
+        TryFireEvent(false);
         mainLight.intensity = 0;
         yield break;
     }
@@ -137,5 +153,18 @@ public class FlashLightController : MonoBehaviour
     public void Recharge()
     {
         currentPower = powerCapacity;
+    }
+    private void TryFireEvent(bool isLighting)
+    {
+        if (currentPower <= 0 && isLighting)
+            return;
+
+        if (!isLighting && mainLight.intensity <= 0)
+            return;
+
+        if (isLighting)
+            OnStartLighting?.Invoke();
+        else
+            OnStoptLighting?.Invoke();
     }
 }

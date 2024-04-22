@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6999372639622091355}
   - component: {fileID: 3541081218103235939}
   - component: {fileID: 5345410915472700540}
+  - component: {fileID: 6318114036796776958}
+  - component: {fileID: 6636955874260164646}
   m_Layer: 0
   m_Name: flashlight(test)
   m_TagString: Untagged
@@ -107,3 +109,29 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6318114036796776958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3705050400862503418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd4f70dbbb9f8d440a1f1ab1f93b3b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashligt_data: {fileID: 11400000, guid: 41c7f2ce74b045d48a7d4c88e6e11c22, type: 2}
+--- !u!114 &6636955874260164646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3705050400862503418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd334929fee51bd41985fb8e9d6e3c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupController: {fileID: 6318114036796776958}

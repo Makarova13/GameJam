@@ -7,19 +7,26 @@ public class Enemy : MonoBehaviour
     public bool HasPath => agent.hasPath;
     public SimpleEnemyAttack Attack;
     [SerializeField] private NavMeshAgent agent;
-    [SerializeField] private Transform player;
+    [SerializeField] private float speedInDark;
+    [SerializeField] private float speedOnLight;
     [SerializeField] private float agroDistance;
     [SerializeField] private float attackRange;
     [SerializeField] private float viewAngle;
     [SerializeField] private Health health;
     [SerializeField] private Transform setPathPoint;
     [SerializeField] private LayerMask layerMask;
+    private Transform player;
     private Vector3 startPosition;
     private EnemyState currentState;
     private Vector3 facing; 
 
-    private void Awake()
+    private void Start()
     {
+        SlowDown(); // :D
+        FlashLightController.OnStartLighting += SlowDown;
+        FlashLightController.OnStoptLighting += SpeedUp;
+
+        player = Player.instance.gameObject.transform;
         health.OnDeath += () => TransitionToState(new DeathState(this));
         startPosition = transform.position;
         TransitionToState(new IdleState(this));
@@ -31,7 +38,11 @@ public class Enemy : MonoBehaviour
         Attack.transform.position = transform.position + facing;     
         currentState.Execute();
     }
-
+    private void OnDestroy()
+    {
+        FlashLightController.OnStartLighting -= SlowDown;
+        FlashLightController.OnStoptLighting -= SpeedUp;
+    }
     public void TransitionToState(EnemyState enemyState)
     {
         currentState?.OnExit();
@@ -41,7 +52,7 @@ public class Enemy : MonoBehaviour
 
     public void ChasePlayer()
     {
-        agent.SetDestination(player.position);  
+        agent.SetDestination(player.position);
     }
 
     public void GoToStartPosition()
@@ -116,5 +127,14 @@ public class Enemy : MonoBehaviour
             facing = transform.forward * -1;            
         }
         Debug.DrawRay(transform.position, facing, Color.blue, 5f);
+    }
+    private void SpeedUp()
+    {
+        agent.speed = speedInDark;
+    }
+    private void SlowDown()
+    {
+        agent.speed = speedOnLight;
+        
     }
 }

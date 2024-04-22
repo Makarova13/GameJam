@@ -15,22 +15,28 @@ namespace Assets.Scripts
         [SerializeField] private Animator animator;
         [SerializeField] private Rigidbody playerRB;
         [SerializeField] private Health health;
-        [SerializeField] private GameObject testEnemy;
         [SerializeField] private FlashLightController flashLightController;
+        [SerializeField] private WeaponController weaponController;
+        [SerializeField] private DialogSystemController dialogSystem;
         [Space]
         [Header("Vectors")]
         private Vector3 movementInput;
         [Space]
         [Header("Floats")]
         private float PlayerSpeed;
+        private float Range;
         [Header("Bools")]
         private bool isAttacking = false;
+        private bool hasWeapon;
+        [Header("Ints")]
+        private int Damage;
 
 
         private InputActions inputActions;
 
         public Health GetHealth() => health;
         public FlashLightController GetFlashLight() => flashLightController;
+        public WeaponController GetWeaponController() => weaponController;
 
         private void Awake()
         {
@@ -51,6 +57,7 @@ namespace Assets.Scripts
 
         private void OnFlashLightToggle()
         {
+            Debug.Log("lantern loged");
             flashLightController.ToggleLight();
         }
 
@@ -99,17 +106,32 @@ namespace Assets.Scripts
 
         private void Attack()
         {
-            if (!isAttacking)
+            if (!isAttacking &! dialogSystem.isActive)
             {
+                Range = weaponController.CurrentData.Range;
+                hasWeapon = weaponController.CurrentData.HasWeapon;
+                Damage = weaponController.CurrentData.Damage;
                 isAttacking = true;
                 animator.SetBool("isAttacking", isAttacking);
                 StartCoroutine(AttackRoutine());
-                Debug.Log("Attack Success");
-                if (Vector3.Distance(this.transform.position, testEnemy.transform.position) < 3f)
+                foreach(GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
                 {
-                    // hit
+                    if (GetDistance(enemy) < Range)
+                    {
+                        if (hasWeapon)
+                        {
+                            enemy.gameObject.GetComponent<Health>().Damage(Damage);
+                            Debug.Log(enemy.gameObject.GetComponent<Health>().GetCurrentHP());
+                            Debug.Log(enemy);
+                        }
+                    }
                 }
             }
+        }
+
+        private float GetDistance(GameObject objects)
+        {
+            return Vector3.Distance(this.transform.position, objects.transform.position);
         }
 
         private IEnumerator AttackRoutine()

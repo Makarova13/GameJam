@@ -75,6 +75,11 @@ public class RechargingStation : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if(player == null)
+        {
+            return;
+        }
+
         if(player.gameObject == other.gameObject)
         {
             player = null;
@@ -84,8 +89,12 @@ public class RechargingStation : MonoBehaviour
 
     private void OnStartInteraction(InputAction.CallbackContext context)
     {
-        isInteracting = true;
+        if (player == null)
+        {
+            return;
+        }
 
+        isInteracting = true;
         player.GetFlashLight().SetIsOn(false);
         interactionText.SetActive(false);
         rechargingBar.SetActive(true);
@@ -99,6 +108,7 @@ public class RechargingStation : MonoBehaviour
 
     private void ResetStation()
     {
+        player = null;
         isInteracting = false;
 
         interactionTimer = 0;
