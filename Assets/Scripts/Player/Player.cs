@@ -17,7 +17,6 @@ namespace Assets.Scripts
         [SerializeField] private Health health;
         [SerializeField] private FlashLightController flashLightController;
         [SerializeField] private WeaponController weaponController;
-        [SerializeField] private DialogSystemController dialogSystem;
         [Space]
         [Header("Vectors")]
         private Vector3 movementInput;
@@ -106,7 +105,7 @@ namespace Assets.Scripts
 
         private void Attack()
         {
-            if (!isAttacking &! dialogSystem.isActive)
+            if (!isAttacking &! DialogSystemController.Instance.isActive)
             {
                 Range = weaponController.CurrentData.Range;
                 hasWeapon = weaponController.CurrentData.HasWeapon;
