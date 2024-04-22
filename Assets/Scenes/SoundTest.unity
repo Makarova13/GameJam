@@ -273,6 +273,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5815673598045698329, guid: 268525cd97bc1994c8dd281a7a7d150b,
+        type: 3}
+      propertyPath: idleSFX.audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cf12610165224714fa58d3879efe9990, type: 3}
     - target: {fileID: 9038888086315574558, guid: 268525cd97bc1994c8dd281a7a7d150b,
         type: 3}
       propertyPath: m_Name

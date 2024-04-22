@@ -2,6 +2,7 @@ using AudioTools;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static AudioTools.SoundSettings;
 
 namespace AudioTools
 {
@@ -10,92 +11,32 @@ namespace AudioTools
         [SerializeField] private GameObject audioSourcePlaceHolder;
 
         private SoundSettings.AudioSourceSettings audioSourceSettings;
-        private SoundSettings.RandomSFXAudioSourceSettings randomSFXAudioSourceSettings;
 
-        public AudioSource CreateAudioSource(SoundSettings.RechargingStationIdleSFX rechargingStationIdleSFX)
+        public AudioSource CreateAudioSources(SoundSettings.RechargingStationAudioSourceSettings rechargingStationSetting)
         {
             audioSourceSettings.audioSource = audioSourcePlaceHolder.AddComponent<AudioSource>();
-            audioSourceSettings.audioSource.loop = true;
-            audioSourceSettings.audioSource.playOnAwake = false;
-            audioSourceSettings.audioSource.volume = rechargingStationIdleSFX.volume;
-            audioSourceSettings.audioSource.clip = rechargingStationIdleSFX.audioClip;
+            audioSourceSettings.audioSource.outputAudioMixerGroup = audioSourceSettings.audioMixerGroup;
+            audioSourceSettings.audioSource.loop = rechargingStationSetting.loop;
+            audioSourceSettings.audioSource.playOnAwake = rechargingStationSetting.playOnAwake;
+            audioSourceSettings.audioSource.spatialBlend = rechargingStationSetting.spatialBlend;
+            audioSourceSettings.audioSource.minDistance = rechargingStationSetting.minDistance;
+            audioSourceSettings.audioSource.maxDistance = rechargingStationSetting.maxDistance;
 
             return audioSourceSettings.audioSource;
         }
 
-        public AudioSource CreateAudioSource(SoundSettings.RechargingStationActiveSFX rechargingStationActiveSFX)
-        {
-            audioSourceSettings.audioSource = audioSourcePlaceHolder.AddComponent<AudioSource>();
-            audioSourceSettings.audioSource.loop = true;
-            audioSourceSettings.audioSource.playOnAwake = false;
-            audioSourceSettings.audioSource.volume = rechargingStationActiveSFX.volume;
-            audioSourceSettings.audioSource.clip = rechargingStationActiveSFX.audioClip;
-
-            return audioSourceSettings.audioSource;
-        }
-
-        public AudioSource GetAudioSource(SoundSettings.RechargingStationIdleSFX rechargingStationIdleSFX)
+        public AudioSource GetAudioSource()
         {
             audioSourceSettings.audioSource = audioSourcePlaceHolder.GetComponent<AudioSource>();
-            audioSourceSettings.audioSource.volume = rechargingStationIdleSFX.volume;
-            audioSourceSettings.audioSource.clip = rechargingStationIdleSFX.audioClip;
 
             return audioSourceSettings.audioSource;
         }
 
-        public AudioSource GetAudioSource(SoundSettings.RechargingStationActiveSFX rechargingStationIdleActiveSFX)
+        public AudioSource GetAudioSourceFromObject(GameObject obj, int audioSource)
         {
-            audioSourceSettings.audioSource = audioSourcePlaceHolder.GetComponent<AudioSource>();
-            audioSourceSettings.audioSource.volume = rechargingStationIdleActiveSFX.volume;
-            audioSourceSettings.audioSource.clip = rechargingStationIdleActiveSFX.audioClip;
+            AudioSource[] allAudioSources = obj.GetComponents<AudioSource>();
 
-            return audioSourceSettings.audioSource;
-        }
-
-        public AudioSource CreateAudioSource(SoundSettings.IdleSFXSettings soundEffectSettings)
-        {
-            randomSFXAudioSourceSettings.audioSource = audioSourcePlaceHolder.AddComponent<AudioSource>();
-            randomSFXAudioSourceSettings.audioSource.playOnAwake = false;
-            randomSFXAudioSourceSettings.audioSource.pitch = Random.Range(soundEffectSettings._pitchMin, soundEffectSettings._pitchMax);
-            randomSFXAudioSourceSettings.audioSource.volume = Random.Range(soundEffectSettings._volumeMin, soundEffectSettings._volumeMax);
-
-            return randomSFXAudioSourceSettings.audioSource;
-        }
-
-        public AudioSource CreateAudioSource(SoundSettings.ActiveSFXSettings soundEffectSettings)
-        {
-            randomSFXAudioSourceSettings.audioSource = audioSourcePlaceHolder.AddComponent<AudioSource>();
-            randomSFXAudioSourceSettings.audioSource.playOnAwake = false;
-            randomSFXAudioSourceSettings.audioSource.pitch = Random.Range(soundEffectSettings._pitchMin, soundEffectSettings._pitchMax);
-            randomSFXAudioSourceSettings.audioSource.volume = Random.Range(soundEffectSettings._volumeMin, soundEffectSettings._volumeMax);
-
-            return randomSFXAudioSourceSettings.audioSource;
-        }
-
-        public AudioSource GetAudioSource(SoundSettings.IdleSFXSettings soundEffectSettings)
-        {
-            randomSFXAudioSourceSettings.audioSource = audioSourcePlaceHolder.AddComponent<AudioSource>();
-            randomSFXAudioSourceSettings.audioSource.pitch = Random.Range(soundEffectSettings._pitchMin, soundEffectSettings._pitchMax);
-            randomSFXAudioSourceSettings.audioSource.volume = Random.Range(soundEffectSettings._volumeMin, soundEffectSettings._volumeMax);
-
-            return randomSFXAudioSourceSettings.audioSource;
-        }
-
-        public AudioSource GetAudioSource(SoundSettings.ActiveSFXSettings soundEffectSettings)
-        {
-            randomSFXAudioSourceSettings.audioSource = audioSourcePlaceHolder.AddComponent<AudioSource>();
-            randomSFXAudioSourceSettings.audioSource.pitch = Random.Range(soundEffectSettings._pitchMin, soundEffectSettings._pitchMax);
-            randomSFXAudioSourceSettings.audioSource.volume = Random.Range(soundEffectSettings._volumeMin, soundEffectSettings._volumeMax);
-
-            return randomSFXAudioSourceSettings.audioSource;
-        }
-
-        public AudioClip GetRandomClip(SoundSettings.IdleSFXSettings soundEffectSettings)
-        {
-            int clipRandomiser = Random.Range(0, soundEffectSettings._clipList.Length);
-            AudioClip clip = soundEffectSettings._clipList[clipRandomiser];
-            
-            return clip;
+            return allAudioSources[audioSource];
         }
 
         public GameObject GetGameObject()

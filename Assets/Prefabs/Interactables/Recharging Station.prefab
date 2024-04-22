@@ -985,6 +985,7 @@ GameObject:
   - component: {fileID: 7803045144244334127}
   - component: {fileID: 3822669791345170810}
   - component: {fileID: 5815673598045698329}
+  - component: {fileID: 3165793876916047419}
   m_Layer: 0
   m_Name: AudioHolder
   m_TagString: Untagged
@@ -1033,12 +1034,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a400ea211eaf8d48b23ec0a92b2ce7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rechargingAudioSourceSettings:
+    loop: 1
+    playOnAwake: 0
+    minDistance: 10
+    maxDistance: 500
+    spatialBlend: 0.8
   idleSFX:
     audioClip: {fileID: 8300000, guid: cf12610165224714fa58d3879efe9990, type: 3}
     pitch: 0
     volume: 1
   activeSFX:
-    audioClip: {fileID: 8300000, guid: a2484a25f712bc24db637c8b9c50451d, type: 3}
+    audioClip: {fileID: 8300000, guid: 5d8b51d6c3bcaf743a75d14f15b7ace9, type: 3}
     pitch: 0
     volume: 1
   idleRandomSFX:
@@ -1046,27 +1053,117 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 8edadf5a2c883fb4fb9484da5a5c9dc2, type: 3}
     - {fileID: 8300000, guid: 775701fc05b7deb418c5690f688cb700, type: 3}
     - {fileID: 8300000, guid: a86b47c5d620d1e4c9fb8e8066464089, type: 3}
-    _pitchMin: 0.3
-    _pitchMax: 2.4
-    _volumeMin: 0.1
-    _volumeMax: 0.7
-    delayMin: 5
-    delayMax: 20
-  activeRandomSFX:
-    _clipList:
     - {fileID: 8300000, guid: ed1a10bc66307d64bacc63a0f968a18c, type: 3}
     - {fileID: 8300000, guid: ad666295736e9dc4a8671bc4133d4392, type: 3}
     - {fileID: 8300000, guid: 9d340377c35ac7a4ab1c366884fafa28, type: 3}
     _pitchMin: 0.3
     _pitchMax: 2.4
     _volumeMin: 0.1
-    _volumeMax: 0.7
-    delayMin: 0
-    delayMax: 0.2
+    _volumeMax: 0.4
+    delayMin: 3
+    delayMax: 10
   audioSourceManager: {fileID: 3822669791345170810}
   rechargingStation: {fileID: 5687640595828058476}
   sfxMixer: {fileID: 24100000, guid: ee31d87e1a8e0be40a073e737ca9efef, type: 2}
   numberOfComponents: 1
+  SFXAudioSource: {fileID: 3165793876916047419}
+--- !u!82 &3165793876916047419
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818624266480864319}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -1514884713521528438, guid: ee31d87e1a8e0be40a073e737ca9efef,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 10
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.74920654
+      value: 0.9063835
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.8
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6233213137069718910
 GameObject:
   m_ObjectHideFlags: 0

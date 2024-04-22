@@ -26,35 +26,20 @@ namespace AudioTools
         }
 
         [Serializable]
-        public struct ActiveSFXSettings
-        {
-            public AudioClip[] _clipList;
-            [Range(0, 3)] public float _pitchMin;
-            [Range(0, 3)] public float _pitchMax;
-            [Range(0, 1)] public float _volumeMin;
-            [Range(0, 1)] public float _volumeMax;
-            public float delayMin;
-            public float delayMax;
-        }
-
-        [Serializable]
         public struct AudioSourceSettings
         {
             public AudioSource audioSource;
+            public AudioMixerGroup audioMixerGroup;
         }
 
         [Serializable]
-        public struct RandomSFXAudioSourceSettings
+        public struct RechargingStationAudioSourceSettings
         {
-            public AudioSource audioSource;
-        }
-
-        [Serializable]
-        public struct RechargingStationIdleSFX
-        {
-            public AudioClip audioClip;
-            [Range(0,3)] public float pitch;
-            [Range(0,1)] public float volume;
+            public bool loop;
+            public bool playOnAwake;
+            public float minDistance;
+            public float maxDistance;
+            [Range(0, 1)] public float spatialBlend;
         }
 
         [Serializable]
@@ -63,6 +48,14 @@ namespace AudioTools
             public AudioClip audioClip;
             [Range(0,3)] public float pitch;
             [Range(0,1)] public float volume;
+        }
+
+        [Serializable]
+        public struct RechargingStationIdleSFX
+        {
+            public AudioClip audioClip;
+            [Range(0, 3)] public float pitch;
+            [Range(0, 1)] public float volume;
         }
     }
 }

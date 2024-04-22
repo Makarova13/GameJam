@@ -10,10 +10,10 @@ using Unity.VisualScripting;
 public class RechargingSFX : MonoBehaviour
 {
     [Header("External Components")]
+    [SerializeField] private SoundSettings.RechargingStationAudioSourceSettings rechargingAudioSourceSettings;
     [SerializeField] private SoundSettings.RechargingStationIdleSFX idleSFX;
     [SerializeField] private SoundSettings.RechargingStationActiveSFX activeSFX;
     [SerializeField] private SoundSettings.IdleSFXSettings idleRandomSFX;
-    [SerializeField] private SoundSettings.ActiveSFXSettings activeRandomSFX;
 
     [Header("External Scripts")]
     [SerializeField] private AudioSourceManager audioSourceManager;
@@ -24,124 +24,128 @@ public class RechargingSFX : MonoBehaviour
 
     [Header("Debug Value")]
     [SerializeField] private int numberOfComponents;
+    [SerializeField] private AudioSource SFXAudioSource;
 
     private SoundSettings.AudioSourceSettings audioSourceSettings;
 
-    private bool idlePlaying = false;
-    private bool activePlaying = false;
+    private bool SFXPlaying = false;
 
-    private bool generateAudioSource = true;
+    private void Start()
+    {
+        PlaySFX();
+    }
 
     void Update()
     {
-
-        if (rechargingStation.GetIsInteracting())
+        if (CanGenerateAudioSource())
         {
-            idlePlaying = false;
-            activePlaying = true;
+            audioSourceSettings.audioSource = audioSourceManager.CreateAudioSources(rechargingAudioSourceSettings);
+        }
+
+        if(audioSourceSettings.audioSource.clip == null)
+        {
+            audioSourceSettings.audioSource = audioSourceManager.GetAudioSource();
+
+            PlayClip(idleSFX.audioClip);
+        }
+
+        if (!PlayerInteracting())
+        {
+            SFXPlaying = true;
+        }
+
+        if (!PlayerInteracting() && !IsAudioSourcePlaying(idleSFX.audioClip))
+        {
+            audioSourceSettings.audioSource = audioSourceManager.GetAudioSource();
+            audioSourceSettings.audioSource.Stop();
+
+            PlayClip(idleSFX.audioClip);
+        }
+
+        if(PlayerInteracting() && !IsAudioSourcePlaying(activeSFX.audioClip))
+        {
+            audioSourceSettings.audioSource = audioSourceManager.GetAudioSource();
+            audioSourceSettings.audioSource.Stop();
+
+            PlayClip(activeSFX.audioClip);
+        }
+    }
+
+    private void PlayClip(AudioClip clip)
+    {
+        audioSourceSettings.audioSource.clip = clip;
+        audioSourceSettings.audioSource.Play();
+    }
+
+    private void PlaySFX()
+    {
+        if (!PlayerInteracting())
+        {
+            SFXPlaying = true;
+            StartCoroutine(PlayRandomClip(idleRandomSFX));
+        }
+        SFXPlaying = false;
+    }
+
+    private bool IsAudioSourcePlaying(AudioClip clip)
+    {
+        if (audioSourceSettings.audioSource.clip.name == clip.name)
+        {
+            return true;
         }
         else
         {
-            activePlaying = false;
-            idlePlaying = true;
+            return false;
         }
+    }
 
-        if(IsEmpty(audioSourceManager.GetGameObject()))
+    private bool CanGenerateAudioSource()
+    {
+        if (IsEmpty(audioSourceManager.GetGameObject()))
         {
-            generateAudioSource = true;
+            return true;
         }
-        else if (!IsEmpty(audioSourceManager.GetGameObject()) && !idlePlaying && !activePlaying)
+        else if (!IsEmpty(audioSourceManager.GetGameObject()) && !IsAudioSourcePlaying(idleSFX.audioClip) && !IsAudioSourcePlaying(activeSFX.audioClip))
         {
             Component[] allComponents = audioSourceManager.GetGameObject().GetComponents<Component>();
 
             Destroy(allComponents[numberOfComponents - 1]);
 
-            generateAudioSource = true;
+            return true;
         }
         else
         {
-            generateAudioSource = false;
+            return false;
         }
-
-        if(generateAudioSource)
-        {
-            if (idlePlaying)
-            {
-                audioSourceSettings.audioSource = audioSourceManager.CreateAudioSource(idleSFX);
-
-                audioSourceSettings.audioSource.clip = idleSFX.audioClip;
-                audioSourceSettings.audioSource.Play();
-                StartCoroutine(PlayRandomClip(idleRandomSFX));
-            }
-            else if (activePlaying)
-            {
-                audioSourceSettings.audioSource = audioSourceManager.CreateAudioSource(activeSFX);
-
-                audioSourceSettings.audioSource.clip = activeSFX.audioClip;
-                audioSourceSettings.audioSource.Play();
-                StartCoroutine(PlayRandomClip(activeRandomSFX));
-            }
-        }
-        else if(!generateAudioSource && !IsEmpty(audioSourceManager.GetGameObject()))
-        {
-            if (idlePlaying)
-            {
-                audioSourceSettings.audioSource = audioSourceManager.GetAudioSource(idleSFX);
-
-                audioSourceSettings.audioSource.Stop();
-                audioSourceSettings.audioSource.clip = idleSFX.audioClip;
-                audioSourceSettings.audioSource.Play();
-                StartCoroutine(PlayRandomClip(idleRandomSFX));
-            }
-            else if(activePlaying)
-            {
-                audioSourceSettings.audioSource = audioSourceManager.GetAudioSource(activeSFX);
-
-                audioSourceSettings.audioSource.Stop();
-                audioSourceSettings.audioSource.clip = activeSFX.audioClip;
-                audioSourceSettings.audioSource.Play();
-                StartCoroutine(PlayRandomClip(activeRandomSFX));
-            }
-        }
-        
     }
 
-    private IEnumerator PlayRandomClip(SoundSettings.ActiveSFXSettings activeSFXSettings)
+    private bool PlayerInteracting()
     {
-        yield return new WaitForSeconds(Random.Range(activeSFXSettings.delayMin, activeSFXSettings.delayMax));
-        
-        if (!idlePlaying)
+        if (rechargingStation.GetIsInteracting())
         {
-            audioSourceSettings.audioSource.PlayOneShot(GetRandomClip(activeSFXSettings));
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
     private IEnumerator PlayRandomClip(SoundSettings.IdleSFXSettings idleSFXSettings)
     {
-        yield return new WaitForSeconds(Random.Range(idleSFXSettings.delayMin, idleSFXSettings.delayMax));
-
-        if (!activePlaying)
+        while (SFXPlaying)
         {
-            audioSourceSettings.audioSource.PlayOneShot(GetRandomClip(idleSFXSettings));
+            yield return new WaitForSeconds(Random.Range(idleSFXSettings.delayMin, idleSFXSettings.delayMax));
+
+            SFXAudioSource.pitch = Random.Range(idleSFXSettings._pitchMin, idleSFXSettings._pitchMax);
+            SFXAudioSource.volume = Random.Range(idleSFXSettings._volumeMin, idleSFXSettings._volumeMax);
+            int clipRandomiser = Random.Range(0, idleSFXSettings._clipList.Length);
+            AudioClip clip = idleSFXSettings._clipList[clipRandomiser];
+
+            SFXAudioSource.clip = clip;
+            SFXAudioSource.Play();
         }
     }
-
-    public AudioClip GetRandomClip(SoundSettings.IdleSFXSettings soundEffectSettings)
-    {
-        int clipRandomiser = Random.Range(0, soundEffectSettings._clipList.Length);
-        AudioClip clip = soundEffectSettings._clipList[clipRandomiser];
-
-        return clip;
-    }
-
-    public AudioClip GetRandomClip(SoundSettings.ActiveSFXSettings soundEffectSettings)
-    {
-        int clipRandomiser = Random.Range(0, soundEffectSettings._clipList.Length);
-        AudioClip clip = soundEffectSettings._clipList[clipRandomiser];
-
-        return clip;
-    }
-
     public bool IsEmpty(GameObject gameObject)
     {
         Component[] allComponents = gameObject.GetComponents<Component>();
