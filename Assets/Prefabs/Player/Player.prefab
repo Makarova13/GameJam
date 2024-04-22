@@ -81,9 +81,9 @@ MonoBehaviour:
   animator: {fileID: 4688133805718067598}
   playerRB: {fileID: 9045229050737485230}
   health: {fileID: 3733704685953782439}
-  enemyHealth: {fileID: 0}
   flashLightController: {fileID: 5928981344442494410}
-  weaponController: {fileID: 0}
+  weaponController: {fileID: 3888401811813579208}
+  dialogSystem: {fileID: 0}
 --- !u!54 &9045229050737485230
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -139,8 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objects:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  interactText: {fileID: 0}
 --- !u!114 &3888401811813579208
 MonoBehaviour:
   m_ObjectHideFlags: 0
