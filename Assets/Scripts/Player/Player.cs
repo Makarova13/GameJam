@@ -108,7 +108,6 @@ namespace Assets.Scripts
         {
             if (!isAttacking &! dialogSystem.isActive)
             {
-                Debug.Log(dialogSystem.isActive);
                 Range = weaponController.CurrentData.Range;
                 hasWeapon = weaponController.CurrentData.HasWeapon;
                 Damage = weaponController.CurrentData.Damage;

@@ -4,6 +4,7 @@ public class Interactions : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private BaseInteractibleObject[] Objects;
+    [SerializeField] private GameObject interactText;
     private InputActions inputActions;
 
     private void Awake()
@@ -34,11 +35,27 @@ public class Interactions : MonoBehaviour
             if(GetDistance(obj.gameObject) < 3)
             {
                 obj.Interact();
-                if (obj.gameObject.name != "Fool Test") // != to an npc
+                if (obj.gameObject.tag != "NPC") // != to an npc
                 {
                     Destroy(obj.gameObject);
                 }
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "NPC")
+        {
+            interactText.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.tag == "NPC")
+        {
+            interactText.SetActive(false);
         }
     }
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ChargingStation
   - Enemy
+  - NPC
   layers:
   - Default
   - TransparentFX
