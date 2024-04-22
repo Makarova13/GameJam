@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9045229050737485230}
   - component: {fileID: 3733704685953782439}
   - component: {fileID: 8926696028848953721}
-  - component: {fileID: 348037577391255545}
+  - component: {fileID: 3888401811813579208}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -81,9 +81,9 @@ MonoBehaviour:
   animator: {fileID: 4688133805718067598}
   playerRB: {fileID: 9045229050737485230}
   health: {fileID: 3733704685953782439}
-  testEnemy: {fileID: 6763963949850390874, guid: c922b41a5eb9d964ab34bc8799622bea,
-    type: 3}
+  enemyHealth: {fileID: 0}
   flashLightController: {fileID: 5928981344442494410}
+  weaponController: {fileID: 0}
 --- !u!54 &9045229050737485230
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -140,7 +140,8 @@ MonoBehaviour:
   Objects:
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &348037577391255545
+  - {fileID: 0}
+--- !u!114 &3888401811813579208
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,9 +150,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2823318526019131948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 895399730027cb646a2de1647591c6a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a8cf1eeaa686f04883d5a339ee75303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultData: {fileID: 11400000, guid: ca4be3aac331df04bb506579870e48b1, type: 2}
 --- !u!1 &3192717014380419505
 GameObject:
   m_ObjectHideFlags: 0
