@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.000041120922, g: 0.0001511845, b: 0.0053881994, a: 1}
+  m_IndirectSpecularColor: {r: 0.000039505452, g: 0.00015238399, b: 0.005423909, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1145,7 +1145,7 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyHealth
       value: 
-      objectReference: {fileID: 2019503749}
+      objectReference: {fileID: 0}
     - target: {fileID: 3520781180340139393, guid: 30530d3d736f8fd4994bced231870264,
         type: 3}
       propertyPath: dialogSystem
@@ -1164,7 +1164,7 @@ PrefabInstance:
     - target: {fileID: 8926696028848953721, guid: 30530d3d736f8fd4994bced231870264,
         type: 3}
       propertyPath: Objects.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8926696028848953721, guid: 30530d3d736f8fd4994bced231870264,
         type: 3}
