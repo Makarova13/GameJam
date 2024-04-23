@@ -49,15 +49,15 @@ public class Player : MonoBehaviour
         inputActions.PlayerInput.FlashLight.performed += ctx => OnFlashLightToggle();
         movement.action.performed += Movement;
 
-        inputActions.PlayerInput.Attack.performed += ctx => Attack();
-    }
-    
+            inputActions.PlayerInput.Attack.performed += ctx => Attack();
+            inputActions.PlayerInput.Dash.performed += ctx => Dash.instance.Player_Dash();
+        }
 
-    private void OnFlashLightToggle()
-    {
-        Debug.Log("lantern loged");
-        flashLightController.ToggleLight();
-    }
+        private void OnFlashLightToggle()
+        {
+            Debug.Log("lantern loged");
+            flashLightController.ToggleLight();
+        }
 
     private void OnEnable()
     {
@@ -188,14 +188,15 @@ public class Player : MonoBehaviour
         flashLightController.Recharge();
     }
 
-    public float Speed
-    {
-        get { return PlayerSpeed; }
-        set
+        public float Speed
         {
-            if (value < 100)
+            get { return PlayerSpeed; }
+            set
             {
-                PlayerSpeed = value;
+                if (value < 150)
+                {
+                    PlayerSpeed = value;
+                }
             }
         }
     }

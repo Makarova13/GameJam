@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3733704685953782439}
   - component: {fileID: 8926696028848953721}
   - component: {fileID: 3888401811813579208}
+  - component: {fileID: 8709314518920518084}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -83,6 +84,8 @@ MonoBehaviour:
   health: {fileID: 3733704685953782439}
   flashLightController: {fileID: 5928981344442494410}
   weaponController: {fileID: 3888401811813579208}
+  movementInput: {x: 0, y: 0, z: 0}
+  PlayerSpeed: 0
 --- !u!54 &9045229050737485230
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -138,7 +141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objects:
   - {fileID: 0}
-  interactText: {fileID: 0}
+  - {fileID: 0}
+  NPCInteract: {fileID: 0}
+  FlashlightInteract: {fileID: 0}
 --- !u!114 &3888401811813579208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +157,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultData: {fileID: 11400000, guid: ca4be3aac331df04bb506579870e48b1, type: 2}
+--- !u!114 &8709314518920518084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2823318526019131948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d6cbf9395e8c84ab55904dc92b7f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3192717014380419505
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +400,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
 --- !u!1 &7583178850741963185
 GameObject:
   m_ObjectHideFlags: 0
