@@ -4,7 +4,7 @@ public class Interactions : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private BaseInteractibleObject[] Objects;
-    [SerializeField] private GameObject interactText;
+    [SerializeField] private GameObject NPCInteract, FlashlightInteract;
     private InputActions inputActions;
 
     private void Awake()
@@ -47,15 +47,22 @@ public class Interactions : MonoBehaviour
     {
         if(other.gameObject.tag == "NPC")
         {
-            interactText.SetActive(true);
+            NPCInteract.SetActive(true);
+        } else if(other.gameObject.tag == "Flashlight")
+        {
+            FlashlightInteract.SetActive(true);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.tag == "NPC")
+        if (other.gameObject.tag == "NPC")
         {
-            interactText.SetActive(false);
+            NPCInteract.SetActive(false);
+        }
+        else if (other.gameObject.tag == "Flashlight")
+        {
+            FlashlightInteract.SetActive(false);
         }
     }
 
