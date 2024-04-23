@@ -42,4 +42,10 @@ public class Health : MonoBehaviour
 
         OnHealed?.Invoke(amount, currentHP, maxHP);
     }
+
+    public void ResetLife()
+    {
+        currentHP = maxHP;
+        OnHealed?.Invoke(maxHP, currentHP, maxHP);
+    }
 }
