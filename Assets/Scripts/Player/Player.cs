@@ -13,16 +13,16 @@ namespace Assets.Scripts
         [Header("Components")]
         [SerializeField] private InputActionReference movement;
         [SerializeField] private Animator animator;
-        [SerializeField] private Rigidbody playerRB;
+        [SerializeField] Rigidbody playerRB;
         [SerializeField] private Health health;
         [SerializeField] private FlashLightController flashLightController;
         [SerializeField] private WeaponController weaponController;
         [Space]
         [Header("Vectors")]
-        private Vector3 movementInput;
+        public Vector3 movementInput;
         [Space]
         [Header("Floats")]
-        private float PlayerSpeed;
+        public float PlayerSpeed;
         private float Range;
         [Header("Bools")]
         private bool isAttacking = false;
@@ -52,6 +52,7 @@ namespace Assets.Scripts
             movement.action.performed += Movement;
 
             inputActions.PlayerInput.Attack.performed += ctx => Attack();
+            inputActions.PlayerInput.Dash.performed += ctx => Dash.instance.Player_Dash();
         }
 
         private void OnFlashLightToggle()
@@ -87,7 +88,6 @@ namespace Assets.Scripts
         private void Start()
         {
             Speed = 60f;
-
             health.OnDeath += Health_OnDeath;
         }
 
@@ -185,7 +185,7 @@ namespace Assets.Scripts
             get { return PlayerSpeed; }
             set
             {
-                if (value < 100)
+                if (value < 150)
                 {
                     PlayerSpeed = value;
                 }
