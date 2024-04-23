@@ -141,7 +141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objects:
   - {fileID: 0}
-  interactText: {fileID: 0}
+  - {fileID: 0}
+  NPCInteract: {fileID: 0}
+  FlashlightInteract: {fileID: 0}
 --- !u!114 &3888401811813579208
 MonoBehaviour:
   m_ObjectHideFlags: 0
