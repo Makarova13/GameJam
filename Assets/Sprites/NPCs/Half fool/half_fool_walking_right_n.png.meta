@@ -1,0 +1,655 @@
+fileFormatVersion: 2
+guid: 81d7307df87dbca48a1f935d20831670
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_0
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 130
+        width: 191
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b088f867935b55541acd901687cf784d
+      internalID: -844366997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_1
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 130
+        width: 190
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dce3cb83e08f8e46a45409cbc20430b
+      internalID: -1805620114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_2
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 130
+        width: 190
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67025e1e3188f5143bc3225538ef1e3b
+      internalID: 484323441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_3
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 130
+        width: 192
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d345219849ac640b92f3096d8a6422
+      internalID: 1280187564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_4
+      rect:
+        serializedVersion: 2
+        x: 2712
+        y: 130
+        width: 190
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc52b51b37fd0640a6aa07e5de1913d
+      internalID: -227264003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_5
+      rect:
+        serializedVersion: 2
+        x: 3338
+        y: 130
+        width: 190
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75603f67e91c4474489d7eff01678b0e
+      internalID: -136677151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_6
+      rect:
+        serializedVersion: 2
+        x: 3957
+        y: 123
+        width: 197
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c11b33fc64cd34aba737735b979509
+      internalID: -817350909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_7
+      rect:
+        serializedVersion: 2
+        x: 4583
+        y: 123
+        width: 194
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9c62b315e93d6489fe6dca726955d5
+      internalID: 580591468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_8
+      rect:
+        serializedVersion: 2
+        x: 5206
+        y: 124
+        width: 197
+        height: 393
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfcc03e649fa46841a249239df14ca41
+      internalID: 1518052984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_9
+      rect:
+        serializedVersion: 2
+        x: 5832
+        y: 124
+        width: 197
+        height: 393
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3adf6b9590b64594fa982e8c64a3b087
+      internalID: 652900035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_10
+      rect:
+        serializedVersion: 2
+        x: 6458
+        y: 125
+        width: 194
+        height: 392
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4edeceae0d3340e469b0731146ff89dc
+      internalID: -1453359074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_11
+      rect:
+        serializedVersion: 2
+        x: 7088
+        y: 130
+        width: 194
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a82ca5719b1b84c8b35c8d81a8c74b
+      internalID: 797913275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_12
+      rect:
+        serializedVersion: 2
+        x: 7714
+        y: 130
+        width: 194
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c436fc72e4cd354091c5a34a23b12b0
+      internalID: -853882084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_13
+      rect:
+        serializedVersion: 2
+        x: 8337
+        y: 130
+        width: 197
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3afcf13ed6f3af04f90dbde28479356c
+      internalID: -1903124783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_14
+      rect:
+        serializedVersion: 2
+        x: 8963
+        y: 130
+        width: 193
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f88970c9eae0e6458a0c7246ad278d4
+      internalID: -1521704157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_15
+      rect:
+        serializedVersion: 2
+        x: 9589
+        y: 130
+        width: 194
+        height: 391
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fddc7cd7b937644f82a1ec8fed41df8
+      internalID: 749051435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_16
+      rect:
+        serializedVersion: 2
+        x: 10204
+        y: 141
+        width: 205
+        height: 373
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24d71da29cf24845b8e0c58217cd56d
+      internalID: -239475949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_17
+      rect:
+        serializedVersion: 2
+        x: 10830
+        y: 141
+        width: 203
+        height: 373
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9304b49bcd2ec5244a9de3b809771f4e
+      internalID: -297292195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_18
+      rect:
+        serializedVersion: 2
+        x: 11453
+        y: 141
+        width: 205
+        height: 373
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d3427a5a08e0c4c90c329914a23eba
+      internalID: 684723165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_19
+      rect:
+        serializedVersion: 2
+        x: 12079
+        y: 141
+        width: 205
+        height: 373
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3facd5016685ff548898cd389a307f7c
+      internalID: 200490840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_20
+      rect:
+        serializedVersion: 2
+        x: 12705
+        y: 141
+        width: 204
+        height: 373
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdf8919ca6209e43833651644a90225
+      internalID: -1395659006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_21
+      rect:
+        serializedVersion: 2
+        x: 13328
+        y: 141
+        width: 204
+        height: 373
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00c3c976265acf46b3de3787f12bc76
+      internalID: 1977652313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_22
+      rect:
+        serializedVersion: 2
+        x: 13954
+        y: 141
+        width: 205
+        height: 373
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cbae6d7bb5b8514094df25829272d25
+      internalID: 1460709252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: half_fool_walking_right_n_23
+      rect:
+        serializedVersion: 2
+        x: 14580
+        y: 141
+        width: 204
+        height: 373
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9193a6a6c73c0144380e225be9cf69bd
+      internalID: 1849520304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: caca037f5300c30408952e84a2f1ff37
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      half_fool_walking_right_n_0: -844366997
+      half_fool_walking_right_n_1: -1805620114
+      half_fool_walking_right_n_10: -1453359074
+      half_fool_walking_right_n_11: 797913275
+      half_fool_walking_right_n_12: -853882084
+      half_fool_walking_right_n_13: -1903124783
+      half_fool_walking_right_n_14: -1521704157
+      half_fool_walking_right_n_15: 749051435
+      half_fool_walking_right_n_16: -239475949
+      half_fool_walking_right_n_17: -297292195
+      half_fool_walking_right_n_18: 684723165
+      half_fool_walking_right_n_19: 200490840
+      half_fool_walking_right_n_2: 484323441
+      half_fool_walking_right_n_20: -1395659006
+      half_fool_walking_right_n_21: 1977652313
+      half_fool_walking_right_n_22: 1460709252
+      half_fool_walking_right_n_23: 1849520304
+      half_fool_walking_right_n_3: 1280187564
+      half_fool_walking_right_n_4: -227264003
+      half_fool_walking_right_n_5: -136677151
+      half_fool_walking_right_n_6: -817350909
+      half_fool_walking_right_n_7: 580591468
+      half_fool_walking_right_n_8: 1518052984
+      half_fool_walking_right_n_9: 652900035
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
