@@ -16,7 +16,9 @@ public class NpcController : MonoBehaviour
     public bool IsTaken { get; private set; }
     private void Start()
     {
+        health.OnDeath += () => Player.instance.TargetsForEnemy.Remove(transform);
         health.OnDeath += () => TransitionToState(new NPCDeathState(this));
+
         player = Player.instance.transform;
         TransitionToState(new NPCLeftState(this));
 
@@ -53,6 +55,7 @@ public class NpcController : MonoBehaviour
     public void StartFollowing()
     {
         TransitionToState(new NPCFollowState(this));
+        Player.instance.TargetsForEnemy.Add(transform);
         IsTaken= true;
     }
     private void PlayWalkAnimation()
