@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chainedToWallDialogue: {fileID: 4900000, guid: 60b8914ce4853c74c97329672d4d0073,
     type: 3}
+  followingDialogue: {fileID: 4900000, guid: 4bf0fdd71c57c164db760a95b31961a2, type: 3}
   health: 20

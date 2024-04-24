@@ -12,8 +12,9 @@ public class NpcController : MonoBehaviour
     private Transform player;
 
     public NpcData Data => data;
-
+    public NPCAnimationController AnimationController => animationController;
     public bool IsTaken { get; private set; }
+
     private void Start()
     {
         health.OnDeath += () => TransitionToState(new NPCDeathState(this));
