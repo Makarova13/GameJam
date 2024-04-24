@@ -14,7 +14,7 @@ namespace AudioTools
 
         public AudioSource CreateAudioSources(SoundSettings.RechargingStationAudioSourceSettings rechargingStationSetting)
         {
-            audioSourceSettings.audioSource = audioSourcePlaceHolder.AddComponent<AudioSource>();
+            audioSourceSettings.audioSource = transform.parent.GetComponent<AudioSource>();
             audioSourceSettings.audioSource.outputAudioMixerGroup = audioSourceSettings.audioMixerGroup;
             audioSourceSettings.audioSource.loop = rechargingStationSetting.loop;
             audioSourceSettings.audioSource.playOnAwake = rechargingStationSetting.playOnAwake;
