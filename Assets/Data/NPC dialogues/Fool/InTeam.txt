@@ -1,0 +1,23 @@
+{
+  "Dialogs": [
+    {
+      "Text": "Hey, friend! Do you need something?",
+      "Choices": [
+        {
+          "Text": "Ask for Advice",
+          "ChoiceType": 1,
+          "Response": "Make sure you steer clear of the monsters, friend! They don’t have to see you; they can hear you, too!"
+        },
+        {
+          "Text": "Chat",
+          "ChoiceType": 1,
+          "Response": "I’ve always been scared of those shocky things. I think Cain calls them Charging Stations? All I know is I’ve never used ‘em."
+        }
+      ]
+    },
+    {
+      "Text": "Oh, you don’t want to touch those scary things, friend! They charge your flashlight, but they sound so scary!",
+      "Choices": []
+    }
+  ]
+}

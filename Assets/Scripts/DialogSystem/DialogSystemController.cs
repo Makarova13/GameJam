@@ -15,7 +15,9 @@ namespace Assets.Scripts
         public static DialogSystemController Instance;
 
         public UnityEvent<ChoiceType> PlayerResponded;
+        public UnityEvent DialogStarted;
         public UnityEvent DialogEnded;
+        public bool IsTyping;
 
         private List<DialogWithChoices> _dialogs;
         private int _currentDialogIndex = 0;
@@ -46,6 +48,7 @@ namespace Assets.Scripts
         public void Init(List<DialogWithChoices> dialogs)
         {
             _dialogs = dialogs;
+            _currentDialogIndex = 0;
         }
 
         public void ShowCurrentDialog()
@@ -53,7 +56,7 @@ namespace Assets.Scripts
             _panel.SetActive(true);
             isActive = true;
 
-            ShowDialog(_dialogs[_currentDialogIndex]);
+            ShowDialog(_dialogs[_currentDialogIndex % _dialogs.Count]);
         }
 
         public void ShowNextDialog()
@@ -64,9 +67,8 @@ namespace Assets.Scripts
                 ShowDialog(_dialogs[_currentDialogIndex]);
             else
             {
-                DialogEnded?.Invoke();
+                _panel.gameObject.SetActive(false);
                 isActive = false;
-                gameObject.SetActive(false);
             }
         }
 
@@ -99,7 +101,16 @@ namespace Assets.Scripts
         {
             ShowButtons(0);
             _haveChoices = dialog.Choices != null && dialog.Choices.Count > 0;
-            _dialogText.TypeText(dialog.Text, () => ShowButtons(dialog.Choices.Count));
+            _dialogText.TypeText(dialog.Text, () =>
+            {
+                ShowButtons(dialog.Choices.Count);
+                IsTyping = false;
+
+                DialogEnded?.Invoke();
+            });
+
+            DialogStarted.Invoke();
+            IsTyping = true;
 
             for (int i = 0; i < dialog.Choices.Count; i++)
             {
