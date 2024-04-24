@@ -29,7 +29,25 @@ public class NPCAnimationController : MonoBehaviour
     {
         animator.Play(IdleTalkingState);
     }
-
+    public void PlayWalkButWorse(Vector3 facing)
+    {
+        if(facing == Vector3.forward)
+        {
+            animator.Play("WalkingUp");           
+        }
+        else if(facing == Vector3.forward * -1) 
+        {
+            animator.Play("WalkingFront");
+        }
+        else if (facing == Vector3.right)
+        {
+            animator.Play("WalkingRight");
+        }
+        else if(facing == Vector3.right * -1)
+        {
+            animator.Play("WalkingLeft");
+        }
+    }
     public void PlayWalk(float moveX, float moveY)
     {
         animator.SetBool(WalkState, true);

@@ -1,4 +1,3 @@
-using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -135,6 +134,34 @@ public class Enemy : MonoBehaviour
     private void SlowDown()
     {
         agent.speed = speedOnLight;
+        
+    }
+}
+public static class NavMeshAgentHelper
+{
+    public static Vector3 GetFacing(this NavMeshAgent agent)
+    {
+        var movementDirection = agent.velocity;
+        if (movementDirection.x > 0 && movementDirection.x >= Mathf.Abs(movementDirection.z))
+        {           
+            //facing right
+            return agent.transform.right;
+        }
+        else if (movementDirection.x < 0 && Mathf.Abs(movementDirection.x) >= Mathf.Abs(movementDirection.z))
+        {
+            //facing left
+            return agent.transform.right * -1;
+        }
+        else if (movementDirection.z < 0)
+        {
+            //facing up
+            return agent.transform.forward * -1;
+        }
+        else
+        {
+            //facing down
+            return agent.transform.forward;
+        }
         
     }
 }
