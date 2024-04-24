@@ -1043,11 +1043,11 @@ MonoBehaviour:
   idleSFX:
     audioClip: {fileID: 8300000, guid: cf12610165224714fa58d3879efe9990, type: 3}
     pitch: 0
-    volume: 1
+    volume: 0.6
   activeSFX:
     audioClip: {fileID: 8300000, guid: 5d8b51d6c3bcaf743a75d14f15b7ace9, type: 3}
     pitch: 0
-    volume: 1
+    volume: 0.6
   idleRandomSFX:
     _clipList:
     - {fileID: 8300000, guid: 8edadf5a2c883fb4fb9484da5a5c9dc2, type: 3}
@@ -1059,7 +1059,7 @@ MonoBehaviour:
     _pitchMin: 0.3
     _pitchMax: 2.4
     _volumeMin: 0.1
-    _volumeMax: 0.4
+    _volumeMax: 0.3
     delayMin: 3
     delayMax: 10
   audioSourceManager: {fileID: 3822669791345170810}
