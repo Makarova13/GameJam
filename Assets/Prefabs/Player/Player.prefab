@@ -85,6 +85,7 @@ MonoBehaviour:
   health: {fileID: 3733704685953782439}
   flashLightController: {fileID: 5928981344442494410}
   weaponController: {fileID: 3888401811813579208}
+  TargetsForEnemy: []
 --- !u!54 &9045229050737485230
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -140,11 +141,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objects:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   NPCInteract: {fileID: 0}
   FlashlightInteract: {fileID: 0}
-  interactText: {fileID: 0}
 --- !u!114 &3888401811813579208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +180,7 @@ GameObject:
   - component: {fileID: 3870883520923730714}
   - component: {fileID: 4688133805718067598}
   - component: {fileID: 8160414108186724875}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +197,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0.54, z: 1}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3010946224965045101}
@@ -507,7 +505,7 @@ Transform:
   m_GameObject: {fileID: 8740833651625316325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.088, z: -0.139}
+  m_LocalPosition: {x: 0, y: 1, z: -0.139}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -562,7 +560,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 183
+    m_Bits: 247
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -614,12 +612,12 @@ PrefabInstance:
     - target: {fileID: 567568788323552653, guid: ee9b188695b666f4da42d82aa6797702,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 567568788323552653, guid: ee9b188695b666f4da42d82aa6797702,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.54
       objectReference: {fileID: 0}
     - target: {fileID: 567568788323552653, guid: ee9b188695b666f4da42d82aa6797702,
         type: 3}
@@ -670,6 +668,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lantern (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395329592209797524, guid: ee9b188695b666f4da42d82aa6797702,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 439
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
