@@ -20,13 +20,10 @@ namespace Assets.Scripts
         {
             if (instance != null) return;
             instance = this;
-        }
-        void Start()
-        {
+
             // Initialize
             Initialize();
         }
-
         public void Player_Dash() // Called in the player.cs
         {
             if (isDashing || hasTimer) return;
