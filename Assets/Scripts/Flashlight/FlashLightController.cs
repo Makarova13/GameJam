@@ -91,6 +91,11 @@ public class FlashLightController : MonoBehaviour
         flashLightRoutine = StartCoroutine(Routine());
     }
 
+    public float GetCurrentPower()
+    {
+        return currentPower;
+    }
+
     public void Rotate(Direction direction)
     {
         gameObject.transform.rotation = Quaternion.Euler(directionRotation[direction]);

@@ -9,7 +9,7 @@ namespace AudioTools
     /// <summary>
     /// Adjustable Audio Clip settings.
     /// </summary>
-    
+
     public class SoundSettings
     {
 
@@ -46,8 +46,8 @@ namespace AudioTools
         public struct RechargingStationActiveSFX
         {
             public AudioClip audioClip;
-            [Range(0,3)] public float pitch;
-            [Range(0,1)] public float volume;
+            [Range(0, 3)] public float pitch;
+            [Range(0, 1)] public float volume;
         }
 
         [Serializable]
@@ -56,6 +56,18 @@ namespace AudioTools
             public AudioClip audioClip;
             [Range(0, 3)] public float pitch;
             [Range(0, 1)] public float volume;
+        }
+
+        [Serializable]
+        public struct BackgroundMusicFadeSettings
+        {
+            public AudioSource audioSource;
+            public AudioMixer audioMixer;
+            public string exposedParameter;
+            public float fadeDuration;
+            [Range(0,1)] public float fadeInVolume;
+            [Range(0,1)] public float fadeOutVolume;
+
         }
     }
 }
