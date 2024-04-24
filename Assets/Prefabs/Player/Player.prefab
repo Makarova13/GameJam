@@ -85,8 +85,6 @@ MonoBehaviour:
   health: {fileID: 3733704685953782439}
   flashLightController: {fileID: 5928981344442494410}
   weaponController: {fileID: 3888401811813579208}
-  movementInput: {x: 0, y: 0, z: 0}
-  PlayerSpeed: 0
 --- !u!54 &9045229050737485230
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -200,7 +198,7 @@ Transform:
   m_GameObject: {fileID: 3192717014380419505}
   serializedVersion: 2
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: -0.465, z: 0}
+  m_LocalPosition: {x: 0, y: 0.54, z: 1}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -247,7 +245,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2038253032, guid: c4431ac981707b6439c4a07c64aaf882, type: 3}
+  m_Sprite: {fileID: 997982691, guid: bdd141ea89e6b2c46b6df39cad24012d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

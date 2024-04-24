@@ -1,0 +1,774 @@
+fileFormatVersion: 2
+guid: bdd141ea89e6b2c46b6df39cad24012d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 600
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: may_idle_c_fl_0
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 19
+        width: 176
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a81f9c1ac566f446b681e0324386c14
+      internalID: 997982691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_1
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 19
+        width: 182
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f23e62979a2d774aba43230a3f7f9cf
+      internalID: -2017591305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_2
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 19
+        width: 175
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d7074e1070eba4a8452f0d3445cc52
+      internalID: -11955150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_3
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 19
+        width: 183
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d6d17baa51c0304092cf3b0d6f3deef
+      internalID: 1565040098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_4
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 19
+        width: 176
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3de9184813d804bb27e7574e632d91
+      internalID: -1307887791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_5
+      rect:
+        serializedVersion: 2
+        x: 2723
+        y: 19
+        width: 181
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102454f47e99c144d817fdbf7f9960de
+      internalID: -869716908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_6
+      rect:
+        serializedVersion: 2
+        x: 3241
+        y: 26
+        width: 183
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc8e54196f9f3a4eb3447771ce84222
+      internalID: 1664670054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_7
+      rect:
+        serializedVersion: 2
+        x: 3761
+        y: 26
+        width: 182
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a847f95c0646740a0f6e1f18dc8f45
+      internalID: 1359537374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_8
+      rect:
+        serializedVersion: 2
+        x: 4274
+        y: 26
+        width: 182
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05de7d5c502b61b4287b8ce6bc1a214e
+      internalID: 1375234236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_9
+      rect:
+        serializedVersion: 2
+        x: 4793
+        y: 26
+        width: 183
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40cd7e92dc0865e4aa40df5b33f9d735
+      internalID: -1151051024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_10
+      rect:
+        serializedVersion: 2
+        x: 5307
+        y: 22
+        width: 182
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9727104e5a7f2c44189549d349596e87
+      internalID: 2085235353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_11
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 233
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1271411ae12f6894d908efc5d465d0fd
+      internalID: -1705397425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_12
+      rect:
+        serializedVersion: 2
+        x: 5826
+        y: 22
+        width: 183
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38575555a3b61444593fd4c7a43e7d25
+      internalID: 512612406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_13
+      rect:
+        serializedVersion: 2
+        x: 6346
+        y: 26
+        width: 176
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2da96d6ebd61b64fbd33915c31d0691
+      internalID: 1492315229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_14
+      rect:
+        serializedVersion: 2
+        x: 6859
+        y: 26
+        width: 183
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069a01611f6fc684fa7ac1ff0841d9a1
+      internalID: -1939690038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_15
+      rect:
+        serializedVersion: 2
+        x: 7379
+        y: 22
+        width: 183
+        height: 404
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213ad83e74ce2184eab3bcf3966d76ca
+      internalID: 1891786066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_16
+      rect:
+        serializedVersion: 2
+        x: 7899
+        y: 26
+        width: 175
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c33116b711d4f4da24309532656bd0
+      internalID: 1567162935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_17
+      rect:
+        serializedVersion: 2
+        x: 8411
+        y: 26
+        width: 183
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07067c950e316a14ea04cc586c41beec
+      internalID: -1821764512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_18
+      rect:
+        serializedVersion: 2
+        x: 8931
+        y: 19
+        width: 180
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02314defd6a3fef4eb1dc6f710352982
+      internalID: 1614469098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_19
+      rect:
+        serializedVersion: 2
+        x: 9445
+        y: 19
+        width: 182
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec6e450c18b37641a713adc14aefd2b
+      internalID: -1911020532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_20
+      rect:
+        serializedVersion: 2
+        x: 9964
+        y: 19
+        width: 183
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05737c1cb14ea2f45ac123e993d9db18
+      internalID: -1709054309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_21
+      rect:
+        serializedVersion: 2
+        x: 10484
+        y: 19
+        width: 176
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d6ced8beebe754bbd058910f52c9f0
+      internalID: -851322112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_22
+      rect:
+        serializedVersion: 2
+        x: 10997
+        y: 20
+        width: 183
+        height: 413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e7f21496a6ef24cbaea6503e0a31f0
+      internalID: 1452448630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_23
+      rect:
+        serializedVersion: 2
+        x: 11517
+        y: 19
+        width: 183
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5498100faca85ad43b64fddfea4010cb
+      internalID: 266458850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_24
+      rect:
+        serializedVersion: 2
+        x: 12037
+        y: 19
+        width: 175
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfd9996aee84124ca2c2d0ee83aa12a
+      internalID: 2129987107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_25
+      rect:
+        serializedVersion: 2
+        x: 12549
+        y: 19
+        width: 183
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2996053d8ef59eb4292812ac6e165f7d
+      internalID: -1102454130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_26
+      rect:
+        serializedVersion: 2
+        x: 13069
+        y: 20
+        width: 181
+        height: 413
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de8f34bdc72af94a9718b8db6af0b10
+      internalID: 1702044998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_27
+      rect:
+        serializedVersion: 2
+        x: 13583
+        y: 19
+        width: 182
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c24b3a748561124e836cfb08b34581c
+      internalID: 2075432397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_28
+      rect:
+        serializedVersion: 2
+        x: 14102
+        y: 18
+        width: 182
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ba31d81b3086d4eaf58a24378de1eb
+      internalID: 863088106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_idle_c_fl_29
+      rect:
+        serializedVersion: 2
+        x: 14622
+        y: 19
+        width: 176
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1745678c7eead1d4084000a6a5d6313c
+      internalID: 2004076592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e1e229c36bcc39148a4631dbb7d3cdc9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      may_idle_c_fl_0: 997982691
+      may_idle_c_fl_1: -2017591305
+      may_idle_c_fl_10: 2085235353
+      may_idle_c_fl_11: -1705397425
+      may_idle_c_fl_12: 512612406
+      may_idle_c_fl_13: 1492315229
+      may_idle_c_fl_14: -1939690038
+      may_idle_c_fl_15: 1891786066
+      may_idle_c_fl_16: 1567162935
+      may_idle_c_fl_17: -1821764512
+      may_idle_c_fl_18: 1614469098
+      may_idle_c_fl_19: -1911020532
+      may_idle_c_fl_2: -11955150
+      may_idle_c_fl_20: -1709054309
+      may_idle_c_fl_21: -851322112
+      may_idle_c_fl_22: 1452448630
+      may_idle_c_fl_23: 266458850
+      may_idle_c_fl_24: 2129987107
+      may_idle_c_fl_25: -1102454130
+      may_idle_c_fl_26: 1702044998
+      may_idle_c_fl_27: 2075432397
+      may_idle_c_fl_28: 863088106
+      may_idle_c_fl_29: 2004076592
+      may_idle_c_fl_3: 1565040098
+      may_idle_c_fl_4: -1307887791
+      may_idle_c_fl_5: -869716908
+      may_idle_c_fl_6: 1664670054
+      may_idle_c_fl_7: 1359537374
+      may_idle_c_fl_8: 1375234236
+      may_idle_c_fl_9: -1151051024
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

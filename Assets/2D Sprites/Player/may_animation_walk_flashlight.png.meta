@@ -1,0 +1,532 @@
+fileFormatVersion: 2
+guid: 9762767f1e0c4fe419c827d593f9cee9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_0
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 114
+        width: 439
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4723a503a3b2646a53308b48da50cc
+      internalID: -807137371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_1
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 118
+        width: 418
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd96382d1c15f1458c27aaf0876c99c
+      internalID: 2044328325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_2
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 99
+        width: 362
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a320ba220bc911743adc76ce749f05c9
+      internalID: -1363505310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_3
+      rect:
+        serializedVersion: 2
+        x: 2605
+        y: 130
+        width: 296
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9ca85195d2e774eaeafaa405241b7d
+      internalID: -1773237185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_4
+      rect:
+        serializedVersion: 2
+        x: 3380
+        y: 109
+        width: 287
+        height: 630
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d78c25c79d935246bf842c31b0b7d76
+      internalID: 1315049110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_5
+      rect:
+        serializedVersion: 2
+        x: 4207
+        y: 102
+        width: 253
+        height: 650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a562bcf3fc77b44b766b4065c2c91a
+      internalID: 701119896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_6
+      rect:
+        serializedVersion: 2
+        x: 4967
+        y: 114
+        width: 293
+        height: 665
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f66c3170e8ca5544bad5b84e0b137b0
+      internalID: -1061268929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_7
+      rect:
+        serializedVersion: 2
+        x: 5722
+        y: 121
+        width: 355
+        height: 633
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922bde59185929346a1f656bfa5fba1c
+      internalID: 1966905493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_8
+      rect:
+        serializedVersion: 2
+        x: 6512
+        y: 121
+        width: 355
+        height: 633
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d1cec79e2515e4f986f0cd8f8c0461
+      internalID: 1648838508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_9
+      rect:
+        serializedVersion: 2
+        x: 7311
+        y: 115
+        width: 361
+        height: 630
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cca89287014cbfb40bac565af3ed3089
+      internalID: 1303506499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_10
+      rect:
+        serializedVersion: 2
+        x: 8091
+        y: 114
+        width: 334
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8274e48470ec00949b0eb0a1244013fc
+      internalID: 1859959280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_11
+      rect:
+        serializedVersion: 2
+        x: 8885
+        y: 131
+        width: 310
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d347324b406fa40a2efacf17f3b6a7
+      internalID: -588235076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_12
+      rect:
+        serializedVersion: 2
+        x: 9675
+        y: 131
+        width: 310
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f623560c57dbb40be79da0336a1278
+      internalID: 153990184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_13
+      rect:
+        serializedVersion: 2
+        x: 10453
+        y: 113
+        width: 293
+        height: 594
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e1885342d52be48a8b888e7873539b
+      internalID: -1818240423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_14
+      rect:
+        serializedVersion: 2
+        x: 11243
+        y: 102
+        width: 321
+        height: 636
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cddc42b4b7bf914bb88f4ad285941ab
+      internalID: 1083327036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_15
+      rect:
+        serializedVersion: 2
+        x: 12051
+        y: 97
+        width: 349
+        height: 661
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0937186cd551e3a4aa1819cb59ebda16
+      internalID: 2086036402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_16
+      rect:
+        serializedVersion: 2
+        x: 12874
+        y: 122
+        width: 365
+        height: 656
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b057447839d60af4e94d73624dd65ca0
+      internalID: 502504734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_17
+      rect:
+        serializedVersion: 2
+        x: 13665
+        y: 123
+        width: 380
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617ccd17ce6b95a439c97ee342f2eddf
+      internalID: 463965601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_animation_walk_flashlight_18
+      rect:
+        serializedVersion: 2
+        x: 14393
+        y: 120
+        width: 456
+        height: 635
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8fa71d37dcf8f3498960f538944b698
+      internalID: 517831052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      may_animation_walk_flashlight_0: -807137371
+      may_animation_walk_flashlight_1: 2044328325
+      may_animation_walk_flashlight_10: 1859959280
+      may_animation_walk_flashlight_11: -588235076
+      may_animation_walk_flashlight_12: 153990184
+      may_animation_walk_flashlight_13: -1818240423
+      may_animation_walk_flashlight_14: 1083327036
+      may_animation_walk_flashlight_15: 2086036402
+      may_animation_walk_flashlight_16: 502504734
+      may_animation_walk_flashlight_17: 463965601
+      may_animation_walk_flashlight_18: 517831052
+      may_animation_walk_flashlight_2: -1363505310
+      may_animation_walk_flashlight_3: -1773237185
+      may_animation_walk_flashlight_4: 1315049110
+      may_animation_walk_flashlight_5: 701119896
+      may_animation_walk_flashlight_6: -1061268929
+      may_animation_walk_flashlight_7: 1966905493
+      may_animation_walk_flashlight_8: 1648838508
+      may_animation_walk_flashlight_9: 1303506499
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

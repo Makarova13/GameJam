@@ -1,0 +1,532 @@
+fileFormatVersion: 2
+guid: b348281e4a848cc419779afe150ace67
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: may_walking_down_fl_0
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 46
+        width: 196
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c4a34e0a9dab646a8ae9a3b2b251cd
+      internalID: -791715257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_1
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 43
+        width: 195
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74857f7eb6358d4d85373912da724c5
+      internalID: -2108775610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_2
+      rect:
+        serializedVersion: 2
+        x: 1899
+        y: 41
+        width: 193
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6ebfe0d1d76c64fb16aad284fb661e
+      internalID: -628978211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_3
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 54
+        width: 192
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64d35ccf35e59b43974c66e9a19f238
+      internalID: -831783925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_4
+      rect:
+        serializedVersion: 2
+        x: 3478
+        y: 47
+        width: 176
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af61585e64ff3f439226b0687b91079
+      internalID: 2070717724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_5
+      rect:
+        serializedVersion: 2
+        x: 4267
+        y: 62
+        width: 180
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c161a17eda13f749b646cd3e1daebde
+      internalID: -737647433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_6
+      rect:
+        serializedVersion: 2
+        x: 5057
+        y: 86
+        width: 187
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3699e9eebc2d84baca8130c51a2ed9
+      internalID: -582698045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_7
+      rect:
+        serializedVersion: 2
+        x: 5846
+        y: 57
+        width: 191
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca68cd9e257eadd45bc0f0c63c1e6174
+      internalID: -1558977276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_8
+      rect:
+        serializedVersion: 2
+        x: 6636
+        y: 63
+        width: 186
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a51ab84860b574cb553b121e68bb8d
+      internalID: 180959090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_9
+      rect:
+        serializedVersion: 2
+        x: 7425
+        y: 50
+        width: 183
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893f63462a2fed1498177053a8babda5
+      internalID: 1006174997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_10
+      rect:
+        serializedVersion: 2
+        x: 8211
+        y: 45
+        width: 182
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9dbeaf4bfef6574aa7646659aa44e85
+      internalID: 1750466942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_11
+      rect:
+        serializedVersion: 2
+        x: 8997
+        y: 48
+        width: 179
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb1502c583e12e43bfe9ba24dc01267
+      internalID: -379211741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_12
+      rect:
+        serializedVersion: 2
+        x: 9792
+        y: 49
+        width: 169
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4924a4b22f50be54993c6f2bf7777340
+      internalID: -1145570876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_13
+      rect:
+        serializedVersion: 2
+        x: 10578
+        y: 66
+        width: 167
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f558cb16f6e946043be8a5cce1684791
+      internalID: -1254259923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_14
+      rect:
+        serializedVersion: 2
+        x: 11372
+        y: 45
+        width: 161
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa1f94250bbc7345b7960dc7bfac961
+      internalID: -1514773256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_15
+      rect:
+        serializedVersion: 2
+        x: 12152
+        y: 49
+        width: 170
+        height: 621
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e995625ab6a9470498e2e1f044a7d502
+      internalID: 431733700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_16
+      rect:
+        serializedVersion: 2
+        x: 12948
+        y: 88
+        width: 164
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ffd7ec1abacaf45866ada6748af49f
+      internalID: 359259549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_17
+      rect:
+        serializedVersion: 2
+        x: 13732
+        y: 105
+        width: 168
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455a11d1cbb2ddb40aa469877bc0f167
+      internalID: 2068601967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_walking_down_fl_18
+      rect:
+        serializedVersion: 2
+        x: 14531
+        y: 37
+        width: 159
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6176981e216208a44963eb4c858672b8
+      internalID: -1605521616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 55454999a6776994fa6d1955722bb955
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      may_walking_down_fl_0: -791715257
+      may_walking_down_fl_1: -2108775610
+      may_walking_down_fl_10: 1750466942
+      may_walking_down_fl_11: -379211741
+      may_walking_down_fl_12: -1145570876
+      may_walking_down_fl_13: -1254259923
+      may_walking_down_fl_14: -1514773256
+      may_walking_down_fl_15: 431733700
+      may_walking_down_fl_16: 359259549
+      may_walking_down_fl_17: 2068601967
+      may_walking_down_fl_18: -1605521616
+      may_walking_down_fl_2: -628978211
+      may_walking_down_fl_3: -831783925
+      may_walking_down_fl_4: 2070717724
+      may_walking_down_fl_5: -737647433
+      may_walking_down_fl_6: -582698045
+      may_walking_down_fl_7: -1558977276
+      may_walking_down_fl_8: 180959090
+      may_walking_down_fl_9: 1006174997
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
