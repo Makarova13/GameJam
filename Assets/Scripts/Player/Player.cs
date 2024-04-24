@@ -182,6 +182,7 @@ public class Player : MonoBehaviour
         else
         {
             animator.SetBool("isWalking", false);
+            flashLightController.Rotate(FlashLightController.Direction.Left);
         }
     }
 
