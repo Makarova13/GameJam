@@ -150,7 +150,7 @@ MonoBehaviour:
   speedInDark: 3.5
   speedOnLight: 1.5
   agroDistance: 7
-  attackRange: 1.5
+  attackRange: 2
   viewAngle: 70
   health: {fileID: 7192494451465130230}
   setPathPoint: {fileID: 0}
@@ -275,8 +275,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.2703854, y: 1, z: 1.4904504}
+  m_Center: {x: -0.008262217, y: 0, z: 0.24522519}
 --- !u!114 &7624009234939251865
 MonoBehaviour:
   m_ObjectHideFlags: 0

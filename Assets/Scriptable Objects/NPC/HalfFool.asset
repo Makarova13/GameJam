@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e81562e9235fcb2428241e6fe1213d87, type: 3}
-  m_Name: Fool
+  m_Name: HalfFool
   m_EditorClassIdentifier: 
   chainedToWallDialogue: {fileID: 4900000, guid: 60b8914ce4853c74c97329672d4d0073,
     type: 3}
+  health: 20

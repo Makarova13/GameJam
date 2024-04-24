@@ -1,6 +1,7 @@
-using Assets.Scripts;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEditor.Experimental.GraphView.GraphView;
+using static UnityEditor.Progress;
 
 public class Enemy : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Health health;
     [SerializeField] private Transform setPathPoint;
     [SerializeField] private LayerMask layerMask;
-    private Transform player;
+    private Transform target;
     private Vector3 startPosition;
     private EnemyState currentState;
     private Vector3 facing; 
@@ -26,7 +27,7 @@ public class Enemy : MonoBehaviour
         FlashLightController.OnStartLighting += SlowDown;
         FlashLightController.OnStoptLighting += SpeedUp;
 
-        player = Player.instance.gameObject.transform;
+        target = Player.instance.gameObject.transform;
         health.OnDeath += () => TransitionToState(new DeathState(this));
         startPosition = transform.position;
         TransitionToState(new IdleState(this));
@@ -50,9 +51,9 @@ public class Enemy : MonoBehaviour
         currentState = enemyState;
     }
 
-    public void ChasePlayer()
+    public void ChaseTarget()
     {
-        agent.SetDestination(player.position);
+        agent.SetDestination(target.position);
     }
 
     public void GoToStartPosition()
@@ -75,33 +76,45 @@ public class Enemy : MonoBehaviour
     {
         agent.isStopped = false;
     }
-    public bool TryToFindPlayer()
+    public bool TryToFindTarget()
     {
-        if(agroDistance >= Vector3.Distance(transform.position, player.position))
-            return true;
-
-        return IsSeePlayer(); 
+        for (int i = Player.instance.TargetsForEnemy.Count - 1; i >= 0; i--)
+        {
+            var item = Player.instance.TargetsForEnemy[i];
+            if (agroDistance >= Vector3.Distance(transform.position, item.position) || IsSeeTarget(item.position))
+            {
+                target = item;
+                return true;
+            }
+        }
+        return false;
     }
 
     public bool IsInAttackRange()
     {
-        return attackRange >= Vector3.Distance(transform.position, player.position) && IsSeePlayer();
+        for (int i = Player.instance.TargetsForEnemy.Count - 1; i >= 0; i--)
+        {
+            var item = Player.instance.TargetsForEnemy[i];
+            if (attackRange >= Vector3.Distance(transform.position, item.position) && IsSeeTarget(item.position))
+                return true;
+        }
+        return false;
     }
 
-    public bool IsSeePlayer()
+    private bool IsSeeTarget(Vector3 target)
     {
-        var direction = player.position - transform.position;
+        var direction = target - transform.position;
         if ( viewAngle >= Vector3.Angle(facing, direction))
         {        
-            Debug.DrawRay(transform.position, player.position - transform.position, Color.red, Mathf.Infinity);
-            if(Physics.Raycast(transform.position, player.position - transform.position, out RaycastHit hitInfo, Mathf.Infinity, layerMask))
+            Debug.DrawRay(transform.position, target - transform.position, Color.red, Mathf.Infinity);
+            if(Physics.Raycast(transform.position, target - transform.position, out RaycastHit hitInfo, Mathf.Infinity, layerMask))
             {
-                return hitInfo.collider.gameObject == Player.instance.gameObject;
+                return hitInfo.collider.gameObject == Player.instance.gameObject || hitInfo.collider.gameObject.tag == "NPC";
             }
 
         }
         return false;
-    }    
+    }
     private void GetFacing()
     {
         var movementDirection = agent.velocity;
@@ -124,7 +137,7 @@ public class Enemy : MonoBehaviour
         else if (movementDirection.z < 0)
         {
             //facing down
-            facing = transform.forward * -1;            
+            facing = transform.forward * -1;
         }
         Debug.DrawRay(transform.position, facing, Color.blue, 5f);
     }
@@ -136,5 +149,32 @@ public class Enemy : MonoBehaviour
     {
         agent.speed = speedOnLight;
         
+    }
+}
+public static class NavMeshAgentHelper
+{
+    public static Vector3 GetFacing(this NavMeshAgent agent)
+    {
+        var movementDirection = agent.velocity;
+        if (movementDirection.x > 0 && movementDirection.x >= Mathf.Abs(movementDirection.z))
+        {           
+            //facing right
+            return agent.transform.right;
+        }
+        else if (movementDirection.x < 0 && Mathf.Abs(movementDirection.x) >= Mathf.Abs(movementDirection.z))
+        {
+            //facing left
+            return agent.transform.right * -1;
+        }      
+        else if(movementDirection.z > 0)
+        {
+            //facing up
+            return agent.transform.forward;
+        }
+        else
+        {
+            //facing down
+            return agent.transform.forward * -1;
+        }
     }
 }

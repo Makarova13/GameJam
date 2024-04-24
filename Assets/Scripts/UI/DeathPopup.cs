@@ -17,7 +17,7 @@ public class DeathPopup : MonoBehaviour
         restartLevel.onClick.AddListener(OnRestartButtonClicked);
         quitGame.onClick.AddListener(OnQuitButtonClicked);
 
-        Time.timeScale = 0;
+        Time.timeScale = 0.3f;
     }
 
     private void OnQuitButtonClicked()
@@ -30,12 +30,15 @@ public class DeathPopup : MonoBehaviour
     {
         Debug.Log("Restart");
         Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(1);
     }
 
     private void OnCheckpointButtonClicked()
     {
-        Debug.Log("CheckPoint");
-        //Todo
+        Debug.Log("CheckPoints");
+        Time.timeScale = 1;
+        Vector3 chackpointPos = SaveLoadManager.Instance.LoadPosition();
+        Player.instance.ResetPlayer(chackpointPos);
+        Destroy(gameObject);
     }
 }
