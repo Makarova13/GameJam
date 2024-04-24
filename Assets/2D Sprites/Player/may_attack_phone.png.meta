@@ -1,0 +1,884 @@
+fileFormatVersion: 2
+guid: 430cb65a87472c041b10f1726b5b9370
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 600
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: may_attack_phone_0
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 27
+        width: 227
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecbe31a8dcd8654f86caabcebbf85f7
+      internalID: 1831198619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_1
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 27
+        width: 232
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3476bde53677c54e817aaac2289f0bf
+      internalID: -1390611789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_2
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 27
+        width: 235
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0346232892eab9a47b9f82e39b4393c3
+      internalID: -976498765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_3
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 27
+        width: 238
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce5e15cde61a264b8f8dff1671e295b
+      internalID: 1369580296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_4
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 27
+        width: 244
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53377c40712b2934e9b89a41d1bb04a2
+      internalID: -1939362643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_5
+      rect:
+        serializedVersion: 2
+        x: 2190
+        y: 27
+        width: 267
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cea7b1519d4c944fab7d53de94e5d3d
+      internalID: -922932184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_6
+      rect:
+        serializedVersion: 2
+        x: 2611
+        y: 27
+        width: 279
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80156caeb0f268146a0003c0179a678e
+      internalID: -1809692836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_7
+      rect:
+        serializedVersion: 2
+        x: 3033
+        y: 27
+        width: 292
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28cb2a4009b75c44389dda0b6ead2a85
+      internalID: 2123388779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_8
+      rect:
+        serializedVersion: 2
+        x: 3459
+        y: 27
+        width: 295
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd8ca98f16820742a14dcb782601c30
+      internalID: -341926606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_9
+      rect:
+        serializedVersion: 2
+        x: 3885
+        y: 27
+        width: 297
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8f6d56eaeb5694080e200feac7a834
+      internalID: 1890150983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_10
+      rect:
+        serializedVersion: 2
+        x: 4311
+        y: 24
+        width: 290
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53166e1e07cdac343b7ce1d4d49a6ac2
+      internalID: 80172587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_11
+      rect:
+        serializedVersion: 2
+        x: 4741
+        y: 24
+        width: 287
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 726a117aa430f944c98162884d136dc4
+      internalID: -1325555783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_12
+      rect:
+        serializedVersion: 2
+        x: 5172
+        y: 24
+        width: 285
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507e41afaf187f148a110ebfcd61b259
+      internalID: -1438084425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_13
+      rect:
+        serializedVersion: 2
+        x: 5602
+        y: 24
+        width: 284
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce5ea9124227304dbc4c72de40cf0da
+      internalID: -911878326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_14
+      rect:
+        serializedVersion: 2
+        x: 6028
+        y: 24
+        width: 287
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e720bf02cd87045b8d2a8c9a4f762c
+      internalID: 768907522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_15
+      rect:
+        serializedVersion: 2
+        x: 6455
+        y: 25
+        width: 287
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9209dabc344caeb409651ea373078ba3
+      internalID: 866821313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_16
+      rect:
+        serializedVersion: 2
+        x: 6882
+        y: 25
+        width: 289
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a9f369c2256154daf62bb63f7b8419
+      internalID: 1633770880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_17
+      rect:
+        serializedVersion: 2
+        x: 7309
+        y: 25
+        width: 291
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a10e38f4ec41ea48a6b7bbbdf4ee519
+      internalID: 908503554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_18
+      rect:
+        serializedVersion: 2
+        x: 7735
+        y: 25
+        width: 294
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19c4f16751375f47923498a2812f428
+      internalID: 509694597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_19
+      rect:
+        serializedVersion: 2
+        x: 8162
+        y: 25
+        width: 268
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322410924555b334dac79caa1a38674e
+      internalID: 2128170931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_20
+      rect:
+        serializedVersion: 2
+        x: 8589
+        y: 26
+        width: 276
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655c2e1334adba6489f84ceedfffe9f4
+      internalID: 606928528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_21
+      rect:
+        serializedVersion: 2
+        x: 9015
+        y: 26
+        width: 278
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee306c6f69b58d40b0034547c34f017
+      internalID: 627464208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_22
+      rect:
+        serializedVersion: 2
+        x: 9442
+        y: 26
+        width: 280
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104a5d07171b21b42b3f528f71af371c
+      internalID: 71098993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_23
+      rect:
+        serializedVersion: 2
+        x: 9868
+        y: 26
+        width: 282
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657e4b9c83ed14842a83d9d843739ff1
+      internalID: 139096616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_24
+      rect:
+        serializedVersion: 2
+        x: 10312
+        y: 26
+        width: 267
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf1a870a0a3c8a43b3a42a3ab57d906
+      internalID: 500730156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_25
+      rect:
+        serializedVersion: 2
+        x: 10744
+        y: 22
+        width: 256
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4589d38320c5b45b40bcd131058e8e
+      internalID: -2051062433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_26
+      rect:
+        serializedVersion: 2
+        x: 11176
+        y: 22
+        width: 252
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b0d26fbc85b1c4aa0f2a2bb8647d19
+      internalID: -1782285109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_27
+      rect:
+        serializedVersion: 2
+        x: 11671
+        y: 25
+        width: 205
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73282b810fdbd448a666161964d54ba
+      internalID: 1648751652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_28
+      rect:
+        serializedVersion: 2
+        x: 12110
+        y: 28
+        width: 193
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3deeae2a97a94064793f6309e011a81e
+      internalID: -46602397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_29
+      rect:
+        serializedVersion: 2
+        x: 12539
+        y: 28
+        width: 251
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f5a49af4f19b640ad83306208c327b
+      internalID: 875267651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_30
+      rect:
+        serializedVersion: 2
+        x: 12967
+        y: 28
+        width: 255
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9f53ca1c09adc4fae917c3c6db8397
+      internalID: -606299579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_31
+      rect:
+        serializedVersion: 2
+        x: 13396
+        y: 28
+        width: 256
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb52e675f0340844a580bdc94e5ff24
+      internalID: 1284957070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_32
+      rect:
+        serializedVersion: 2
+        x: 13824
+        y: 28
+        width: 259
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866fa722389e4454fb4fb26926106cb4
+      internalID: -1712486190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_33
+      rect:
+        serializedVersion: 2
+        x: 14253
+        y: 28
+        width: 260
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f6c924fc8b316438f2f675667179b3
+      internalID: -1514804433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_attack_phone_34
+      rect:
+        serializedVersion: 2
+        x: 14681
+        y: 28
+        width: 197
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045c636d2abd16941ab22316dc3451cb
+      internalID: 127862354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      may_attack_phone_0: 1831198619
+      may_attack_phone_1: -1390611789
+      may_attack_phone_10: 80172587
+      may_attack_phone_11: -1325555783
+      may_attack_phone_12: -1438084425
+      may_attack_phone_13: -911878326
+      may_attack_phone_14: 768907522
+      may_attack_phone_15: 866821313
+      may_attack_phone_16: 1633770880
+      may_attack_phone_17: 908503554
+      may_attack_phone_18: 509694597
+      may_attack_phone_19: 2128170931
+      may_attack_phone_2: -976498765
+      may_attack_phone_20: 606928528
+      may_attack_phone_21: 627464208
+      may_attack_phone_22: 71098993
+      may_attack_phone_23: 139096616
+      may_attack_phone_24: 500730156
+      may_attack_phone_25: -2051062433
+      may_attack_phone_26: -1782285109
+      may_attack_phone_27: 1648751652
+      may_attack_phone_28: -46602397
+      may_attack_phone_29: 875267651
+      may_attack_phone_3: 1369580296
+      may_attack_phone_30: -606299579
+      may_attack_phone_31: 1284957070
+      may_attack_phone_32: -1712486190
+      may_attack_phone_33: -1514804433
+      may_attack_phone_34: 127862354
+      may_attack_phone_4: -1939362643
+      may_attack_phone_5: -922932184
+      may_attack_phone_6: -1809692836
+      may_attack_phone_7: 2123388779
+      may_attack_phone_8: -341926606
+      may_attack_phone_9: 1890150983
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
