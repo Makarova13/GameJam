@@ -5,5 +5,6 @@ public class DeathState : EnemyState
     public override void OnEnter()
     {
         enemy.DisableMovement();
+        enemy.gameObject.SetActive(false);
     }
 }
