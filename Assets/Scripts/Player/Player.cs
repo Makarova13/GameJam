@@ -136,7 +136,7 @@ public class Player : MonoBehaviour
 
     private IEnumerator AttackRoutine()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.3f);
         isAttacking = false;
         animator.SetBool("isAttacking", isAttacking);
     }
