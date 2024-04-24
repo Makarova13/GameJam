@@ -1,6 +1,7 @@
 using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SimpleEnemyAttack : MonoBehaviour
@@ -21,6 +22,10 @@ public class SimpleEnemyAttack : MonoBehaviour
         {
             player.GetHealth().Damage(damage);
             col.enabled = false;
+        }
+        else if(other?.gameObject.tag == "NPC")
+        {
+            other.gameObject.GetComponent<Health>().Damage(damage);
         }
     }
     public bool IsReady()

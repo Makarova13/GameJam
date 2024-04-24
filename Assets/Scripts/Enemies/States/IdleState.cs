@@ -9,7 +9,7 @@ public class IdleState : EnemyState
     }
     public override void Execute()
     {
-        if (enemy.TryToFindPlayer()) 
+        if (enemy.TryToFindTarget()) 
         {
             enemy.TransitionToState(new ChaseState(enemy));
         }

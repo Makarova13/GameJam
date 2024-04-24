@@ -8,8 +8,8 @@ public class ChaseState : EnemyState
         if (enemy.IsInAttackRange())
             enemy.TransitionToState(new AttackState(enemy));
 
-        else if (enemy.TryToFindPlayer())
-            enemy.ChasePlayer();
+        else if (enemy.TryToFindTarget())
+            enemy.ChaseTarget();
 
         else if(!enemy.HasPath)
             enemy.TransitionToState(new IdleState(enemy));

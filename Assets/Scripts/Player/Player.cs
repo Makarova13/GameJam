@@ -1,6 +1,7 @@
 using Assets.Scripts;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour
     public FlashLightController GetFlashLight() => flashLightController;
     public WeaponController GetWeaponController() => weaponController;
 
+    public List<Transform> TargetsForEnemy = new List<Transform>();
     private void Awake()
     {
         if (instance != null)
@@ -51,7 +53,9 @@ public class Player : MonoBehaviour
 
             inputActions.PlayerInput.Attack.performed += ctx => Attack();
             inputActions.PlayerInput.Dash.performed += ctx => Dash.instance.Player_Dash();
-        }
+
+        TargetsForEnemy.Add(transform);
+    }
 
         private void OnFlashLightToggle()
         {
