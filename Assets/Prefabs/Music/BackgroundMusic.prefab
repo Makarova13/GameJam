@@ -264,10 +264,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 583749589876178108, guid: ee31d87e1a8e0be40a073e737ca9efef,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 171cce2db9fcc364986b4cd07ed2c379, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -486,7 +486,6 @@ MonoBehaviour:
     fadeDuration: 5
     fadeInVolume: 1
     fadeOutVolume: 0
-  flashLightController: {fileID: 0}
 --- !u!1 &2728225208604410874
 GameObject:
   m_ObjectHideFlags: 0
