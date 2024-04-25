@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace Assets.Scripts
@@ -8,6 +10,7 @@ namespace Assets.Scripts
     public class DialogSystemController : MonoBehaviour
     {
         [SerializeField] Button _skipButton;
+        [SerializeField] InputActionReference skipAction;
         [SerializeField] GameObject _panel;
         [SerializeField] TextTyper _dialogText;
         [SerializeField] List<ChoiceButton> _choiceButtons = new(3);
@@ -38,11 +41,13 @@ namespace Assets.Scripts
         private void OnEnable()
         {
             _skipButton.onClick.AddListener(Skip);
+            skipAction.action.performed += OnSkipAction;
         }
 
         private void OnDisable()
         {
             _skipButton.onClick.RemoveListener(Skip);
+            skipAction.action.performed -= OnSkipAction;
         }
 
         public void Init(List<DialogWithChoices> dialogs)
@@ -129,6 +134,11 @@ namespace Assets.Scripts
             {
                 _choiceButtons[i].gameObject.SetActive(true);
             }
+        }
+
+        private void OnSkipAction(InputAction.CallbackContext _)
+        {
+            Skip();
         }
 
         private void Skip()

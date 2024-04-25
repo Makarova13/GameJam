@@ -327,6 +327,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "HoldSubmit",
+                    "type": "Value",
+                    "id": "fc67a1c7-c3fc-4e9d-b2e3-df0907154dfa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -596,17 +605,6 @@
                 },
                 {
                     "name": "",
-                    "id": "09c1c876-de3a-4a6b-a76d-2b5ee0453844",
-                    "path": "*/{Submit}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse;Gamepad;Touch;Joystick;XR",
-                    "action": "Submit",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "0186e6bf-0f9e-4f70-8480-737d39540adf",
                     "path": "*/{Cancel}",
                     "interactions": "",
@@ -745,6 +743,28 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a800ace-329f-46e1-95d8-c441d3c0b752",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec8da2b8-996a-49ff-9149-2d167b62cca6",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HoldSubmit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

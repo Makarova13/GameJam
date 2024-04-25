@@ -60,6 +60,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _skipButton: {fileID: 3895463932088926463}
+  skipAction: {fileID: -6829290881567474051, guid: 96dabf9da801c784686f70cb0b914d4e,
+    type: 3}
   _panel: {fileID: 3399114310548475913}
   _dialogText: {fileID: 4253223404396839043}
   _choiceButtons:
@@ -68,9 +70,14 @@ MonoBehaviour:
   PlayerResponded:
     m_PersistentCalls:
       m_Calls: []
+  DialogStarted:
+    m_PersistentCalls:
+      m_Calls: []
   DialogEnded:
     m_PersistentCalls:
       m_Calls: []
+  IsTyping: 0
+  isActive: 0
 --- !u!1 &2065740037518596866
 GameObject:
   m_ObjectHideFlags: 0
