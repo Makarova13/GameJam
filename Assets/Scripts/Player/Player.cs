@@ -152,6 +152,11 @@ public class Player : MonoBehaviour
 
     public void Movement(InputAction.CallbackContext context)
     {
+        if(Time.timeScale == 0)
+        {
+            return;
+        }
+
         Vector3 input = context.ReadValue<Vector3>();
         if (input != Vector3.zero)
         {
