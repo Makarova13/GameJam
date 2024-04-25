@@ -1,4 +1,4 @@
-
+using Assets.Scripts;
 public class EnemyState
 {
     protected Enemy enemy;
