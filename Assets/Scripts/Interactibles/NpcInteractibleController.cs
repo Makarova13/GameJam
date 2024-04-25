@@ -54,6 +54,7 @@ public class NpcInteractibleController : BaseInteractibleObject
         }
         else
         {
+            controller.Free();
             controller.AnimationController.PlayIdleHappy();
         }
 
