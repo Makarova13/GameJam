@@ -201,6 +201,12 @@ public class Player : MonoBehaviour
         transform.position = pos;
         health.ResetLife();
         flashLightController.Recharge();
+        GameLevelTimer.Instance.ActiveteTimer();
+    }
+
+    public void KillPlayer()
+    {
+        health.KillPlayer();
     }
 
         public float Speed
