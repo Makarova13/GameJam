@@ -557,7 +557,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 247
@@ -668,6 +668,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lantern (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6395329592209797524, guid: ee9b188695b666f4da42d82aa6797702,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6395329592209797524, guid: ee9b188695b666f4da42d82aa6797702,
         type: 3}
