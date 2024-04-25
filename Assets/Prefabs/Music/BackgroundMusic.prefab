@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3258899621661446851}
-  - component: {fileID: 5011579187229179972}
   - component: {fileID: 1727963442496619567}
   - component: {fileID: 244654604121035475}
   - component: {fileID: 6135142219143083722}
@@ -37,27 +36,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3979780136763340338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &5011579187229179972
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1594345677327593439}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 10
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &1727963442496619567
 AudioSource:
   m_ObjectHideFlags: 0
@@ -264,10 +242,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 583749589876178108, guid: ee31d87e1a8e0be40a073e737ca9efef,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 171cce2db9fcc364986b4cd07ed2c379, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -487,6 +465,7 @@ MonoBehaviour:
     fadeInVolume: 1
     fadeOutVolume: 0
   flashLightController: {fileID: 0}
+  rechargingStation: {fileID: 0}
 --- !u!1 &2728225208604410874
 GameObject:
   m_ObjectHideFlags: 0

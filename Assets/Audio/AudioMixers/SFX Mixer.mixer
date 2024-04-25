@@ -73,7 +73,6 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 58fa8c44b11b7c7409995037d45c11cc
   m_Children:
-  - {fileID: 583749589876178108}
   - {fileID: 1663854893991486096}
   - {fileID: 4202540676665746871}
   - {fileID: 5302208713206355147}
@@ -176,6 +175,8 @@ AudioMixerController:
     name: DarkVolume
   - guid: 0e9afb7d9a0b00d4f85d2e161c8d350a
     name: MainVolume
+  - guid: 6c849107bb77f834084923f7883bc5e4
+    name: ChargingSFXVolume
   m_AudioMixerGroupViews:
   - guids:
     - da423662304a41443a6f8ff2ccc67a81
@@ -318,6 +319,7 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 7d2dcc3e1c748eb4893e845513196fec
   m_Children:
+  - {fileID: 583749589876178108}
   - {fileID: -9182467604093140472}
   m_Volume: 6c849107bb77f834084923f7883bc5e4
   m_Pitch: 58f64d5482f629c46ada76000a242af0

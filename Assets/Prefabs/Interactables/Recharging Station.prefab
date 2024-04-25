@@ -986,6 +986,7 @@ GameObject:
   - component: {fileID: 3822669791345170810}
   - component: {fileID: 5815673598045698329}
   - component: {fileID: 3165793876916047419}
+  - component: {fileID: 1929632146525701728}
   m_Layer: 0
   m_Name: AudioHolder
   m_TagString: Untagged
@@ -1037,9 +1038,8 @@ MonoBehaviour:
   rechargingAudioSourceSettings:
     loop: 1
     playOnAwake: 0
-    minDistance: 10
-    maxDistance: 500
-    spatialBlend: 0.8
+    audioMixerGroup: {fileID: -127156508339641498, guid: ee31d87e1a8e0be40a073e737ca9efef,
+      type: 2}
   idleSFX:
     audioClip: {fileID: 8300000, guid: cf12610165224714fa58d3879efe9990, type: 3}
     pitch: 0
@@ -1053,13 +1053,12 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 8edadf5a2c883fb4fb9484da5a5c9dc2, type: 3}
     - {fileID: 8300000, guid: 775701fc05b7deb418c5690f688cb700, type: 3}
     - {fileID: 8300000, guid: a86b47c5d620d1e4c9fb8e8066464089, type: 3}
-    - {fileID: 8300000, guid: ed1a10bc66307d64bacc63a0f968a18c, type: 3}
-    - {fileID: 8300000, guid: ad666295736e9dc4a8671bc4133d4392, type: 3}
     - {fileID: 8300000, guid: 9d340377c35ac7a4ab1c366884fafa28, type: 3}
+    - {fileID: 8300000, guid: ad666295736e9dc4a8671bc4133d4392, type: 3}
     _pitchMin: 0.3
-    _pitchMax: 2.4
+    _pitchMax: 2.4009001
     _volumeMin: 0.1
-    _volumeMax: 0.3
+    _volumeMax: 0.2
     delayMin: 3
     delayMax: 10
   audioSourceManager: {fileID: 3822669791345170810}
@@ -1124,7 +1123,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.8
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1164,6 +1163,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1929632146525701728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818624266480864319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca618f6e5c6820d46aff7f9463622811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: ee31d87e1a8e0be40a073e737ca9efef, type: 2}
+  soundDistance: 20
+  volumeValueChanger: 1
+  mixerExposedParameter: ChargingSFXVolume
 --- !u!1 &6233213137069718910
 GameObject:
   m_ObjectHideFlags: 0
