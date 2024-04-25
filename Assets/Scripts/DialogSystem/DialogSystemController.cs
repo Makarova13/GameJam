@@ -36,18 +36,9 @@ namespace Assets.Scripts
             {
                 _choiceButtons[i].Subscribe(OnChoiceButtonClick);
             }
-        }
 
-        private void OnEnable()
-        {
-            _skipButton.onClick.AddListener(Skip);
             skipAction.action.performed += OnSkipAction;
-        }
-
-        private void OnDisable()
-        {
-            _skipButton.onClick.RemoveListener(Skip);
-            skipAction.action.performed -= OnSkipAction;
+            _skipButton.onClick.AddListener(Skip);
         }
 
         public void Init(List<DialogWithChoices> dialogs)
@@ -143,14 +134,15 @@ namespace Assets.Scripts
 
         private void Skip()
         {
-            if (_dialogText.Typing)
-            {
-                _dialogText.Skip();
-            }
-            else if(!_haveChoices)
-            {
-                ShowNextDialog();
-            }
+            if (_panel.gameObject.activeSelf)
+                if (_dialogText.Typing)
+                {
+                    _dialogText.Skip();
+                }
+                else if (!_haveChoices)
+                {
+                    ShowNextDialog();
+                }
         }
     }
 }
