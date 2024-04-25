@@ -16,9 +16,9 @@ MonoBehaviour:
   ambientOpacity: 1
   albedo: {r: 0, g: 0, b: 0, a: 1}
   minMaxStepLength: {x: 0.5, y: 8.56338}
-  stepIncrementFactor: 1.1
+  stepIncrementFactor: 1.272
   maxRayLength: 50
-  maxSampleCount: 36
+  maxSampleCount: 194
   jitterStrength: 5
   lightingMode: 1
   lightIntensityModifier: 1

@@ -7,7 +7,8 @@ public class NpcController : MonoBehaviour
     [SerializeField] NPCAnimationController animationController;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Health health;
-    [SerializeField] private float stopNearPlayer = 3.5f;   
+    [SerializeField] private float stopNearPlayer = 3.5f;
+    [SerializeField] private GameObject chains;
     private NPCState currentState;
     private Transform player;
 
@@ -29,12 +30,19 @@ public class NpcController : MonoBehaviour
 
         currentState.Execute();
     }
+
+    public void Free()
+    {
+        chains.SetActive(false);
+    }
+
     public void TransitionToState(NPCState state)
     {
         currentState?.OnExit();
         currentState = state;
         currentState.OnEnter();
     }
+
     public void FollowPlayer()
     {
         agent.SetDestination(player.position);

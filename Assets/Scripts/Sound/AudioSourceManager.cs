@@ -18,9 +18,7 @@ namespace AudioTools
             audioSourceSettings.audioSource.outputAudioMixerGroup = audioSourceSettings.audioMixerGroup;
             audioSourceSettings.audioSource.loop = rechargingStationSetting.loop;
             audioSourceSettings.audioSource.playOnAwake = rechargingStationSetting.playOnAwake;
-            audioSourceSettings.audioSource.spatialBlend = rechargingStationSetting.spatialBlend;
-            audioSourceSettings.audioSource.minDistance = rechargingStationSetting.minDistance;
-            audioSourceSettings.audioSource.maxDistance = rechargingStationSetting.maxDistance;
+            audioSourceSettings.audioSource.outputAudioMixerGroup = rechargingStationSetting.audioMixerGroup;
 
             return audioSourceSettings.audioSource;
         }

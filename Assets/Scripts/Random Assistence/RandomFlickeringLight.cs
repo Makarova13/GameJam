@@ -9,7 +9,7 @@ namespace Assets.Scripts
         [SerializeField] private float probability = 1;
 
         private Light _light;
-        private WaitForSeconds waitForSeconds = new WaitForSeconds(2);
+        private WaitForSeconds waitForSeconds = new WaitForSeconds(20);
         private float normalIntensity;
 
         private void Awake()
