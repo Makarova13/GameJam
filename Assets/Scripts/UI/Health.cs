@@ -48,4 +48,9 @@ public class Health : MonoBehaviour
         currentHP = maxHP;
         OnHealed?.Invoke(maxHP, currentHP, maxHP);
     }
+
+    public void KillPlayer()
+    {
+        Damage(maxHP);
+    }
 }
