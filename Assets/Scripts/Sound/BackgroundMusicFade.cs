@@ -1,5 +1,4 @@
 using AudioTools;
-using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -14,16 +13,13 @@ public class BackgroundMusicFade : MonoBehaviour
     [SerializeField] private SoundSettings.BackgroundMusicFadeSettings chargerLoopSettings;
     [SerializeField] private SoundSettings.BackgroundMusicFadeSettings battleLoopSettings;
 
-    private FlashLightController flashLightController;
-    private RechargingStation rechargingStation;
+    [SerializeField] private FlashLightController flashLightController;
+    [SerializeField] private RechargingStation rechargingStation;
 
     private bool isFlashlightOn = true;
 
     private void Start()
     {
-        flashLightController = FindObjectOfType<FlashLightController>();
-        rechargingStation = FindObjectOfType<RechargingStation>();
-
         ResetVolumes(darkLoopSettings, chargerLoopSettings, battleLoopSettings);
     }
 
@@ -49,6 +45,44 @@ public class BackgroundMusicFade : MonoBehaviour
         {
             FadeOutLoop(mainLoopSettings);
             FadeInLoop(darkLoopSettings);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "ChargingStation")
+        {
+            FadeInLoop(chargerLoopSettings);
+        }
+
+        if (other.tag == "Enemy" && isFlashlightOn)
+        {
+            FadeOutLoop(mainLoopSettings);
+            FadeInLoop(battleLoopSettings);
+        }
+        else if (other.tag == "Enemy" && !isFlashlightOn)
+        {
+            FadeOutLoop(darkLoopSettings);
+            FadeInLoop(battleLoopSettings);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "ChargingStation")
+        {
+            FadeOutLoop(chargerLoopSettings);
+        }
+
+        if (other.tag == "Enemy" && isFlashlightOn)
+        {
+            FadeInLoop(mainLoopSettings);
+            FadeOutLoop(battleLoopSettings);
+        }
+        else if (other.tag == "Enemy" && !isFlashlightOn)
+        {
+            FadeInLoop(darkLoopSettings);
+            FadeOutLoop(battleLoopSettings);
         }
     }
 

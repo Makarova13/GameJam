@@ -37,7 +37,9 @@ namespace AudioTools
         {
             public bool loop;
             public bool playOnAwake;
-            public AudioMixerGroup audioMixerGroup;
+            public float minDistance;
+            public float maxDistance;
+            [Range(0, 1)] public float spatialBlend;
         }
 
         [Serializable]
