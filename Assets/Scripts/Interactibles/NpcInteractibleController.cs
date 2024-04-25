@@ -5,6 +5,7 @@ using UnityEngine;
 public class NpcInteractibleController : BaseInteractibleObject
 {
     [SerializeField] NpcController controller;
+    [SerializeField] Player player;
 
     private void Start()
     {
@@ -54,6 +55,9 @@ public class NpcInteractibleController : BaseInteractibleObject
         }
         else
         {
+            player.AnimateInteraction();
+
+            yield return new WaitForSeconds(1.5f);
             controller.Free();
             controller.AnimationController.PlayIdleHappy();
         }
