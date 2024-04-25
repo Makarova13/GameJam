@@ -35,6 +35,7 @@ public class Interactions : MonoBehaviour
             if(GetDistance(obj.gameObject) < 3)
             {
                 obj.Interact();
+
                 if (obj.gameObject.tag != "NPC") // != to an npc
                 {
                     Destroy(obj.gameObject);

@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.AI;
-using static UnityEditor.Experimental.GraphView.GraphView;
-using static UnityEditor.Progress;
 
 public class Enemy : MonoBehaviour
 {
