@@ -1,6 +1,6 @@
 
 using Unity.VisualScripting;
-
+using Assets.Scripts;
 public class AttackState : EnemyState
 {
     private SimpleEnemyAttack simpleattack;

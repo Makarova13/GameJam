@@ -1,4 +1,4 @@
-
+using Assets.Scripts;
 public class ChaseState : EnemyState
 {
     public ChaseState(Enemy e) : base(e) { }

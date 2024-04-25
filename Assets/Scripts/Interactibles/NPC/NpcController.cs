@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 public class NpcController : MonoBehaviour

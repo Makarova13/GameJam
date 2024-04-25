@@ -1,4 +1,4 @@
-
+using Assets.Scripts;
 public class IdleState : EnemyState
 {
     public IdleState(Enemy e) : base(e){}
