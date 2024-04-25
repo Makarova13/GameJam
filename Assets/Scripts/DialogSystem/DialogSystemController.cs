@@ -135,6 +135,7 @@ namespace Assets.Scripts
         private void Skip()
         {
             if (_panel.gameObject.activeSelf)
+            {
                 if (_dialogText.Typing)
                 {
                     _dialogText.Skip();
@@ -143,6 +144,7 @@ namespace Assets.Scripts
                 {
                     ShowNextDialog();
                 }
+            }
         }
     }
 }

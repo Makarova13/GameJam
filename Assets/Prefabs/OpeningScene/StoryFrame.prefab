@@ -128,5 +128,5 @@ MonoBehaviour:
     m_RotationOrder: 4
   changeOpacity: 1
   startWithOpacity: 0
-  duration: 0.6
+  duration: 0.3
   showNextTime: 1
