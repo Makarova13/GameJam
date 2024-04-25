@@ -351,13 +351,13 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""HoldSubmit"",
-                    ""type"": ""Value"",
-                    ""id"": ""fc67a1c7-c3fc-4e9d-b2e3-df0907154dfa"",
+                    ""name"": ""Escape"",
+                    ""type"": ""Button"",
+                    ""id"": ""1a5323b2-dabf-4b87-95dc-4ca5e2447751"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Hold"",
-                    ""initialStateCheck"": true
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -770,23 +770,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""9a800ace-329f-46e1-95d8-c441d3c0b752"",
-                    ""path"": ""<Keyboard>/enter"",
+                    ""id"": ""64a87311-f7eb-4e40-99be-ac8ed90bffed"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Submit"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""ec8da2b8-996a-49ff-9149-2d167b62cca6"",
-                    ""path"": ""<Keyboard>/j"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""HoldSubmit"",
+                    ""action"": ""Escape"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -818,7 +807,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
-        m_UI_HoldSubmit = m_UI.FindAction("HoldSubmit", throwIfNotFound: true);
+        m_UI_Escape = m_UI.FindAction("Escape", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1022,7 +1011,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_RightClick;
     private readonly InputAction m_UI_TrackedDevicePosition;
     private readonly InputAction m_UI_TrackedDeviceOrientation;
-    private readonly InputAction m_UI_HoldSubmit;
+    private readonly InputAction m_UI_Escape;
     public struct UIActions
     {
         private @InputActions m_Wrapper;
@@ -1037,7 +1026,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @RightClick => m_Wrapper.m_UI_RightClick;
         public InputAction @TrackedDevicePosition => m_Wrapper.m_UI_TrackedDevicePosition;
         public InputAction @TrackedDeviceOrientation => m_Wrapper.m_UI_TrackedDeviceOrientation;
-        public InputAction @HoldSubmit => m_Wrapper.m_UI_HoldSubmit;
+        public InputAction @Escape => m_Wrapper.m_UI_Escape;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1077,9 +1066,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @TrackedDeviceOrientation.started += instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.performed += instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.canceled += instance.OnTrackedDeviceOrientation;
-            @HoldSubmit.started += instance.OnHoldSubmit;
-            @HoldSubmit.performed += instance.OnHoldSubmit;
-            @HoldSubmit.canceled += instance.OnHoldSubmit;
+            @Escape.started += instance.OnEscape;
+            @Escape.performed += instance.OnEscape;
+            @Escape.canceled += instance.OnEscape;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -1114,9 +1103,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @TrackedDeviceOrientation.started -= instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.performed -= instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.canceled -= instance.OnTrackedDeviceOrientation;
-            @HoldSubmit.started -= instance.OnHoldSubmit;
-            @HoldSubmit.performed -= instance.OnHoldSubmit;
-            @HoldSubmit.canceled -= instance.OnHoldSubmit;
+            @Escape.started -= instance.OnEscape;
+            @Escape.performed -= instance.OnEscape;
+            @Escape.canceled -= instance.OnEscape;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -1159,6 +1148,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnRightClick(InputAction.CallbackContext context);
         void OnTrackedDevicePosition(InputAction.CallbackContext context);
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
-        void OnHoldSubmit(InputAction.CallbackContext context);
+        void OnEscape(InputAction.CallbackContext context);
     }
 }

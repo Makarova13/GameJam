@@ -354,13 +354,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5329451412257393530}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.27059805, y: 0.6532815, z: -0.27059805, w: 0.6532815}
-  m_LocalPosition: {x: 0.108, y: 2.462, z: 2.317}
+  m_LocalRotation: {x: 0.32650557, y: 0.6272114, z: -0.32650557, w: 0.6272114}
+  m_LocalPosition: {x: 0.115, y: 2.098, z: 2.084}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4431188253650433763}
-  m_LocalEulerAnglesHint: {x: 45, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 55, y: 90, z: 0}
 --- !u!108 &58539980402419509
 Light:
   m_ObjectHideFlags: 0
@@ -372,11 +372,11 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.9811321, g: 0.87321967, b: 0.42114633, a: 1}
-  m_Intensity: 5
+  m_Color: {r: 1, g: 0.8405792, b: 0.15566039, a: 1}
+  m_Intensity: 8
   m_Range: 100
-  m_SpotAngle: 137.21968
-  m_InnerSpotAngle: 33.17279
+  m_SpotAngle: 177.36156
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -458,7 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c86148c1f95ea584c809000230d770fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  probability: 2
+  probability: 1
 --- !u!1 &5750168610487124106
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 3822669791345170810}
   - component: {fileID: 5815673598045698329}
   - component: {fileID: 3165793876916047419}
+  - component: {fileID: 5929391413157381886}
   m_Layer: 0
   m_Name: AudioHolder
   m_TagString: Untagged
@@ -625,9 +626,8 @@ MonoBehaviour:
   rechargingAudioSourceSettings:
     loop: 1
     playOnAwake: 0
-    minDistance: 10
-    maxDistance: 500
-    spatialBlend: 0.8
+    audioMixerGroup: {fileID: -127156508339641498, guid: ee31d87e1a8e0be40a073e737ca9efef,
+      type: 2}
   idleSFX:
     audioClip: {fileID: 8300000, guid: cf12610165224714fa58d3879efe9990, type: 3}
     pitch: 0
@@ -641,13 +641,12 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 8edadf5a2c883fb4fb9484da5a5c9dc2, type: 3}
     - {fileID: 8300000, guid: 775701fc05b7deb418c5690f688cb700, type: 3}
     - {fileID: 8300000, guid: a86b47c5d620d1e4c9fb8e8066464089, type: 3}
-    - {fileID: 8300000, guid: ed1a10bc66307d64bacc63a0f968a18c, type: 3}
-    - {fileID: 8300000, guid: ad666295736e9dc4a8671bc4133d4392, type: 3}
     - {fileID: 8300000, guid: 9d340377c35ac7a4ab1c366884fafa28, type: 3}
+    - {fileID: 8300000, guid: ad666295736e9dc4a8671bc4133d4392, type: 3}
     _pitchMin: 0.3
     _pitchMax: 2.4
     _volumeMin: 0.1
-    _volumeMax: 0.3
+    _volumeMax: 0.2
     delayMin: 3
     delayMax: 10
   audioSourceManager: {fileID: 3822669791345170810}
@@ -712,7 +711,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.8
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -752,6 +751,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5929391413157381886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818624266480864319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca618f6e5c6820d46aff7f9463622811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: ee31d87e1a8e0be40a073e737ca9efef, type: 2}
+  volumeValueChanger: 1
+  soundDistance: 20
+  exposedParameter: ChargerSFXVolume
 --- !u!1 &6216884578187880615
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,7 +795,7 @@ Transform:
   m_GameObject: {fileID: 6216884578187880615}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.815, y: 1.9089994, z: 1.9}
+  m_LocalPosition: {x: -0.686, y: 1.676, z: 1.651}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -797,11 +812,11 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.9811321, g: 0.87321967, b: 0.42114633, a: 1}
-  m_Intensity: 5
+  m_Color: {r: 0.990566, g: 0.864409, b: 0.3224012, a: 1}
+  m_Intensity: 3
   m_Range: 50
-  m_SpotAngle: 102.40843
-  m_InnerSpotAngle: 33.5881
+  m_SpotAngle: 132.71964
+  m_InnerSpotAngle: 15.565214
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -832,7 +847,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 2
+  m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -883,7 +898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c86148c1f95ea584c809000230d770fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  probability: 5
+  probability: 2
 --- !u!1 &6298967616230041625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,7 +1137,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.92042565, b: 0.5235849, a: 1}
   m_Intensity: 2
   m_Range: 100
   m_SpotAngle: 137.21968
@@ -1239,6 +1254,7 @@ GameObject:
   - component: {fileID: 4431188253650433763}
   - component: {fileID: 5086934294545913682}
   - component: {fileID: 5687640595828058476}
+  - component: {fileID: 7217542712262394268}
   m_Layer: 0
   m_Name: Recharging Station
   m_TagString: ChargingStation
@@ -1256,7 +1272,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8850124354925534631}
@@ -1306,3 +1322,17 @@ MonoBehaviour:
   starPos: {fileID: 3053014743195724777}
   endPos: {fileID: 940664206406988076}
   positionMarker: {fileID: 6762215873259852407}
+--- !u!114 &7217542712262394268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9038888086315574558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d245de298bcbb9c478b2dca3bc2a53ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeIntensity: 0.05
+  objectTransform: {fileID: 4431188253650433763}
