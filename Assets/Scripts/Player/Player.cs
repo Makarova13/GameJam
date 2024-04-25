@@ -57,11 +57,16 @@ public class Player : MonoBehaviour
         TargetsForEnemy.Add(transform);
     }
 
-        private void OnFlashLightToggle()
-        {
-            Debug.Log("lantern loged");
-            flashLightController.ToggleLight();
-        }
+    public void AnimateInteraction()
+    {
+        animator.Play("Mess");
+    }
+
+    private void OnFlashLightToggle()
+    {
+        Debug.Log("lantern loged");
+        flashLightController.ToggleLight();
+    }
 
     private void OnEnable()
     {

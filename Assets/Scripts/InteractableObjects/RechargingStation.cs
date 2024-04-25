@@ -96,6 +96,7 @@ public class RechargingStation : MonoBehaviour
             return;
         }
 
+        player.AnimateInteraction();
         isInteracting = true;
         player.GetFlashLight().SetIsOn(false);
         interactionText.SetActive(false);

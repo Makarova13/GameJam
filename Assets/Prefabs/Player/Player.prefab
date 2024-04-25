@@ -143,6 +143,7 @@ MonoBehaviour:
   - {fileID: 0}
   NPCInteract: {fileID: 0}
   FlashlightInteract: {fileID: 0}
+  player: {fileID: 3520781180340139393}
 --- !u!114 &3888401811813579208
 MonoBehaviour:
   m_ObjectHideFlags: 0
