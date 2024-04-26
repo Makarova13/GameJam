@@ -1,0 +1,28 @@
+{
+  "Dialogs": [
+    {
+      "Text": "CAIN: Hello, little girl. Feeling brave tonight, I see?",
+      "Choices": []
+    },
+    {
+      "Text": "MAY: Hello? Who is this? What’s going on?!",
+      "Choices": []
+    },
+    {
+      "Text": "CAIN: My name is Cain, the creator of this labyrinth. Don’t worry, little girl. I won’t hurt you… yet. You’ve trespassed onto my property and entered my home without permission. That’s a very naughty thing to do, little girl.",
+      "Choices": []
+    },
+    {
+      "Text": "MAY: I’m sorry! Please, can I just go home? I won’t come back, I promise!",
+      "Choices": []
+    },
+    {
+      "Text": "CAIN: Aw, you’re sorry? That’s sweet, but it’s too late. I’ve made up my mind. It’s time for you to follow my rules. Escape before sunrise and I’ll let you go free. If not… well, you’ll see what I do to naughty children who trespass into my home. Good luck, little girl.",
+      "Choices": []
+    },
+    {
+      "Text": "MAY: Wait, no! Let me go-!",
+      "Choices": []
+    }
+  ]
+}
