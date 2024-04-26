@@ -6,7 +6,6 @@ namespace Assets.Scripts
 {
     public class Enemy : MonoBehaviour
     {
-        public static Enemy instance;
         public bool HasPath => agent.hasPath;
         public SimpleEnemyAttack Attack;
         [SerializeField] private NavMeshAgent agent;
@@ -24,10 +23,6 @@ namespace Assets.Scripts
         private EnemyState currentState;
         private Vector3 facing;
 
-        private void Awake()
-        {
-            instance = this;
-        }
         private void Start()
         {
             SlowDown(); // :D
@@ -66,13 +61,12 @@ namespace Assets.Scripts
         public void GoToStartPosition()
         {
             agent.SetDestination(startPosition);
-            startPosition = agent.destination;
         }
         public void GoToSetPathPoint()
         {
             agent.SetDestination(setPathPoint.position);
         }
-        public bool IsDestenationStartPosition() => agent.destination == startPosition;
+        public bool IsDestenationStartPosition() => Mathf.Approximately(transform.position.x, startPosition.x) && Mathf.Approximately(transform.position.z, startPosition.z);
 
         public void DisableMovement()
         {
@@ -120,7 +114,7 @@ namespace Assets.Scripts
             var direction = target - transform.position;
             if (viewAngle >= Vector3.Angle(facing, direction))
             {
-                Debug.DrawRay(transform.position, target - transform.position, Color.red, Mathf.Infinity);
+                //Debug.DrawRay(transform.position, target - transform.position, Color.red, Mathf.Infinity);
                 if (Physics.Raycast(transform.position, target - transform.position, out RaycastHit hitInfo, Mathf.Infinity, layerMask))
                 {
                     return hitInfo.collider.gameObject == Player.instance.gameObject || hitInfo.collider.gameObject.tag == "NPC";
@@ -161,7 +155,7 @@ namespace Assets.Scripts
             {
                 animator.SetBool("isWalking", false);
             }
-            Debug.DrawRay(transform.position, facing, Color.blue, 5f);
+           // Debug.DrawRay(transform.position, facing, Color.blue, 5f);
         }
         private void SpeedUp()
         {
