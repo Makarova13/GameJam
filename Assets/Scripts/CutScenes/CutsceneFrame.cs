@@ -7,9 +7,9 @@ public class CutsceneFrame : MonoBehaviour
     [SerializeField] bool changeOpacity;
     [SerializeField] bool startWithOpacity;
     [SerializeField] float duration = 1.0f;
-    [SerializeField] float showNextTime = 2f;
+    [SerializeField] float showTime = 2f;
 
-    public float ShowNextTime => showNextTime;
+    public float ShowNextTime => showTime;
 
     private float elapsedTime = 0.0f;
     private bool isAnimating = false;

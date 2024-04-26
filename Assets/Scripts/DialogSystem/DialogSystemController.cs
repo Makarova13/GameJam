@@ -14,6 +14,8 @@ namespace Assets.Scripts
         [SerializeField] GameObject _panel;
         [SerializeField] TextTyper _dialogText;
         [SerializeField] List<ChoiceButton> _choiceButtons = new(3);
+        [SerializeField] TextAsset _openingDialogue;
+        [SerializeField] bool _showOpeningDialogue;
 
         public static DialogSystemController Instance;
 
@@ -35,6 +37,12 @@ namespace Assets.Scripts
             for (int i = 0; i < _choiceButtons.Count; i++)
             {
                 _choiceButtons[i].Subscribe(OnChoiceButtonClick);
+            }
+
+            if (_showOpeningDialogue && _openingDialogue != null)
+            {
+                Init(DialogsLoader.GetJsonData(_openingDialogue));
+                ShowCurrentDialog();
             }
 
             skipAction.action.performed += OnSkipAction;

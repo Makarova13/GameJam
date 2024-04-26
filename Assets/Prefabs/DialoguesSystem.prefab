@@ -67,6 +67,8 @@ MonoBehaviour:
   _choiceButtons:
   - {fileID: 6651283465064214324}
   - {fileID: 6252826662794454018}
+  _openingDialogue: {fileID: 4900000, guid: e05423f03747c3e4aaf5a41e8c000350, type: 3}
+  _showOpeningDialogue: 1
   PlayerResponded:
     m_PersistentCalls:
       m_Calls: []
@@ -331,7 +333,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6d431fefe6bd2ba468a3da194b2de045, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a6fb958da5952c243bbdafbb7448303d, type: 2}
   m_sharedMaterial: {fileID: 5266134484555376220, guid: 6d431fefe6bd2ba468a3da194b2de045,
     type: 2}
   m_fontSharedMaterials: []
@@ -396,7 +398,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -1.1275635, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &4253223404396839043
