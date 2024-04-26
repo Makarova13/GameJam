@@ -1,4 +1,5 @@
 using AudioTools;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -10,20 +11,20 @@ public class BackgroundMusicFade : MonoBehaviour
 {
     [SerializeField] private SoundSettings.BackgroundMusicFadeSettings mainLoopSettings;
     [SerializeField] private SoundSettings.BackgroundMusicFadeSettings darkLoopSettings;
-    [SerializeField] private SoundSettings.BackgroundMusicFadeSettings chargerLoopSettings;
     [SerializeField] private SoundSettings.BackgroundMusicFadeSettings battleLoopSettings;
 
     private FlashLightController flashLightController;
-    private RechargingStation rechargingStation;
+    [SerializeField] private RechargingStation rechargingStation;
 
     private bool isFlashlightOn = true;
+    private bool isBattling = false;
 
     private void Start()
     {
         flashLightController = FindObjectOfType<FlashLightController>();
         rechargingStation = FindObjectOfType<RechargingStation>();
 
-        ResetVolumes(darkLoopSettings, chargerLoopSettings, battleLoopSettings);
+        ResetVolumes(darkLoopSettings, battleLoopSettings);
     }
 
     void Update()
@@ -38,16 +39,53 @@ public class BackgroundMusicFade : MonoBehaviour
             isFlashlightOn = true;
         }
 
-        if (isFlashlightOn && !mainLoopSettings.audioSource.isPlaying && !battleLoopSettings.audioSource.isPlaying)
+        if (isFlashlightOn && !isBattling && battleLoopSettings.audioSource.isPlaying && !mainLoopSettings.audioSource.isPlaying)
+        {
+            FadeOutLoop(battleLoopSettings);
+            FadeInLoop(mainLoopSettings);
+        }
+        else if(!isFlashlightOn && !isBattling && battleLoopSettings.audioSource.isPlaying && !darkLoopSettings.audioSource.isPlaying)
+        {
+            FadeOutLoop(battleLoopSettings);
+            FadeInLoop(darkLoopSettings);
+        }
+
+        if (isFlashlightOn && !mainLoopSettings.audioSource.isPlaying && !isBattling)
         {
             FadeOutLoop(darkLoopSettings);
             FadeInLoop(mainLoopSettings);
         }
-
-        if(!isFlashlightOn && !darkLoopSettings.audioSource.isPlaying && !battleLoopSettings.audioSource.isPlaying)
+        else if(!isFlashlightOn && !darkLoopSettings.audioSource.isPlaying && !isBattling)
         {
             FadeOutLoop(mainLoopSettings);
             FadeInLoop(darkLoopSettings);
+        }
+
+        if(!isFlashlightOn && isBattling && !battleLoopSettings.audioSource.isPlaying)
+        {
+            FadeOutLoop(darkLoopSettings);
+            FadeInLoop(battleLoopSettings);
+        }
+        else if(isFlashlightOn && isBattling && !battleLoopSettings.audioSource.isPlaying)
+        {
+            FadeOutLoop(mainLoopSettings);
+            FadeInLoop(battleLoopSettings);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Enemy")
+        {
+            isBattling = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+            isBattling = false;
         }
     }
 
@@ -74,10 +112,9 @@ public class BackgroundMusicFade : MonoBehaviour
         backgroundMusicFadeSettings.audioSource.Stop();
     }
 
-    private void ResetVolumes(SoundSettings.BackgroundMusicFadeSettings darkLoopSettings, SoundSettings.BackgroundMusicFadeSettings chargerLoopSettings, SoundSettings.BackgroundMusicFadeSettings battleLoopSettings)
+    private void ResetVolumes(SoundSettings.BackgroundMusicFadeSettings darkLoopSettings, SoundSettings.BackgroundMusicFadeSettings battleLoopSettings)
     {
         darkLoopSettings.audioMixer.SetFloat(darkLoopSettings.exposedParameter, -80);
-        chargerLoopSettings.audioMixer.SetFloat(chargerLoopSettings.exposedParameter, -80);
         battleLoopSettings.audioMixer.SetFloat(battleLoopSettings.exposedParameter, -80);
     }
 }

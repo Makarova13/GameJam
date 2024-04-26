@@ -25,13 +25,17 @@ public class RechargingSFX : MonoBehaviour
     [Header("Debug Value")]
     [SerializeField] private int numberOfComponents;
     [SerializeField] private AudioSource SFXAudioSource;
+    [SerializeField] private AudioSource chargerLoopSource;
 
     private SoundSettings.AudioSourceSettings audioSourceSettings;
 
     private bool SFXPlaying = false;
+    private bool isPlayerNear = false;
 
     private void Start()
     {
+        rechargingStation = FindObjectOfType<RechargingStation>();
+
         PlaySFX();
     }
 
@@ -42,19 +46,23 @@ public class RechargingSFX : MonoBehaviour
             audioSourceSettings.audioSource = audioSourceManager.CreateAudioSources(rechargingAudioSourceSettings);
         }
 
+        if(isPlayerNear && !chargerLoopSource.isPlaying)
+        {
+            chargerLoopSource.Play();
+        }
+
         if(audioSourceSettings.audioSource.clip == null)
         {
             audioSourceSettings.audioSource = audioSourceManager.GetAudioSource();
-
-            PlayClip(idleSFX.audioClip);
+            audioSourceSettings.audioSource.clip = idleSFX.audioClip;
         }
 
-        if (!PlayerInteracting())
+        if (!PlayerInteracting() && isPlayerNear)
         {
             SFXPlaying = true;
         }
 
-        if (!PlayerInteracting() && !IsAudioSourcePlaying(idleSFX.audioClip))
+        if (!PlayerInteracting() && !IsAudioSourcePlaying(idleSFX.audioClip) && isPlayerNear)
         {
             audioSourceSettings.audioSource = audioSourceManager.GetAudioSource();
             audioSourceSettings.audioSource.Stop();
@@ -62,13 +70,36 @@ public class RechargingSFX : MonoBehaviour
             PlayClip(idleSFX.audioClip);
         }
 
-        if(PlayerInteracting() && !IsAudioSourcePlaying(activeSFX.audioClip))
+        if(PlayerInteracting() && !IsAudioSourcePlaying(activeSFX.audioClip) && isPlayerNear)
         {
             audioSourceSettings.audioSource = audioSourceManager.GetAudioSource();
             audioSourceSettings.audioSource.Stop();
 
             PlayClip(activeSFX.audioClip);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            isPlayerNear = true;
+
+            Debug.Log("Player is near");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            isPlayerNear = false;
+        }
+    }
+
+    public bool GetIsPlayerNear()
+    {
+        return isPlayerNear;
     }
 
     private void PlayClip(AudioClip clip)
@@ -79,7 +110,7 @@ public class RechargingSFX : MonoBehaviour
 
     private void PlaySFX()
     {
-        if (!PlayerInteracting())
+        if (!PlayerInteracting() && isPlayerNear)
         {
             SFXPlaying = true;
             StartCoroutine(PlayRandomClip(idleRandomSFX));
@@ -89,7 +120,7 @@ public class RechargingSFX : MonoBehaviour
 
     private bool IsAudioSourcePlaying(AudioClip clip)
     {
-        if (audioSourceSettings.audioSource.clip.name == clip.name)
+        if (audioSourceSettings.audioSource.clip.name == clip.name && isPlayerNear)
         {
             return true;
         }
@@ -105,7 +136,7 @@ public class RechargingSFX : MonoBehaviour
         {
             return true;
         }
-        else if (!IsEmpty(audioSourceManager.GetGameObject()) && !IsAudioSourcePlaying(idleSFX.audioClip) && !IsAudioSourcePlaying(activeSFX.audioClip))
+        else if (!IsEmpty(audioSourceManager.GetGameObject()) && !IsAudioSourcePlaying(idleSFX.audioClip) && !IsAudioSourcePlaying(activeSFX.audioClip) && isPlayerNear)
         {
             Component[] allComponents = audioSourceManager.GetGameObject().GetComponents<Component>();
 
