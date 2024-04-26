@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,16 +12,22 @@ public class FadeByDistance : MonoBehaviour
     [SerializeField] private string exposedParameter;
 
     private Player player;
+    private RechargingSFX rechargingSFX;
+    private int stationIndex;
 
 
     void Start()
     {
         player = FindObjectOfType<Player>();
+        rechargingSFX = GetComponent<RechargingSFX>();
     }
 
     void Update()
     {
-        VolumeChanger();
+        if (rechargingSFX.GetIsPlayerNear())
+        {
+            VolumeChanger();
+        }
     }
 
     private void VolumeChanger()
@@ -34,7 +41,7 @@ public class FadeByDistance : MonoBehaviour
         }
         else
         {
-            audioMixer.SetFloat (exposedParameter, -80);
+            audioMixer.SetFloat(exposedParameter, -80);
         }
     }
 }

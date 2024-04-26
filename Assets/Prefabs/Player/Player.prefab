@@ -710,11 +710,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3010946224965045101}
     m_Modifications:
+    - target: {fileID: 244654604121035475, guid: 35d92b866869d7943a635ff15b971b67,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b68c8c69733f7846ba8a0198047a8e5, type: 3}
     - target: {fileID: 975519155859301724, guid: 35d92b866869d7943a635ff15b971b67,
         type: 3}
       propertyPath: flashLightController
       value: 
       objectReference: {fileID: 5928981344442494410}
+    - target: {fileID: 1727963442496619567, guid: 35d92b866869d7943a635ff15b971b67,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a76ac1b9426033e4fab5c61b21a9e193, type: 3}
     - target: {fileID: 2728225208604410874, guid: 35d92b866869d7943a635ff15b971b67,
         type: 3}
       propertyPath: m_Name
@@ -755,6 +765,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7249618266493264042, guid: 35d92b866869d7943a635ff15b971b67,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e6cd587500cc5e4ba92b14083f11b43, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
