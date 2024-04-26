@@ -1,4 +1,6 @@
-
+using System.Collections;
+using UnityEngine;
+using Assets.Scripts;
 public class DeathState : EnemyState
 {
     public DeathState(Enemy e) : base(e){}

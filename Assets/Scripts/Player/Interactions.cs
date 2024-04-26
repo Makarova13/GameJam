@@ -48,7 +48,7 @@ public class Interactions : MonoBehaviour
     {
         if(other.gameObject.tag == "NPC")
         {
-            NPCInteract.SetActive(true);
+           // NPCInteract.SetActive(true);
         } else if(other.gameObject.tag == "Flashlight")
         {
             FlashlightInteract.SetActive(true);
@@ -59,7 +59,7 @@ public class Interactions : MonoBehaviour
     {
         if (other.gameObject.tag == "NPC")
         {
-            NPCInteract.SetActive(false);
+            //NPCInteract.SetActive(false);
         }
         else if (other.gameObject.tag == "Flashlight")
         {

@@ -62,6 +62,11 @@ public class Player : MonoBehaviour
         animator.Play("Mess");
     }
 
+    public void AnimateCalling()
+    {
+        animator.Play("Calling");
+    }
+
     private void OnFlashLightToggle()
     {
         Debug.Log("lantern loged");
@@ -152,6 +157,11 @@ public class Player : MonoBehaviour
 
     public void Movement(InputAction.CallbackContext context)
     {
+        if(Time.timeScale == 0)
+        {
+            return;
+        }
+
         Vector3 input = context.ReadValue<Vector3>();
         if (input != Vector3.zero)
         {
@@ -196,6 +206,12 @@ public class Player : MonoBehaviour
         transform.position = pos;
         health.ResetLife();
         flashLightController.Recharge();
+        GameLevelTimer.Instance.ActiveteTimer();
+    }
+
+    public void KillPlayer()
+    {
+        health.KillPlayer();
     }
 
         public float Speed

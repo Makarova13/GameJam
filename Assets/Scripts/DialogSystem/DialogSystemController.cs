@@ -1,6 +1,10 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace Assets.Scripts
@@ -8,9 +12,14 @@ namespace Assets.Scripts
     public class DialogSystemController : MonoBehaviour
     {
         [SerializeField] Button _skipButton;
+        [SerializeField] InputActionReference skipAction;
         [SerializeField] GameObject _panel;
         [SerializeField] TextTyper _dialogText;
         [SerializeField] List<ChoiceButton> _choiceButtons = new(3);
+        [SerializeField] TextAsset _openingDialogue;
+        [SerializeField] bool _showOpeningDialogue;
+        [SerializeField] Player player;
+        [SerializeField] AudioSource phoneSource;
 
         public static DialogSystemController Instance;
 
@@ -33,16 +42,14 @@ namespace Assets.Scripts
             {
                 _choiceButtons[i].Subscribe(OnChoiceButtonClick);
             }
-        }
 
-        private void OnEnable()
-        {
+            if (_showOpeningDialogue && _openingDialogue != null)
+            {
+                StartCoroutine(WaitAndStart());
+            }
+
+            skipAction.action.performed += OnSkipAction;
             _skipButton.onClick.AddListener(Skip);
-        }
-
-        private void OnDisable()
-        {
-            _skipButton.onClick.RemoveListener(Skip);
         }
 
         public void Init(List<DialogWithChoices> dialogs)
@@ -76,6 +83,31 @@ namespace Assets.Scripts
         {
             _currentDialogIndex = index;
             ShowDialog(_dialogs[index]);
+        }
+
+        private IEnumerator WaitAndStart()
+        {
+            phoneSource.Play();
+
+            yield return new WaitForSeconds(4f);
+
+            phoneSource.Pause();
+
+            Init(DialogsLoader.GetJsonData(_openingDialogue));
+            ShowCurrentDialog();
+            StartCoroutine(FirstDialogue());
+        }
+
+        private IEnumerator FirstDialogue()
+        {
+            while (_panel.gameObject.activeSelf)
+            {
+                player.AnimateCalling();
+
+                yield return null;
+            }
+
+            yield break;
         }
 
         private void OnChoiceButtonClick(Choice choice)
@@ -131,15 +163,23 @@ namespace Assets.Scripts
             }
         }
 
+        private void OnSkipAction(InputAction.CallbackContext _)
+        {
+            Skip();
+        }
+
         private void Skip()
         {
-            if (_dialogText.Typing)
+            if (_panel.gameObject.activeSelf)
             {
-                _dialogText.Skip();
-            }
-            else if(!_haveChoices)
-            {
-                ShowNextDialog();
+                if (_dialogText.Typing)
+                {
+                    _dialogText.Skip();
+                }
+                else if (!_haveChoices)
+                {
+                    ShowNextDialog();
+                }
             }
         }
     }
