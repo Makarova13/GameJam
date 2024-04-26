@@ -8,10 +8,15 @@ public class CutsceneFrame : MonoBehaviour
     [SerializeField] bool startWithOpacity;
     [SerializeField] float duration = 1.0f;
     [SerializeField] float showTime = 2f;
+    [SerializeField] AudioClip clip;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] float audioVolume;
+    [SerializeField] bool changeVolumeOverTime = true;
 
     public float ShowNextTime => showTime;
 
     private float elapsedTime = 0.0f;
+    private float volumeElapsedTime = 0.0f;
     private bool isAnimating = false;
 
     private void Awake()
@@ -34,15 +39,35 @@ public class CutsceneFrame : MonoBehaviour
                 StopAnimation();
             }
         }
+
+        if (changeVolumeOverTime && audioVolume != audioSource.volume && volumeElapsedTime < showTime)
+        {
+            volumeElapsedTime += Time.deltaTime;
+            float normalizedTime = Mathf.Clamp01(volumeElapsedTime / showTime);
+            float newVolume = Mathf.Lerp(audioVolume, audioSource.volume, normalizedTime);
+
+            audioSource.volume = newVolume;
+        }
     }
 
     public void ShowImidietly()
     {
         canvasGroup.alpha = 1;
+        changeVolumeOverTime = false;
+        audioSource.volume = audioVolume;
     }
 
     public void Show()
     {
+        volumeElapsedTime = 0;
+
+        if (audioSource.clip != clip)
+        {
+            audioSource.clip = clip;
+            audioSource.volume = audioVolume;
+            audioSource.Play();
+        }
+
         if (changeOpacity)
         {
             isAnimating = true;

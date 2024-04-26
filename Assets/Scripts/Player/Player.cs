@@ -62,6 +62,11 @@ public class Player : MonoBehaviour
         animator.Play("Mess");
     }
 
+    public void AnimateCalling()
+    {
+        animator.Play("Calling");
+    }
+
     private void OnFlashLightToggle()
     {
         Debug.Log("lantern loged");

@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -16,6 +18,8 @@ namespace Assets.Scripts
         [SerializeField] List<ChoiceButton> _choiceButtons = new(3);
         [SerializeField] TextAsset _openingDialogue;
         [SerializeField] bool _showOpeningDialogue;
+        [SerializeField] Player player;
+        [SerializeField] AudioSource phoneSource;
 
         public static DialogSystemController Instance;
 
@@ -41,8 +45,7 @@ namespace Assets.Scripts
 
             if (_showOpeningDialogue && _openingDialogue != null)
             {
-                Init(DialogsLoader.GetJsonData(_openingDialogue));
-                ShowCurrentDialog();
+                StartCoroutine(WaitAndStart());
             }
 
             skipAction.action.performed += OnSkipAction;
@@ -80,6 +83,31 @@ namespace Assets.Scripts
         {
             _currentDialogIndex = index;
             ShowDialog(_dialogs[index]);
+        }
+
+        private IEnumerator WaitAndStart()
+        {
+            phoneSource.Play();
+
+            yield return new WaitForSeconds(4f);
+
+            phoneSource.Pause();
+
+            Init(DialogsLoader.GetJsonData(_openingDialogue));
+            ShowCurrentDialog();
+            StartCoroutine(FirstDialogue());
+        }
+
+        private IEnumerator FirstDialogue()
+        {
+            while (_panel.gameObject.activeSelf)
+            {
+                player.AnimateCalling();
+
+                yield return null;
+            }
+
+            yield break;
         }
 
         private void OnChoiceButtonClick(Choice choice)

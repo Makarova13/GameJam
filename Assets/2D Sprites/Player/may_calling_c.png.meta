@@ -1,0 +1,765 @@
+fileFormatVersion: 2
+guid: 49d20f7803a6acb4da9eda523a59da1e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 600
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: may_calling_c_0
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 25
+        width: 133
+        height: 406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8023d6809c73437458e310edfab519a5
+      internalID: -565334617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_1
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 24
+        width: 132
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c01537bbd4c144e8a9812c2a6c7ba8
+      internalID: 1425590315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_2
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 24
+        width: 132
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f013f5a286fd1e458923cdea6745cf6
+      internalID: 663656739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_3
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 24
+        width: 131
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b12635e3c06e76b4987ea37d123576f7
+      internalID: -2094179705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_4
+      rect:
+        serializedVersion: 2
+        x: 2269
+        y: 24
+        width: 131
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24935981084bf0845bf064a6ce0b802d
+      internalID: -915049449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_5
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 28
+        width: 132
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61656a52b2a2d184f839cc2a4283703e
+      internalID: -507848318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_6
+      rect:
+        serializedVersion: 2
+        x: 3301
+        y: 28
+        width: 132
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4dbe5855d103248b14217e74921071
+      internalID: 1264565038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_7
+      rect:
+        serializedVersion: 2
+        x: 3818
+        y: 28
+        width: 131
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed4fe55fc89ace449f1995be9156ac8
+      internalID: 1019951620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_8
+      rect:
+        serializedVersion: 2
+        x: 4334
+        y: 28
+        width: 135
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ee2ce42094bc440bd030a919374880
+      internalID: -1783099636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_9
+      rect:
+        serializedVersion: 2
+        x: 4854
+        y: 28
+        width: 135
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8879eebc0e5b5740a509a7220d87924
+      internalID: -69099854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_10
+      rect:
+        serializedVersion: 2
+        x: 5370
+        y: 28
+        width: 136
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384870ebb821a3d40a725c2b2fd3fb49
+      internalID: -1445793122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_11
+      rect:
+        serializedVersion: 2
+        x: 5886
+        y: 28
+        width: 136
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7995c926c99d58343a966f9a8774ce70
+      internalID: -819538384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_12
+      rect:
+        serializedVersion: 2
+        x: 6403
+        y: 28
+        width: 135
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533d99350f179264f85913859c92f994
+      internalID: -660430061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_13
+      rect:
+        serializedVersion: 2
+        x: 6919
+        y: 28
+        width: 139
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce3c7b33f0e300409040391cc5c55b6
+      internalID: -69037624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_14
+      rect:
+        serializedVersion: 2
+        x: 7439
+        y: 28
+        width: 135
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125375bf4ecd62947943d5172df81ba2
+      internalID: -806110104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_15
+      rect:
+        serializedVersion: 2
+        x: 7955
+        y: 28
+        width: 136
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a5a96b8ea68a84d9a2fc5348073935
+      internalID: -1730029054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_16
+      rect:
+        serializedVersion: 2
+        x: 8472
+        y: 28
+        width: 135
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94b2bbe80c04374b9e5d697b847c925
+      internalID: 820827902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_17
+      rect:
+        serializedVersion: 2
+        x: 8988
+        y: 24
+        width: 136
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ee86a7a58d4b14698cd15107967d27
+      internalID: 129176740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_18
+      rect:
+        serializedVersion: 2
+        x: 9508
+        y: 24
+        width: 136
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108f510075244bc408c192b9ec8ba25c
+      internalID: 234279844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_19
+      rect:
+        serializedVersion: 2
+        x: 10026
+        y: 25
+        width: 137
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f606d0352c689745ba4ef2d3d43ca73
+      internalID: -1053722976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_20
+      rect:
+        serializedVersion: 2
+        x: 10544
+        y: 25
+        width: 136
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caee067c0abf2894889a70b3cede3d91
+      internalID: 1543308664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_21
+      rect:
+        serializedVersion: 2
+        x: 11061
+        y: 28
+        width: 135
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f80086396da7504f8c083d3d985daec
+      internalID: 431503603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_22
+      rect:
+        serializedVersion: 2
+        x: 11577
+        y: 24
+        width: 135
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1360be0564831b64cbbb89f508c9ac16
+      internalID: -1496693657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_23
+      rect:
+        serializedVersion: 2
+        x: 12095
+        y: 24
+        width: 137
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567a9150c072dde4c8f6984b9de763ea
+      internalID: 1822578264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_24
+      rect:
+        serializedVersion: 2
+        x: 12613
+        y: 25
+        width: 136
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf84b02326d1ac47a65e6722a0a52ee
+      internalID: -977317107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_25
+      rect:
+        serializedVersion: 2
+        x: 13130
+        y: 28
+        width: 135
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6493976e8ced7b942b4b94751dddedd8
+      internalID: 1839522269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_26
+      rect:
+        serializedVersion: 2
+        x: 13646
+        y: 24
+        width: 132
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02acd529bb3ca054ab27f1ad4df817d1
+      internalID: 1310000245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_27
+      rect:
+        serializedVersion: 2
+        x: 14162
+        y: 24
+        width: 132
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe9060f68e9c8a40bb7dac0cd00dc67
+      internalID: 716078796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: may_calling_c_28
+      rect:
+        serializedVersion: 2
+        x: 14679
+        y: 24
+        width: 131
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9021b040da83484093731a28a6f825d
+      internalID: 703577258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3dc15ba33c699604caa3f0d02c6f891c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      may_calling_c_0: -565334617
+      may_calling_c_1: 1425590315
+      may_calling_c_10: -1445793122
+      may_calling_c_11: -819538384
+      may_calling_c_12: -660430061
+      may_calling_c_13: -69037624
+      may_calling_c_14: -806110104
+      may_calling_c_15: -1730029054
+      may_calling_c_16: 820827902
+      may_calling_c_17: 129176740
+      may_calling_c_18: 234279844
+      may_calling_c_19: -1053722976
+      may_calling_c_2: 663656739
+      may_calling_c_20: 1543308664
+      may_calling_c_21: 431503603
+      may_calling_c_22: -1496693657
+      may_calling_c_23: 1822578264
+      may_calling_c_24: -977317107
+      may_calling_c_25: 1839522269
+      may_calling_c_26: 1310000245
+      may_calling_c_27: 716078796
+      may_calling_c_28: 703577258
+      may_calling_c_3: -2094179705
+      may_calling_c_4: -915049449
+      may_calling_c_5: -507848318
+      may_calling_c_6: 1264565038
+      may_calling_c_7: 1019951620
+      may_calling_c_8: -1783099636
+      may_calling_c_9: -69099854
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
